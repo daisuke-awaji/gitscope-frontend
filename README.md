@@ -1,8 +1,8 @@
-# dahsboard layout for react
+![Vercel](https://vercelbadge.vercel.app/api/daisuke-awaji/gitscope-frontend)
 
-![image](https://user-images.githubusercontent.com/20736455/111234653-5e173c80-8632-11eb-8572-e31958c3d368.png)
+# GitScope Frontend
 
-![Vercel](https://vercelbadge.vercel.app/api/daisuke-awaji/dashboard-layout)
+![image](https://user-images.githubusercontent.com/20736455/115806612-100c0a80-a422-11eb-97d8-9ace015a7062.png)
 
 # generate frontend api client
 
