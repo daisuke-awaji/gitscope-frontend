@@ -1,0 +1,19 @@
+.button {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    color         : #ffffff;     /* 文字色     */
+    transition    : .3s;         /* なめらか変化 */
+  }
+  
+  
+a {
+    text-decoration: none !important;
+    color: #ffffff;
+}
+
+.github-icon {
+    width: 15px;
+    margin-right: 5px;
+}

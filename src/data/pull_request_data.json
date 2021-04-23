@@ -1,0 +1,5216 @@
+[
+    {
+        "title": "[4/6マージ]建退共連携用作業員名簿リスト（複数件）　建退共番号を雇用から取得する",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/520",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 4,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-04-02T07:01:55Z",
+                        "authoredDate": "2021-04-02T07:01:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-04-05T01:39:35Z",
+                        "authoredDate": "2021-04-05T01:39:35Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-04-05T02:20:31Z",
+                        "authoredDate": "2021-04-05T02:20:31Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-04-06T03:02:55Z",
+                        "authoredDate": "2021-04-06T03:02:55Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-04-02T07:02:52Z",
+        "mergedAt": "2021-04-06T03:28:39Z",
+        "additions": 21444,
+        "deletions": 263
+    },
+    {
+        "title": "GitHub テンプレート更新",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/519",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-31T05:57:01Z",
+                        "authoredDate": "2021-03-31T05:57:01Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-31T05:58:02Z",
+                        "authoredDate": "2021-03-31T05:58:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-31T06:00:06Z",
+                        "authoredDate": "2021-03-31T06:00:06Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-31T06:04:40Z",
+        "mergedAt": "2021-04-01T07:52:51Z",
+        "additions": 6,
+        "deletions": 42
+    },
+    {
+        "title": "redoc-cliの参照先をnode-moduleに変更",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/518",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-30T05:08:27Z",
+                        "authoredDate": "2021-03-30T05:08:27Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-30T05:14:41Z",
+        "mergedAt": "2021-03-30T05:25:24Z",
+        "additions": 2048,
+        "deletions": 1
+    },
+    {
+        "title": "APIコール数計測を無効化",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/517",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-30T02:00:26Z",
+                        "authoredDate": "2021-03-30T02:00:26Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-30T02:09:58Z",
+                        "authoredDate": "2021-03-30T02:09:58Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-30T02:04:41Z",
+        "mergedAt": "2021-03-30T02:27:02Z",
+        "additions": 5,
+        "deletions": 1
+    },
+    {
+        "title": "Revert \"AmazonTimestreamを操作する権限をコンテナに追加する\"",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/516",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-30T01:25:59Z",
+                        "authoredDate": "2021-03-30T01:25:59Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-30T01:26:04Z",
+        "mergedAt": null,
+        "additions": 1,
+        "deletions": 30
+    },
+    {
+        "title": "Revert \"環境ごとに読み込むAmazonTimestreamを切り替える\"",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/515",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-30T01:25:45Z",
+                        "authoredDate": "2021-03-30T01:25:45Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-30T01:25:50Z",
+        "mergedAt": null,
+        "additions": 6,
+        "deletions": 27
+    },
+    {
+        "title": "企業属性提供API(変更履歴)テスト追加",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/514",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T03:13:34Z",
+                        "authoredDate": "2021-03-23T03:13:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T05:46:24Z",
+                        "authoredDate": "2021-03-23T05:46:24Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-23T03:20:36Z",
+        "mergedAt": "2021-03-23T06:26:27Z",
+        "additions": 386,
+        "deletions": 8
+    },
+    {
+        "title": "Revert \"#0 ECSの停止時間を未来日付に変更 stg環境 0108\"",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/513",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-22T08:08:46Z",
+                        "authoredDate": "2021-03-22T08:08:46Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-22T08:08:54Z",
+        "mergedAt": "2021-03-22T08:18:02Z",
+        "additions": 1,
+        "deletions": 2
+    },
+    {
+        "title": "プロジェクト編成企業リスト提供（複数件）のクエリパラメータに企業名称カナを追加",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/512",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-22T07:03:58Z",
+                        "authoredDate": "2021-03-22T07:03:58Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-22T07:11:47Z",
+        "mergedAt": "2021-03-23T06:47:13Z",
+        "additions": 72,
+        "deletions": 8
+    },
+    {
+        "title": "【作業所Net】企業属性 - 更新履歴テーブルの差分取得",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/511",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 7,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-22T01:04:08Z",
+                        "authoredDate": "2021-03-22T01:04:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T01:39:49Z",
+                        "authoredDate": "2021-03-23T01:39:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T03:13:34Z",
+                        "authoredDate": "2021-03-23T03:13:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T05:46:24Z",
+                        "authoredDate": "2021-03-23T05:46:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T06:26:27Z",
+                        "authoredDate": "2021-03-23T06:26:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-23T08:29:33Z",
+                        "authoredDate": "2021-03-23T08:29:33Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-24T00:10:45Z",
+                        "authoredDate": "2021-03-24T00:10:45Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-22T01:25:57Z",
+        "mergedAt": "2021-03-24T03:03:06Z",
+        "additions": 765,
+        "deletions": 23
+    },
+    {
+        "title": "インデックス修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/510",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-18T09:43:06Z",
+                        "authoredDate": "2021-03-18T09:43:06Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-18T09:44:27Z",
+        "mergedAt": "2021-03-19T02:02:19Z",
+        "additions": 1,
+        "deletions": 1
+    },
+    {
+        "title": "変更履歴テーブル追加",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/509",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-18T03:02:01Z",
+                        "authoredDate": "2021-03-18T03:02:01Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-18T03:23:29Z",
+        "mergedAt": "2021-03-18T05:12:05Z",
+        "additions": 11,
+        "deletions": 0
+    },
+    {
+        "title": "企業属性のインデックス追加",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/508",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-18T02:18:29Z",
+                        "authoredDate": "2021-03-18T02:18:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-18T02:55:47Z",
+                        "authoredDate": "2021-03-18T02:55:47Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-18T02:21:40Z",
+        "mergedAt": "2021-03-18T03:11:13Z",
+        "additions": 40,
+        "deletions": 1
+    },
+    {
+        "title": "【作業所Net】企業属性API - 企業担当者修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/507",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 7,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T05:05:53Z",
+                        "authoredDate": "2021-03-16T05:05:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T06:25:18Z",
+                        "authoredDate": "2021-03-16T06:25:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T06:37:03Z",
+                        "authoredDate": "2021-03-16T06:37:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T07:15:05Z",
+                        "authoredDate": "2021-03-16T07:15:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T07:29:18Z",
+                        "authoredDate": "2021-03-16T07:29:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-17T01:57:36Z",
+                        "authoredDate": "2021-03-17T01:57:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-17T01:58:56Z",
+                        "authoredDate": "2021-03-17T01:58:56Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-16T07:21:10Z",
+        "mergedAt": "2021-03-17T03:51:34Z",
+        "additions": 929,
+        "deletions": 147
+    },
+    {
+        "title": "環境ごとに読み込むAmazonTimestreamを切り替える",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/506",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T00:00:25Z",
+                        "authoredDate": "2021-03-15T09:46:00Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-15T09:50:10Z",
+        "mergedAt": "2021-03-16T00:23:14Z",
+        "additions": 27,
+        "deletions": 6
+    },
+    {
+        "title": "AmazonTimestreamを操作する権限をコンテナに追加する",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/505",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-15T05:30:30Z",
+                        "authoredDate": "2021-03-15T05:29:21Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-15T05:29:48Z",
+        "mergedAt": "2021-03-15T05:47:22Z",
+        "additions": 30,
+        "deletions": 1
+    },
+    {
+        "title": "APIごとに実行回数を計測する middleware のプロトタイプを実装",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/504",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T07:58:15Z",
+                        "authoredDate": "2021-03-12T07:18:50Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-12T07:19:28Z",
+        "mergedAt": "2021-03-15T05:03:13Z",
+        "additions": 181,
+        "deletions": 18461
+    },
+    {
+        "title": "【作業所Net】企業属性API - 許可業取得修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/503",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 4,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T04:41:19Z",
+                        "authoredDate": "2021-03-11T04:41:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T06:13:48Z",
+                        "authoredDate": "2021-03-11T06:13:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T06:29:37Z",
+                        "authoredDate": "2021-03-11T06:29:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T07:00:03Z",
+                        "authoredDate": "2021-03-11T07:00:03Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-11T06:32:31Z",
+        "mergedAt": "2021-03-16T01:14:52Z",
+        "additions": 127,
+        "deletions": 285
+    },
+    {
+        "title": "ユーザ属性提供API_削除ユーザと未削除ユーザが共存した場合の挙動修正",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/502",
+        "comments": {
+            "totalCount": 3
+        },
+        "commits": {
+            "totalCount": 19,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T05:10:42Z",
+                        "authoredDate": "2021-03-11T05:10:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T05:45:50Z",
+                        "authoredDate": "2021-03-11T05:45:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T06:38:04Z",
+                        "authoredDate": "2021-03-11T06:38:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T06:57:00Z",
+                        "authoredDate": "2021-03-11T06:57:00Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T08:17:21Z",
+                        "authoredDate": "2021-03-11T08:17:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T08:18:36Z",
+                        "authoredDate": "2021-03-11T08:18:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-11T08:20:11Z",
+                        "authoredDate": "2021-03-11T08:20:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T01:51:53Z",
+                        "authoredDate": "2021-03-12T01:51:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T01:55:58Z",
+                        "authoredDate": "2021-03-12T01:55:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T02:11:34Z",
+                        "authoredDate": "2021-03-12T02:11:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T02:43:56Z",
+                        "authoredDate": "2021-03-12T02:43:56Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T02:45:24Z",
+                        "authoredDate": "2021-03-12T02:45:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T04:58:50Z",
+                        "authoredDate": "2021-03-12T04:58:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T05:14:12Z",
+                        "authoredDate": "2021-03-12T05:14:12Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T06:29:18Z",
+                        "authoredDate": "2021-03-12T06:29:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T06:37:38Z",
+                        "authoredDate": "2021-03-12T06:37:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-12T07:19:46Z",
+                        "authoredDate": "2021-03-12T07:19:46Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-16T06:38:07Z",
+                        "authoredDate": "2021-03-16T06:38:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-17T00:49:28Z",
+                        "authoredDate": "2021-03-17T00:49:28Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-11T05:18:21Z",
+        "mergedAt": "2021-03-17T07:22:43Z",
+        "additions": 1455,
+        "deletions": 732
+    },
+    {
+        "title": "【作業所Net】企業属性API - SQL修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/501",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T11:03:45Z",
+                        "authoredDate": "2021-03-08T11:03:45Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-08T11:07:31Z",
+        "mergedAt": "2021-03-09T00:23:45Z",
+        "additions": 96,
+        "deletions": 128
+    },
+    {
+        "title": "【作業所Net】ユーザ属性リスト提供API　更新日Fromのテスト修正",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/500",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T02:02:59Z",
+                        "authoredDate": "2021-03-08T02:02:59Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-08T02:04:44Z",
+        "mergedAt": "2021-03-08T02:20:11Z",
+        "additions": 16,
+        "deletions": 14
+    },
+    {
+        "title": "【作業所Net】企業属性API - 文言統一、ファイル移動",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/499",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 6,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T01:58:20Z",
+                        "authoredDate": "2021-03-08T01:58:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T02:09:59Z",
+                        "authoredDate": "2021-03-08T02:09:59Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T02:28:49Z",
+                        "authoredDate": "2021-03-08T02:28:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T02:36:35Z",
+                        "authoredDate": "2021-03-08T02:36:35Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T02:38:29Z",
+                        "authoredDate": "2021-03-08T02:38:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T02:48:15Z",
+                        "authoredDate": "2021-03-08T02:48:15Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-08T02:02:00Z",
+        "mergedAt": "2021-03-08T03:14:09Z",
+        "additions": 153,
+        "deletions": 153
+    },
+    {
+        "title": "【マージしない】建退共連携用作業員名簿リスト（複数件）API 負荷検証用テスト",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/498",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T05:42:01Z",
+                        "authoredDate": "2021-03-05T05:42:01Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-05T05:56:28Z",
+        "mergedAt": null,
+        "additions": 99,
+        "deletions": 0
+    },
+    {
+        "title": "企業属性用ダミーデータ作成",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/497",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T03:50:24Z",
+                        "authoredDate": "2021-03-05T03:50:24Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-05T03:53:14Z",
+        "mergedAt": "2021-03-05T05:03:48Z",
+        "additions": 457,
+        "deletions": 30
+    },
+    {
+        "title": "企業属性API負荷テスト",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/496",
+        "comments": {
+            "totalCount": 3
+        },
+        "commits": {
+            "totalCount": 14,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T05:06:57Z",
+                        "authoredDate": "2021-03-04T05:06:57Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T00:47:44Z",
+                        "authoredDate": "2021-03-05T00:47:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T03:41:46Z",
+                        "authoredDate": "2021-03-05T03:41:46Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T03:50:24Z",
+                        "authoredDate": "2021-03-05T03:50:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T05:03:48Z",
+                        "authoredDate": "2021-03-05T05:03:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T08:41:41Z",
+                        "authoredDate": "2021-03-05T08:41:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T08:43:27Z",
+                        "authoredDate": "2021-03-05T08:43:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T00:36:51Z",
+                        "authoredDate": "2021-03-08T00:36:51Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T00:38:16Z",
+                        "authoredDate": "2021-03-09T00:38:16Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T02:16:33Z",
+                        "authoredDate": "2021-03-09T02:16:33Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T02:17:19Z",
+                        "authoredDate": "2021-03-09T02:17:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T02:19:17Z",
+                        "authoredDate": "2021-03-09T02:19:17Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T02:27:28Z",
+                        "authoredDate": "2021-03-09T02:27:28Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T02:41:37Z",
+                        "authoredDate": "2021-03-09T02:41:37Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-05T03:45:03Z",
+        "mergedAt": "2021-03-09T03:04:12Z",
+        "additions": 1069,
+        "deletions": 23
+    },
+    {
+        "title": "ユーザ属性リスト提供　SPEC更新",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/495",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T09:57:38Z",
+                        "authoredDate": "2021-03-04T09:57:38Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-04T09:58:40Z",
+        "mergedAt": "2021-03-05T00:03:45Z",
+        "additions": 22,
+        "deletions": 5
+    },
+    {
+        "title": "企業属性リスト提供API リファクタリング",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/494",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 6,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T10:07:13Z",
+                        "authoredDate": "2021-03-03T10:07:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T00:13:12Z",
+                        "authoredDate": "2021-03-04T00:13:12Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T05:08:21Z",
+                        "authoredDate": "2021-03-04T05:08:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T05:51:48Z",
+                        "authoredDate": "2021-03-08T05:51:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-08T06:01:52Z",
+                        "authoredDate": "2021-03-08T06:01:52Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-09T02:03:03Z",
+                        "authoredDate": "2021-03-09T02:03:03Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-03T10:13:22Z",
+        "mergedAt": "2021-03-10T00:20:57Z",
+        "additions": 316,
+        "deletions": 179
+    },
+    {
+        "title": "企業属性提供API_グループ化項目の追加",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/493",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T05:26:44Z",
+                        "authoredDate": "2021-03-03T05:26:44Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-03T05:30:42Z",
+        "mergedAt": "2021-03-03T05:36:26Z",
+        "additions": 4,
+        "deletions": 1
+    },
+    {
+        "title": "【作業所Net】企業属性提供 - SPEC修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/492",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T00:39:03Z",
+                        "authoredDate": "2021-03-03T00:39:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T02:57:30Z",
+                        "authoredDate": "2021-03-03T02:57:30Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-03T00:45:42Z",
+        "mergedAt": "2021-03-03T07:56:28Z",
+        "additions": 3,
+        "deletions": 4
+    },
+    {
+        "title": "【作業所】企業属性提供 - リファクタ",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/491",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 7,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:18:34Z",
+                        "authoredDate": "2021-03-02T03:18:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:20:25Z",
+                        "authoredDate": "2021-03-02T03:20:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:00:43Z",
+                        "authoredDate": "2021-03-02T07:00:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:35:34Z",
+                        "authoredDate": "2021-03-02T07:35:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:37:19Z",
+                        "authoredDate": "2021-03-02T07:37:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T08:14:08Z",
+                        "authoredDate": "2021-03-02T08:14:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T08:18:06Z",
+                        "authoredDate": "2021-03-02T08:18:06Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-02T07:02:10Z",
+        "mergedAt": "2021-03-02T08:25:27Z",
+        "additions": 1406,
+        "deletions": 1339
+    },
+    {
+        "title": "ユーザ属性提供APIのSQLに対してインデックスを付与",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/490",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T04:57:49Z",
+                        "authoredDate": "2021-03-02T04:57:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:54:04Z",
+                        "authoredDate": "2021-03-03T06:54:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T07:43:08Z",
+                        "authoredDate": "2021-03-03T07:23:12Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-02T04:59:28Z",
+        "mergedAt": "2021-03-04T04:58:43Z",
+        "additions": 753,
+        "deletions": 18462
+    },
+    {
+        "title": "【作業所Net】企業属性リスト提供  - SPEC修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/489",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T07:25:19Z",
+                        "authoredDate": "2021-03-01T07:25:19Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-02T02:19:36Z",
+        "mergedAt": "2021-03-02T02:25:58Z",
+        "additions": 5,
+        "deletions": 3
+    },
+    {
+        "title": "企業属性API 削除企業のレスポンス修正",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/488",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:01:41Z",
+                        "authoredDate": "2021-03-02T02:01:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:29:57Z",
+                        "authoredDate": "2021-03-02T02:29:57Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:50:39Z",
+                        "authoredDate": "2021-03-02T02:50:39Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-02T02:04:13Z",
+        "mergedAt": "2021-03-02T03:01:03Z",
+        "additions": 42,
+        "deletions": 41
+    },
+    {
+        "title": "【作業所Net】企業属性提供 - 建設業許可修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/487",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 7,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T11:10:58Z",
+                        "authoredDate": "2021-03-01T11:10:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:02:31Z",
+                        "authoredDate": "2021-03-02T00:02:31Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:14:53Z",
+                        "authoredDate": "2021-03-02T00:14:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:54:03Z",
+                        "authoredDate": "2021-03-02T00:54:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:02:29Z",
+                        "authoredDate": "2021-03-02T01:02:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:03:00Z",
+                        "authoredDate": "2021-03-02T01:03:00Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:51:06Z",
+                        "authoredDate": "2021-03-02T01:51:06Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T11:17:24Z",
+        "mergedAt": "2021-03-02T02:00:56Z",
+        "additions": 409,
+        "deletions": 212
+    },
+    {
+        "title": "利用サービスの取得元を企業統合履歴（企業）に変更",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/486",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T09:03:36Z",
+                        "authoredDate": "2021-03-01T09:03:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T09:47:32Z",
+                        "authoredDate": "2021-03-01T09:47:32Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:09:36Z",
+                        "authoredDate": "2021-03-02T00:09:36Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T09:30:45Z",
+        "mergedAt": "2021-03-02T01:47:41Z",
+        "additions": 546,
+        "deletions": 97
+    },
+    {
+        "title": "DMS　MCログ追加、変更履歴削除",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/485",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T08:53:08Z",
+                        "authoredDate": "2021-03-01T08:53:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T09:02:05Z",
+                        "authoredDate": "2021-03-01T09:02:05Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T08:59:14Z",
+        "mergedAt": "2021-03-01T09:19:50Z",
+        "additions": 17,
+        "deletions": 6
+    },
+    {
+        "title": "limit500バリデーション",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/484",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T08:04:11Z",
+                        "authoredDate": "2021-03-01T08:04:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T08:18:14Z",
+                        "authoredDate": "2021-03-01T08:18:14Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T08:10:52Z",
+        "mergedAt": "2021-03-02T02:03:19Z",
+        "additions": 17,
+        "deletions": 8
+    },
+    {
+        "title": "DMSに企業統合履歴（企業）を追加",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/483",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T06:45:24Z",
+                        "authoredDate": "2021-03-01T06:45:24Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T06:51:07Z",
+        "mergedAt": "2021-03-01T06:57:10Z",
+        "additions": 11,
+        "deletions": 0
+    },
+    {
+        "title": "【作業所Net】企業属性リスト提供 - サービステスト実装、修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/482",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 6,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T00:18:41Z",
+                        "authoredDate": "2021-03-01T00:18:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T02:46:55Z",
+                        "authoredDate": "2021-03-01T02:46:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T02:48:13Z",
+                        "authoredDate": "2021-03-01T02:48:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:59:11Z",
+                        "authoredDate": "2021-03-01T03:59:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T05:09:19Z",
+                        "authoredDate": "2021-03-01T05:09:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T05:23:11Z",
+                        "authoredDate": "2021-03-01T05:23:11Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T02:51:54Z",
+        "mergedAt": "2021-03-01T05:35:11Z",
+        "additions": 273,
+        "deletions": 100
+    },
+    {
+        "title": "企業属性リストAPI_レスポンス構築_区分値の名称追加",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/481",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T02:23:19Z",
+                        "authoredDate": "2021-03-01T02:23:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:05:49Z",
+                        "authoredDate": "2021-03-01T03:05:49Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T02:29:11Z",
+        "mergedAt": "2021-03-01T03:32:18Z",
+        "additions": 502,
+        "deletions": 97
+    },
+    {
+        "title": "【作業所Net】企業属性リスト提供API - API-SPEC",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/480",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T01:43:39Z",
+                        "authoredDate": "2021-03-01T01:43:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T01:50:34Z",
+                        "authoredDate": "2021-03-01T01:50:34Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T01:45:32Z",
+        "mergedAt": "2021-03-01T02:01:57Z",
+        "additions": 180,
+        "deletions": 62
+    },
+    {
+        "title": "ユーザ属性APISPEC修正",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/479",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T00:31:23Z",
+                        "authoredDate": "2021-03-01T00:31:23Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-03-01T00:33:02Z",
+        "mergedAt": "2021-03-01T01:19:03Z",
+        "additions": 103,
+        "deletions": 49
+    },
+    {
+        "title": "ユーザ属性API負荷テスト",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/478",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T10:36:48Z",
+                        "authoredDate": "2021-02-26T10:36:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:43:50Z",
+                        "authoredDate": "2021-03-01T02:41:01Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-26T10:37:52Z",
+        "mergedAt": null,
+        "additions": 629,
+        "deletions": 18496
+    },
+    {
+        "title": "【対応完了後 close 】一時的にECSサービスを2台構成にする",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/477",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T09:56:59Z",
+                        "authoredDate": "2021-02-26T09:56:59Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T07:44:09Z",
+                        "authoredDate": "2021-03-01T07:44:09Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T07:48:51Z",
+                        "authoredDate": "2021-03-01T07:48:51Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-26T09:57:45Z",
+        "mergedAt": null,
+        "additions": 30,
+        "deletions": 3
+    },
+    {
+        "title": "【作業所Net】企業属性リスト提供（複数件）_存在企業、削除済み企業の取得",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/476",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:43:55Z",
+                        "authoredDate": "2021-02-26T03:43:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:35:06Z",
+                        "authoredDate": "2021-02-26T06:35:06Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-26T03:57:22Z",
+        "mergedAt": "2021-02-26T06:44:16Z",
+        "additions": 3799,
+        "deletions": 902
+    },
+    {
+        "title": "【作業所NET】ユーザ属性リスト提供API",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/475",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 65,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:47Z",
+                        "authoredDate": "2021-02-01T00:57:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:50Z",
+                        "authoredDate": "2021-02-03T02:19:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:53Z",
+                        "authoredDate": "2021-02-03T03:24:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:54Z",
+                        "authoredDate": "2021-02-03T09:59:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:57Z",
+                        "authoredDate": "2021-02-12T01:01:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T03:27:04Z",
+                        "authoredDate": "2021-02-16T03:27:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T04:17:08Z",
+                        "authoredDate": "2021-02-17T04:17:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T09:28:50Z",
+                        "authoredDate": "2021-02-17T09:28:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:05:42Z",
+                        "authoredDate": "2021-02-22T06:05:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:05:51Z",
+                        "authoredDate": "2021-02-22T06:05:51Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T00:22:21Z",
+                        "authoredDate": "2021-02-24T00:22:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T03:59:24Z",
+                        "authoredDate": "2021-02-24T03:59:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T08:01:41Z",
+                        "authoredDate": "2021-02-24T08:01:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T08:25:11Z",
+                        "authoredDate": "2021-02-24T08:25:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T08:36:53Z",
+                        "authoredDate": "2021-02-24T08:36:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T04:18:24Z",
+                        "authoredDate": "2021-02-24T09:32:31Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T05:37:37Z",
+                        "authoredDate": "2021-02-26T05:37:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T05:25:51Z",
+                        "authoredDate": "2021-03-01T05:25:51Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T06:55:47Z",
+                        "authoredDate": "2021-03-01T06:55:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T08:33:06Z",
+                        "authoredDate": "2021-03-01T08:33:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:12:49Z",
+                        "authoredDate": "2021-03-02T00:12:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:14:17Z",
+                        "authoredDate": "2021-03-02T00:14:17Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:37:23Z",
+                        "authoredDate": "2021-03-02T00:37:23Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:37:27Z",
+                        "authoredDate": "2021-03-02T00:37:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:48:15Z",
+                        "authoredDate": "2021-03-02T00:48:15Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:48:47Z",
+                        "authoredDate": "2021-03-02T00:48:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:05:08Z",
+                        "authoredDate": "2021-03-02T02:05:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:39:56Z",
+                        "authoredDate": "2021-03-02T02:39:56Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:57:32Z",
+                        "authoredDate": "2021-03-02T02:57:32Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:01:02Z",
+                        "authoredDate": "2021-03-02T03:01:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:06:32Z",
+                        "authoredDate": "2021-03-02T03:06:32Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T04:57:49Z",
+                        "authoredDate": "2021-03-02T04:57:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T05:50:44Z",
+                        "authoredDate": "2021-03-02T05:50:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T06:31:14Z",
+                        "authoredDate": "2021-03-02T06:31:14Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:12:21Z",
+                        "authoredDate": "2021-03-02T07:12:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:42:16Z",
+                        "authoredDate": "2021-03-02T07:42:16Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T00:57:29Z",
+                        "authoredDate": "2021-03-03T00:57:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T01:41:49Z",
+                        "authoredDate": "2021-03-03T01:41:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T01:59:30Z",
+                        "authoredDate": "2021-03-03T01:59:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T02:01:18Z",
+                        "authoredDate": "2021-03-03T02:01:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T02:46:36Z",
+                        "authoredDate": "2021-03-03T02:46:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T02:57:44Z",
+                        "authoredDate": "2021-03-03T02:57:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T02:59:47Z",
+                        "authoredDate": "2021-03-03T02:59:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T04:21:47Z",
+                        "authoredDate": "2021-03-03T04:21:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T04:27:30Z",
+                        "authoredDate": "2021-03-03T04:27:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T05:29:03Z",
+                        "authoredDate": "2021-03-03T05:29:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T05:50:38Z",
+                        "authoredDate": "2021-03-03T05:50:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T05:51:26Z",
+                        "authoredDate": "2021-03-03T05:51:26Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:03:29Z",
+                        "authoredDate": "2021-03-03T06:03:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:09:37Z",
+                        "authoredDate": "2021-03-03T06:09:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:15:01Z",
+                        "authoredDate": "2021-03-03T06:15:01Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:24:23Z",
+                        "authoredDate": "2021-03-03T06:24:23Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:28:21Z",
+                        "authoredDate": "2021-03-03T06:28:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:29:21Z",
+                        "authoredDate": "2021-03-03T06:29:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:36:18Z",
+                        "authoredDate": "2021-03-03T06:36:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:42:08Z",
+                        "authoredDate": "2021-03-03T06:42:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:49:24Z",
+                        "authoredDate": "2021-03-03T06:49:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T06:54:04Z",
+                        "authoredDate": "2021-03-03T06:54:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-03T07:43:08Z",
+                        "authoredDate": "2021-03-03T07:23:12Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T03:50:12Z",
+                        "authoredDate": "2021-03-04T03:50:12Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T04:54:39Z",
+                        "authoredDate": "2021-03-04T04:54:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T04:58:43Z",
+                        "authoredDate": "2021-03-04T04:58:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T05:10:01Z",
+                        "authoredDate": "2021-03-04T05:10:01Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T08:09:55Z",
+                        "authoredDate": "2021-03-04T08:09:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-05T08:11:18Z",
+                        "authoredDate": "2021-03-05T08:11:18Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-26T03:52:10Z",
+        "mergedAt": "2021-03-08T00:02:48Z",
+        "additions": 27067,
+        "deletions": 48
+    },
+    {
+        "title": "【作業所Net】企業属性リスト提供API - テストケース追加、リファクタ",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/474",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 9,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T02:12:24Z",
+                        "authoredDate": "2021-02-26T02:12:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T02:50:56Z",
+                        "authoredDate": "2021-02-26T02:50:56Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:18:01Z",
+                        "authoredDate": "2021-02-26T03:18:01Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:20:08Z",
+                        "authoredDate": "2021-02-26T03:20:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T04:10:33Z",
+                        "authoredDate": "2021-02-26T04:10:33Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T04:36:02Z",
+                        "authoredDate": "2021-02-26T04:36:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T07:15:48Z",
+                        "authoredDate": "2021-02-26T07:15:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:32:44Z",
+                        "authoredDate": "2021-03-01T03:32:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:49:22Z",
+                        "authoredDate": "2021-03-01T03:49:22Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-26T03:12:51Z",
+        "mergedAt": "2021-03-01T03:54:02Z",
+        "additions": 271,
+        "deletions": 244
+    },
+    {
+        "title": "建退共連携用作業員名簿リストAPI パラメータの変換処理をテストする",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/473",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T01:26:15Z",
+                        "authoredDate": "2021-02-26T01:26:15Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-26T01:26:45Z",
+        "mergedAt": "2021-02-26T03:01:08Z",
+        "additions": 40,
+        "deletions": 0
+    },
+    {
+        "title": "企業属性リスト提供 大成グループオーナー情報取得",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/472",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 4,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T00:20:08Z",
+                        "authoredDate": "2021-02-25T00:20:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:27:16Z",
+                        "authoredDate": "2021-02-25T08:27:16Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:36:21Z",
+                        "authoredDate": "2021-02-25T08:36:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:58:09Z",
+                        "authoredDate": "2021-02-26T03:58:09Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-25T08:29:20Z",
+        "mergedAt": "2021-02-26T06:02:04Z",
+        "additions": 1024,
+        "deletions": 273
+    },
+    {
+        "title": "【建退共連携】作業員名簿リストAPI パフォーマンス改善、limitの上限追加（1000）",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/471",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T05:49:03Z",
+                        "authoredDate": "2021-02-24T05:49:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T06:15:34Z",
+                        "authoredDate": "2021-02-24T06:15:34Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-24T06:21:42Z",
+        "mergedAt": "2021-02-24T07:38:24Z",
+        "additions": 20,
+        "deletions": 6
+    },
+    {
+        "title": "企業属性リスト提供 - 区分値名称、ソート順 API-SPEC修正",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/470",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 5,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T03:27:48Z",
+                        "authoredDate": "2021-02-24T03:27:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T07:52:38Z",
+                        "authoredDate": "2021-02-24T07:52:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T00:29:22Z",
+                        "authoredDate": "2021-02-25T00:29:22Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T08:59:50Z",
+                        "authoredDate": "2021-02-26T08:59:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T00:05:42Z",
+                        "authoredDate": "2021-03-01T00:05:42Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-24T03:39:55Z",
+        "mergedAt": "2021-03-01T01:23:08Z",
+        "additions": 157,
+        "deletions": 46
+    },
+    {
+        "title": "【建退共連携】作業員名簿リストAPI カウント集計のSQLからソートを削除",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/469",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T02:12:18Z",
+                        "authoredDate": "2021-02-24T02:12:18Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-24T02:18:42Z",
+        "mergedAt": "2021-02-24T02:27:26Z",
+        "additions": 1,
+        "deletions": 2
+    },
+    {
+        "title": "【建退共連携】作業員名簿リストAPI_ソート実装",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/468",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T09:57:29Z",
+                        "authoredDate": "2021-02-22T09:57:29Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-22T10:04:57Z",
+        "mergedAt": "2021-02-24T00:11:21Z",
+        "additions": 468,
+        "deletions": 1
+    },
+    {
+        "title": "企業属性リスト提供バリデーションチェック, PARAMファイル修正",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/467",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 14,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:38:54Z",
+                        "authoredDate": "2021-02-04T06:38:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:46:43Z",
+                        "authoredDate": "2021-02-04T06:46:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T07:25:44Z",
+                        "authoredDate": "2021-02-05T07:25:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T10:10:37Z",
+                        "authoredDate": "2021-02-05T10:10:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T11:38:48Z",
+                        "authoredDate": "2021-02-05T11:38:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-08T09:24:15Z",
+                        "authoredDate": "2021-02-08T09:24:15Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T03:16:20Z",
+                        "authoredDate": "2021-02-09T03:16:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T06:28:06Z",
+                        "authoredDate": "2021-02-09T06:28:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T00:05:34Z",
+                        "authoredDate": "2021-02-10T00:05:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T01:35:34Z",
+                        "authoredDate": "2021-02-10T01:35:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:19:24Z",
+                        "authoredDate": "2021-02-22T06:19:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T08:16:55Z",
+                        "authoredDate": "2021-02-22T08:16:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T00:18:36Z",
+                        "authoredDate": "2021-02-24T00:18:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T07:27:29Z",
+                        "authoredDate": "2021-02-24T07:27:29Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-22T08:24:57Z",
+        "mergedAt": "2021-02-25T07:50:09Z",
+        "additions": 425,
+        "deletions": 50
+    },
+    {
+        "title": "企業属性リスト提供API　社会保険データ取得　",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/466",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 16,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:38:54Z",
+                        "authoredDate": "2021-02-04T06:38:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:46:43Z",
+                        "authoredDate": "2021-02-04T06:46:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T07:25:44Z",
+                        "authoredDate": "2021-02-05T07:25:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T10:10:37Z",
+                        "authoredDate": "2021-02-05T10:10:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T11:38:48Z",
+                        "authoredDate": "2021-02-05T11:38:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-08T09:24:15Z",
+                        "authoredDate": "2021-02-08T09:24:15Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T03:16:20Z",
+                        "authoredDate": "2021-02-09T03:16:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T06:28:06Z",
+                        "authoredDate": "2021-02-09T06:28:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T00:05:34Z",
+                        "authoredDate": "2021-02-10T00:05:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T01:35:34Z",
+                        "authoredDate": "2021-02-10T01:35:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T05:24:20Z",
+                        "authoredDate": "2021-02-19T05:24:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:31:05Z",
+                        "authoredDate": "2021-02-22T05:31:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:32:13Z",
+                        "authoredDate": "2021-02-22T05:32:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:39:39Z",
+                        "authoredDate": "2021-02-22T05:39:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:01:53Z",
+                        "authoredDate": "2021-02-22T06:01:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T00:01:21Z",
+                        "authoredDate": "2021-02-25T00:01:21Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-22T05:33:49Z",
+        "mergedAt": "2021-02-25T07:45:05Z",
+        "additions": 340,
+        "deletions": 48
+    },
+    {
+        "title": "【作業所Net】企業属性取得API_企業担当者取得",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/465",
+        "comments": {
+            "totalCount": 5
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T03:49:11Z",
+                        "authoredDate": "2021-02-22T03:49:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:56:25Z",
+                        "authoredDate": "2021-02-22T05:56:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T07:55:07Z",
+                        "authoredDate": "2021-02-25T07:55:07Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-22T05:01:21Z",
+        "mergedAt": "2021-02-25T08:14:01Z",
+        "additions": 354,
+        "deletions": 17
+    },
+    {
+        "title": "DMSテーブル追加 - 企業属性リスト提供",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/464",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-21T23:37:00Z",
+                        "authoredDate": "2021-02-21T23:37:00Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-21T23:40:41Z",
+        "mergedAt": "2021-02-22T07:03:21Z",
+        "additions": 11,
+        "deletions": 0
+    },
+    {
+        "title": "【作業所Net】企業属性取得API_建設許可業取得",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/463",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 4,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:13:40Z",
+                        "authoredDate": "2021-02-19T11:13:40Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:33:27Z",
+                        "authoredDate": "2021-02-19T11:33:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:06:36Z",
+                        "authoredDate": "2021-02-26T06:06:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:14:25Z",
+                        "authoredDate": "2021-02-26T06:14:25Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-19T11:20:38Z",
+        "mergedAt": "2021-02-26T06:27:45Z",
+        "additions": 914,
+        "deletions": 54
+    },
+    {
+        "title": "企業属性リスト提供（複数件）バリデーションチェック, PARAMファイル修正",
+        "author": {
+            "login": "WataruNishiki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/462",
+        "comments": {
+            "totalCount": 3
+        },
+        "commits": {
+            "totalCount": 12,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:38:54Z",
+                        "authoredDate": "2021-02-04T06:38:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:46:43Z",
+                        "authoredDate": "2021-02-04T06:46:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T07:25:44Z",
+                        "authoredDate": "2021-02-05T07:25:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T10:10:37Z",
+                        "authoredDate": "2021-02-05T10:10:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T11:38:48Z",
+                        "authoredDate": "2021-02-05T11:38:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-08T09:24:15Z",
+                        "authoredDate": "2021-02-08T09:24:15Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T03:16:20Z",
+                        "authoredDate": "2021-02-09T03:16:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T06:28:06Z",
+                        "authoredDate": "2021-02-09T06:28:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T00:05:34Z",
+                        "authoredDate": "2021-02-10T00:05:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T01:35:34Z",
+                        "authoredDate": "2021-02-10T01:35:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T05:24:20Z",
+                        "authoredDate": "2021-02-19T05:24:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T07:42:51Z",
+                        "authoredDate": "2021-02-19T07:42:51Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-19T07:46:09Z",
+        "mergedAt": null,
+        "additions": 377,
+        "deletions": 46
+    },
+    {
+        "title": "企業属性取得のDaoテスト追加",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/461",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T00:24:35Z",
+                        "authoredDate": "2021-02-19T00:24:35Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-19T01:26:05Z",
+        "mergedAt": "2021-02-22T07:41:23Z",
+        "additions": 477,
+        "deletions": 231
+    },
+    {
+        "title": "企業属性リスト提供API - 配列要素Dao、サービスクラスのテストケース追加",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/460",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T11:53:12Z",
+                        "authoredDate": "2021-02-18T11:53:12Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-18T11:59:31Z",
+        "mergedAt": "2021-02-22T00:24:52Z",
+        "additions": 94,
+        "deletions": 52
+    },
+    {
+        "title": "UserAttribute取得用のクエリを組み立てるビルダクラスを提案",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/459",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T04:17:08Z",
+                        "authoredDate": "2021-02-17T04:17:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:05:42Z",
+                        "authoredDate": "2021-02-22T06:05:42Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-17T04:17:57Z",
+        "mergedAt": "2021-02-22T06:05:51Z",
+        "additions": 222,
+        "deletions": 50
+    },
+    {
+        "title": "企業属性リスト提供API",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/458",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 107,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T06:52:03Z",
+                        "authoredDate": "2021-02-16T06:52:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T07:03:55Z",
+                        "authoredDate": "2021-02-16T07:03:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T07:11:39Z",
+                        "authoredDate": "2021-02-16T07:11:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T09:19:54Z",
+                        "authoredDate": "2021-02-16T09:19:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T09:25:21Z",
+                        "authoredDate": "2021-02-16T09:25:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T09:31:07Z",
+                        "authoredDate": "2021-02-16T09:31:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T10:07:55Z",
+                        "authoredDate": "2021-02-16T10:07:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T00:48:47Z",
+                        "authoredDate": "2021-02-17T00:48:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T01:00:07Z",
+                        "authoredDate": "2021-02-17T01:00:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T01:03:07Z",
+                        "authoredDate": "2021-02-17T01:03:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T01:05:23Z",
+                        "authoredDate": "2021-02-17T01:05:23Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T07:48:58Z",
+                        "authoredDate": "2021-02-18T07:48:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T07:56:22Z",
+                        "authoredDate": "2021-02-18T07:56:22Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T11:53:12Z",
+                        "authoredDate": "2021-02-18T11:53:12Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T00:24:35Z",
+                        "authoredDate": "2021-02-19T00:24:35Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T05:24:20Z",
+                        "authoredDate": "2021-02-19T05:24:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:13:40Z",
+                        "authoredDate": "2021-02-19T11:13:40Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:33:27Z",
+                        "authoredDate": "2021-02-19T11:33:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T00:24:52Z",
+                        "authoredDate": "2021-02-22T00:24:52Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T03:49:11Z",
+                        "authoredDate": "2021-02-22T03:49:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:31:05Z",
+                        "authoredDate": "2021-02-22T05:31:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:32:13Z",
+                        "authoredDate": "2021-02-22T05:32:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:39:39Z",
+                        "authoredDate": "2021-02-22T05:39:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:56:25Z",
+                        "authoredDate": "2021-02-22T05:56:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:01:53Z",
+                        "authoredDate": "2021-02-22T06:01:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:19:24Z",
+                        "authoredDate": "2021-02-22T06:19:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T07:41:23Z",
+                        "authoredDate": "2021-02-22T07:41:23Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T08:16:55Z",
+                        "authoredDate": "2021-02-22T08:16:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T00:18:36Z",
+                        "authoredDate": "2021-02-24T00:18:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T03:27:48Z",
+                        "authoredDate": "2021-02-24T03:27:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T07:27:29Z",
+                        "authoredDate": "2021-02-24T07:27:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T07:52:38Z",
+                        "authoredDate": "2021-02-24T07:52:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T00:01:21Z",
+                        "authoredDate": "2021-02-25T00:01:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T00:20:08Z",
+                        "authoredDate": "2021-02-25T00:20:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T00:29:22Z",
+                        "authoredDate": "2021-02-25T00:29:22Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T07:45:05Z",
+                        "authoredDate": "2021-02-25T07:45:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T07:50:09Z",
+                        "authoredDate": "2021-02-25T07:50:09Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T07:55:07Z",
+                        "authoredDate": "2021-02-25T07:55:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:14:01Z",
+                        "authoredDate": "2021-02-25T08:14:01Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:27:16Z",
+                        "authoredDate": "2021-02-25T08:27:16Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:36:21Z",
+                        "authoredDate": "2021-02-25T08:36:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T02:12:24Z",
+                        "authoredDate": "2021-02-26T02:12:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T02:50:56Z",
+                        "authoredDate": "2021-02-26T02:50:56Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:18:01Z",
+                        "authoredDate": "2021-02-26T03:18:01Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:20:08Z",
+                        "authoredDate": "2021-02-26T03:20:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:43:55Z",
+                        "authoredDate": "2021-02-26T03:43:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:58:09Z",
+                        "authoredDate": "2021-02-26T03:58:09Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T04:10:33Z",
+                        "authoredDate": "2021-02-26T04:10:33Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T04:36:02Z",
+                        "authoredDate": "2021-02-26T04:36:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:02:04Z",
+                        "authoredDate": "2021-02-26T06:02:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:06:36Z",
+                        "authoredDate": "2021-02-26T06:06:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:14:25Z",
+                        "authoredDate": "2021-02-26T06:14:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:27:45Z",
+                        "authoredDate": "2021-02-26T06:27:45Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:35:06Z",
+                        "authoredDate": "2021-02-26T06:35:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T06:44:16Z",
+                        "authoredDate": "2021-02-26T06:44:16Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T07:15:48Z",
+                        "authoredDate": "2021-02-26T07:15:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T08:59:50Z",
+                        "authoredDate": "2021-02-26T08:59:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T00:05:42Z",
+                        "authoredDate": "2021-03-01T00:05:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T00:18:41Z",
+                        "authoredDate": "2021-03-01T00:18:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T01:23:08Z",
+                        "authoredDate": "2021-03-01T01:23:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T02:23:19Z",
+                        "authoredDate": "2021-03-01T02:23:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T02:46:55Z",
+                        "authoredDate": "2021-03-01T02:46:55Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T02:48:13Z",
+                        "authoredDate": "2021-03-01T02:48:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:05:49Z",
+                        "authoredDate": "2021-03-01T03:05:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:32:17Z",
+                        "authoredDate": "2021-03-01T03:32:17Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:32:44Z",
+                        "authoredDate": "2021-03-01T03:32:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:49:22Z",
+                        "authoredDate": "2021-03-01T03:49:22Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:54:02Z",
+                        "authoredDate": "2021-03-01T03:54:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T03:59:11Z",
+                        "authoredDate": "2021-03-01T03:59:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T04:52:11Z",
+                        "authoredDate": "2021-03-01T04:52:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T05:09:19Z",
+                        "authoredDate": "2021-03-01T05:09:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T05:23:11Z",
+                        "authoredDate": "2021-03-01T05:23:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T05:35:11Z",
+                        "authoredDate": "2021-03-01T05:35:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T06:40:09Z",
+                        "authoredDate": "2021-03-01T06:40:09Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T08:04:11Z",
+                        "authoredDate": "2021-03-01T08:04:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T08:18:14Z",
+                        "authoredDate": "2021-03-01T08:18:14Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T09:03:36Z",
+                        "authoredDate": "2021-03-01T09:03:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T09:47:32Z",
+                        "authoredDate": "2021-03-01T09:47:32Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T11:10:58Z",
+                        "authoredDate": "2021-03-01T11:10:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:02:31Z",
+                        "authoredDate": "2021-03-02T00:02:31Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:09:36Z",
+                        "authoredDate": "2021-03-02T00:09:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:14:53Z",
+                        "authoredDate": "2021-03-02T00:14:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T00:54:03Z",
+                        "authoredDate": "2021-03-02T00:54:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:02:29Z",
+                        "authoredDate": "2021-03-02T01:02:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:03:00Z",
+                        "authoredDate": "2021-03-02T01:03:00Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:47:41Z",
+                        "authoredDate": "2021-03-02T01:47:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T01:51:06Z",
+                        "authoredDate": "2021-03-02T01:51:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:00:56Z",
+                        "authoredDate": "2021-03-02T02:00:56Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:01:41Z",
+                        "authoredDate": "2021-03-02T02:01:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:03:18Z",
+                        "authoredDate": "2021-03-02T02:03:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:29:57Z",
+                        "authoredDate": "2021-03-02T02:29:57Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T02:50:39Z",
+                        "authoredDate": "2021-03-02T02:50:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:01:03Z",
+                        "authoredDate": "2021-03-02T03:01:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:18:34Z",
+                        "authoredDate": "2021-03-02T03:18:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T03:20:25Z",
+                        "authoredDate": "2021-03-02T03:20:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:00:43Z",
+                        "authoredDate": "2021-03-02T07:00:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:35:34Z",
+                        "authoredDate": "2021-03-02T07:35:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T07:37:19Z",
+                        "authoredDate": "2021-03-02T07:37:19Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T08:14:08Z",
+                        "authoredDate": "2021-03-02T08:14:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-02T08:18:06Z",
+                        "authoredDate": "2021-03-02T08:18:06Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-17T01:06:43Z",
+        "mergedAt": "2021-03-03T02:52:00Z",
+        "additions": 8596,
+        "deletions": 22
+    },
+    {
+        "title": "【建退共連携】作業員名簿リストAPI",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/457",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 35,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T06:22:36Z",
+                        "authoredDate": "2021-02-16T06:22:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T04:04:45Z",
+                        "authoredDate": "2021-02-18T04:04:45Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T08:56:08Z",
+                        "authoredDate": "2021-02-18T08:56:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T09:13:04Z",
+                        "authoredDate": "2021-02-18T09:13:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T09:13:07Z",
+                        "authoredDate": "2021-02-18T09:13:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T09:17:02Z",
+                        "authoredDate": "2021-02-18T09:17:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T09:27:29Z",
+                        "authoredDate": "2021-02-18T09:27:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T13:21:37Z",
+                        "authoredDate": "2021-02-18T13:21:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T05:15:40Z",
+                        "authoredDate": "2021-02-19T05:15:40Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T07:19:13Z",
+                        "authoredDate": "2021-02-19T07:19:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T08:41:05Z",
+                        "authoredDate": "2021-02-19T08:41:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T09:22:03Z",
+                        "authoredDate": "2021-02-19T09:22:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T10:33:34Z",
+                        "authoredDate": "2021-02-19T10:33:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T10:43:56Z",
+                        "authoredDate": "2021-02-19T10:43:56Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:17:58Z",
+                        "authoredDate": "2021-02-19T11:17:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:44:35Z",
+                        "authoredDate": "2021-02-19T11:44:35Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T11:45:00Z",
+                        "authoredDate": "2021-02-19T11:45:00Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T12:09:53Z",
+                        "authoredDate": "2021-02-19T12:09:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T12:11:26Z",
+                        "authoredDate": "2021-02-19T12:11:26Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T12:11:30Z",
+                        "authoredDate": "2021-02-19T12:11:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-19T12:12:30Z",
+                        "authoredDate": "2021-02-19T12:12:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T00:02:07Z",
+                        "authoredDate": "2021-02-22T00:02:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T02:09:04Z",
+                        "authoredDate": "2021-02-22T02:09:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T02:18:27Z",
+                        "authoredDate": "2021-02-22T02:18:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T02:44:42Z",
+                        "authoredDate": "2021-02-22T02:44:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T02:57:41Z",
+                        "authoredDate": "2021-02-22T02:57:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T03:07:26Z",
+                        "authoredDate": "2021-02-22T03:07:26Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T03:11:59Z",
+                        "authoredDate": "2021-02-22T03:11:59Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T03:45:36Z",
+                        "authoredDate": "2021-02-22T03:45:36Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T04:04:35Z",
+                        "authoredDate": "2021-02-22T04:04:35Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T04:38:53Z",
+                        "authoredDate": "2021-02-22T04:38:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T04:49:53Z",
+                        "authoredDate": "2021-02-22T04:49:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T05:03:23Z",
+                        "authoredDate": "2021-02-22T05:03:23Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:20:47Z",
+                        "authoredDate": "2021-02-22T06:20:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:33:21Z",
+                        "authoredDate": "2021-02-22T06:33:21Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-16T06:30:49Z",
+        "mergedAt": "2021-02-22T06:44:50Z",
+        "additions": 2908,
+        "deletions": 12
+    },
+    {
+        "title": "Revert \"企業属性提供（複数件） - ,削除\"",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/456",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-15T06:00:43Z",
+                        "authoredDate": "2021-02-15T06:00:43Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-15T06:00:48Z",
+        "mergedAt": null,
+        "additions": 1,
+        "deletions": 1
+    },
+    {
+        "title": "企業属性提供（複数件） - ,削除",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/455",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-08T09:47:43Z",
+                        "authoredDate": "2021-02-08T09:47:43Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-08T09:52:52Z",
+        "mergedAt": "2021-02-08T10:06:21Z",
+        "additions": 1,
+        "deletions": 1
+    },
+    {
+        "title": "企業属性リスト提供（複数件） - DMSテーブル追加",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/454",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-08T06:38:08Z",
+                        "authoredDate": "2021-02-08T06:38:08Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-08T06:45:06Z",
+        "mergedAt": "2021-02-08T09:08:53Z",
+        "additions": 23,
+        "deletions": 1
+    },
+    {
+        "title": "プロジェクト複数件のソート対応",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/453",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 9,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:38:54Z",
+                        "authoredDate": "2021-02-04T06:38:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T06:46:43Z",
+                        "authoredDate": "2021-02-04T06:46:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T07:25:44Z",
+                        "authoredDate": "2021-02-05T07:25:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T10:10:37Z",
+                        "authoredDate": "2021-02-05T10:10:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-05T11:38:48Z",
+                        "authoredDate": "2021-02-05T11:38:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-08T09:24:15Z",
+                        "authoredDate": "2021-02-08T09:24:15Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T03:16:20Z",
+                        "authoredDate": "2021-02-09T03:16:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-09T06:28:06Z",
+                        "authoredDate": "2021-02-09T06:28:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-10T00:05:34Z",
+                        "authoredDate": "2021-02-10T00:05:34Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-04T06:40:41Z",
+        "mergedAt": "2021-02-10T01:35:35Z",
+        "additions": 182,
+        "deletions": 30
+    },
+    {
+        "title": "企業属性提供API - DMS追加",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/452",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-04T02:46:56Z",
+                        "authoredDate": "2021-02-04T02:46:56Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-04T02:50:15Z",
+        "mergedAt": "2021-02-04T03:09:29Z",
+        "additions": 11,
+        "deletions": 0
+    },
+    {
+        "title": "MySQLバージョンアップ対応",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/451",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-02T05:34:51Z",
+                        "authoredDate": "2021-02-02T05:34:51Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-18T02:33:45Z",
+                        "authoredDate": "2021-02-18T02:33:45Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-21T00:04:11Z",
+                        "authoredDate": "2021-02-21T00:04:11Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-02T05:35:19Z",
+        "mergedAt": "2021-02-22T07:05:05Z",
+        "additions": 1,
+        "deletions": 0
+    },
+    {
+        "title": "ユーザー属性追加に伴うDMS追加",
+        "author": null,
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/450",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-01T06:13:38Z",
+                        "authoredDate": "2021-02-01T06:13:38Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-01T06:19:44Z",
+        "mergedAt": "2021-02-01T06:35:03Z",
+        "additions": 22,
+        "deletions": 0
+    },
+    {
+        "title": "#0 DMSの構文エラー修正",
+        "author": null,
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/449",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-01T03:35:32Z",
+                        "authoredDate": "2021-02-01T03:35:32Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-01T03:37:26Z",
+        "mergedAt": "2021-02-01T03:41:22Z",
+        "additions": 1,
+        "deletions": 1
+    },
+    {
+        "title": "企業属性追加に伴うDMS追加対応",
+        "author": null,
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/448",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-01T02:37:47Z",
+                        "authoredDate": "2021-02-01T02:37:47Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-01T02:53:01Z",
+        "mergedAt": "2021-02-01T03:30:38Z",
+        "additions": 56,
+        "deletions": 1
+    },
+    {
+        "title": "[WIP]ユーザ属性API",
+        "author": {
+            "login": "iguchi-takumi"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/447",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 40,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:47Z",
+                        "authoredDate": "2021-02-01T00:57:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:50Z",
+                        "authoredDate": "2021-02-03T02:19:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:53Z",
+                        "authoredDate": "2021-02-03T03:24:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:54Z",
+                        "authoredDate": "2021-02-03T09:59:03Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-12T01:34:57Z",
+                        "authoredDate": "2021-02-12T01:01:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-16T03:27:04Z",
+                        "authoredDate": "2021-02-16T03:27:04Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T04:17:08Z",
+                        "authoredDate": "2021-02-17T04:17:08Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-17T09:28:50Z",
+                        "authoredDate": "2021-02-17T09:28:50Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:05:42Z",
+                        "authoredDate": "2021-02-22T06:05:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-22T06:05:51Z",
+                        "authoredDate": "2021-02-22T06:05:51Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T00:22:21Z",
+                        "authoredDate": "2021-02-24T00:22:21Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T03:59:24Z",
+                        "authoredDate": "2021-02-24T03:59:24Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T08:01:41Z",
+                        "authoredDate": "2021-02-24T08:01:41Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T08:25:11Z",
+                        "authoredDate": "2021-02-24T08:25:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T08:36:53Z",
+                        "authoredDate": "2021-02-24T08:36:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-24T09:32:31Z",
+                        "authoredDate": "2021-02-24T09:32:31Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T01:21:00Z",
+                        "authoredDate": "2021-02-25T01:21:00Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T01:36:43Z",
+                        "authoredDate": "2021-02-25T01:36:43Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T01:45:49Z",
+                        "authoredDate": "2021-02-25T01:45:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T02:39:22Z",
+                        "authoredDate": "2021-02-25T02:39:22Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T02:39:57Z",
+                        "authoredDate": "2021-02-25T02:39:57Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T02:52:27Z",
+                        "authoredDate": "2021-02-25T02:52:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T03:11:37Z",
+                        "authoredDate": "2021-02-25T03:11:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T03:15:49Z",
+                        "authoredDate": "2021-02-25T03:15:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T03:15:54Z",
+                        "authoredDate": "2021-02-25T03:15:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T03:42:53Z",
+                        "authoredDate": "2021-02-25T03:42:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T03:46:38Z",
+                        "authoredDate": "2021-02-25T03:46:38Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T04:03:52Z",
+                        "authoredDate": "2021-02-25T04:03:52Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T04:08:39Z",
+                        "authoredDate": "2021-02-25T04:08:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T06:42:51Z",
+                        "authoredDate": "2021-02-25T06:42:51Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T07:13:58Z",
+                        "authoredDate": "2021-02-25T07:13:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:11:06Z",
+                        "authoredDate": "2021-02-25T08:11:06Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:15:59Z",
+                        "authoredDate": "2021-02-25T08:15:59Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:16:26Z",
+                        "authoredDate": "2021-02-25T08:16:26Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-25T08:34:05Z",
+                        "authoredDate": "2021-02-25T08:34:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T00:25:14Z",
+                        "authoredDate": "2021-02-26T00:25:14Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T01:12:02Z",
+                        "authoredDate": "2021-02-26T01:12:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:06:48Z",
+                        "authoredDate": "2021-02-26T03:06:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:46:44Z",
+                        "authoredDate": "2021-02-26T03:46:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T03:48:23Z",
+                        "authoredDate": "2021-02-26T03:48:23Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-02-01T00:58:00Z",
+        "mergedAt": null,
+        "additions": 22315,
+        "deletions": 67
+    },
+    {
+        "title": "プロジェクトポータルの負荷テストが完了したため、ステージング環境のECS台数を調整する",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/446",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-28T08:50:37Z",
+                        "authoredDate": "2021-01-28T08:50:37Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-28T08:51:05Z",
+        "mergedAt": "2021-01-28T08:56:21Z",
+        "additions": 3,
+        "deletions": 3
+    },
+    {
+        "title": "Fargateアップデート対応",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/445",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 9,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-25T03:13:26Z",
+                        "authoredDate": "2021-01-25T03:13:26Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-25T09:57:13Z",
+                        "authoredDate": "2021-01-25T09:57:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-25T10:05:18Z",
+                        "authoredDate": "2021-01-25T10:05:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-27T05:37:32Z",
+                        "authoredDate": "2021-01-27T05:37:32Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T09:59:54Z",
+                        "authoredDate": "2021-02-26T09:59:54Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-02-26T10:00:42Z",
+                        "authoredDate": "2021-02-26T10:00:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T07:49:39Z",
+                        "authoredDate": "2021-03-01T07:49:39Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-01T07:50:18Z",
+                        "authoredDate": "2021-03-01T07:50:18Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-03-04T10:00:50Z",
+                        "authoredDate": "2021-03-04T10:00:50Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-25T03:15:04Z",
+        "mergedAt": "2021-03-05T06:00:24Z",
+        "additions": 10,
+        "deletions": 19
+    },
+    {
+        "title": "作業所ネットAPISpec修正（date, 総件数＆表示件数）",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/444",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-21T01:46:42Z",
+                        "authoredDate": "2021-01-21T01:46:42Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-21T03:36:43Z",
+                        "authoredDate": "2021-01-21T03:36:43Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-21T01:48:17Z",
+        "mergedAt": "2021-01-22T00:29:37Z",
+        "additions": 52,
+        "deletions": 2
+    },
+    {
+        "title": "ユーザ利用サービスの型を serviceType -> userUseServiceType に変更",
+        "author": {
+            "login": "awaji-daisuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/443",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T06:31:10Z",
+                        "authoredDate": "2021-01-19T06:31:10Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-19T06:35:44Z",
+        "mergedAt": "2021-01-19T06:40:40Z",
+        "additions": 8,
+        "deletions": 8
+    },
+    {
+        "title": "#0 作業員リスト提供（複数件）に複数従業員クエリパラメータの追加",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/442",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 5,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T03:06:00Z",
+                        "authoredDate": "2021-01-19T03:06:00Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T03:15:12Z",
+                        "authoredDate": "2021-01-19T03:15:12Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T05:53:48Z",
+                        "authoredDate": "2021-01-19T05:53:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T07:06:23Z",
+                        "authoredDate": "2021-01-19T07:06:23Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T10:33:41Z",
+                        "authoredDate": "2021-01-19T10:33:41Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-19T03:06:50Z",
+        "mergedAt": "2021-01-19T10:39:25Z",
+        "additions": 130,
+        "deletions": 4
+    },
+    {
+        "title": "複数企業ID検索のテストコード実装",
+        "author": null,
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/441",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 6,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T01:07:14Z",
+                        "authoredDate": "2021-01-19T01:07:14Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T02:18:49Z",
+                        "authoredDate": "2021-01-19T02:18:49Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T02:39:58Z",
+                        "authoredDate": "2021-01-19T02:39:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T02:50:11Z",
+                        "authoredDate": "2021-01-19T02:50:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T05:47:58Z",
+                        "authoredDate": "2021-01-19T05:47:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-19T05:58:22Z",
+                        "authoredDate": "2021-01-19T05:58:22Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-19T01:10:51Z",
+        "mergedAt": "2021-01-19T06:04:29Z",
+        "additions": 183,
+        "deletions": 49
+    },
+    {
+        "title": "企業検索（複数件）をカンマ区切りの企業IDで複数検索できるようにする",
+        "author": null,
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/440",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-15T05:02:42Z",
+                        "authoredDate": "2021-01-15T05:02:42Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-15T05:25:33Z",
+        "mergedAt": "2021-01-15T05:56:32Z",
+        "additions": 18,
+        "deletions": 2
+    },
+    {
+        "title": "#0 ECSの停止時間を未来日付に変更 stg環境 0108",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/439",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-08T09:21:46Z",
+                        "authoredDate": "2021-01-08T09:21:46Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-08T10:31:05Z",
+                        "authoredDate": "2021-01-08T10:31:05Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-08T09:23:14Z",
+        "mergedAt": "2021-01-08T11:05:08Z",
+        "additions": 5,
+        "deletions": 4
+    },
+    {
+        "title": "#0 PRテンプレートの更新,セルフレビュー追加",
+        "author": {
+            "login": "RyoTakano00"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/438",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-07T11:26:37Z",
+                        "authoredDate": "2021-01-07T11:26:37Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-07T11:27:18Z",
+        "mergedAt": null,
+        "additions": 9,
+        "deletions": 40
+    },
+    {
+        "title": "#0 作業所ネットAPISpec修正",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/437",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-07T02:46:45Z",
+                        "authoredDate": "2021-01-07T02:46:45Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-08T01:14:45Z",
+                        "authoredDate": "2021-01-08T01:14:45Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-07T02:47:32Z",
+        "mergedAt": "2021-01-08T12:11:01Z",
+        "additions": 5,
+        "deletions": 5
+    },
+    {
+        "title": "#0 作業所ネット属性APISpec修正",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/436",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2021-01-06T00:30:13Z",
+                        "authoredDate": "2021-01-06T00:30:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-06T03:51:37Z",
+                        "authoredDate": "2021-01-06T03:51:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-06T03:53:45Z",
+                        "authoredDate": "2021-01-06T03:53:45Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2021-01-06T00:34:16Z",
+        "mergedAt": "2021-01-06T05:54:55Z",
+        "additions": 43,
+        "deletions": 26
+    },
+    {
+        "title": "手動デプロイ時変更セットの作成をするように",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/435",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-12-24T01:40:32Z",
+                        "authoredDate": "2020-12-24T01:40:32Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-12-24T01:42:08Z",
+        "mergedAt": "2021-01-06T08:33:11Z",
+        "additions": 67,
+        "deletions": 4
+    },
+    {
+        "title": "ユーザ・企業属性リスト提供APISpec",
+        "author": {
+            "login": "kageyama-tomoki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/434",
+        "comments": {
+            "totalCount": 2
+        },
+        "commits": {
+            "totalCount": 14,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-12-21T08:40:30Z",
+                        "authoredDate": "2020-12-21T08:40:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-22T01:39:52Z",
+                        "authoredDate": "2020-12-22T01:39:52Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-22T01:46:02Z",
+                        "authoredDate": "2020-12-22T01:46:02Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-22T06:23:48Z",
+                        "authoredDate": "2020-12-22T06:23:48Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-23T05:37:30Z",
+                        "authoredDate": "2020-12-23T05:37:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-23T06:16:59Z",
+                        "authoredDate": "2020-12-23T06:16:59Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-24T01:31:11Z",
+                        "authoredDate": "2020-12-24T01:31:11Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-24T06:46:27Z",
+                        "authoredDate": "2020-12-24T06:46:27Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-24T09:40:25Z",
+                        "authoredDate": "2020-12-24T09:40:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-24T10:06:25Z",
+                        "authoredDate": "2020-12-24T10:06:25Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-24T10:11:20Z",
+                        "authoredDate": "2020-12-24T10:11:20Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-28T02:46:47Z",
+                        "authoredDate": "2020-12-28T02:46:47Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-04T01:46:10Z",
+                        "authoredDate": "2021-01-04T01:46:10Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2021-01-04T02:26:01Z",
+                        "authoredDate": "2021-01-04T02:26:01Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-12-21T08:41:08Z",
+        "mergedAt": "2021-01-04T07:33:50Z",
+        "additions": 774,
+        "deletions": 2
+    },
+    {
+        "title": "【契約請求】企業検索API(複数件)のクエリパラメータに更新日（FROM-TO）を追加する_API修正",
+        "author": {
+            "login": "ishiguroMadoka"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/433",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-12-08T05:37:53Z",
+                        "authoredDate": "2020-12-08T05:37:53Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-12-08T07:04:32Z",
+                        "authoredDate": "2020-12-08T07:04:32Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-12-08T06:02:12Z",
+        "mergedAt": "2020-12-08T08:36:03Z",
+        "additions": 174,
+        "deletions": 3
+    },
+    {
+        "title": "#0 fetchでエラーが起きた際のログ修正 warn -> info",
+        "author": {
+            "login": "RyoTakano00"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/432",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-12-08T01:04:31Z",
+                        "authoredDate": "2020-12-08T01:04:31Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-12-08T01:04:58Z",
+        "mergedAt": "2020-12-08T03:16:57Z",
+        "additions": 1,
+        "deletions": 1
+    },
+    {
+        "title": "Revert \"#0 ECSの停止時間を未来日付に変更 stg環境\"",
+        "author": {
+            "login": "RyoTakano00"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/431",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-12-01T08:58:32Z",
+                        "authoredDate": "2020-12-01T08:58:32Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-12-01T08:58:36Z",
+        "mergedAt": "2020-12-08T02:05:44Z",
+        "additions": 1,
+        "deletions": 2
+    },
+    {
+        "title": "#0 ECSの停止時間を未来日付に変更 stg環境",
+        "author": {
+            "login": "RyoTakano00"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/430",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-12-01T08:22:12Z",
+                        "authoredDate": "2020-12-01T08:22:12Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-12-01T08:22:35Z",
+        "mergedAt": "2020-12-01T08:54:26Z",
+        "additions": 2,
+        "deletions": 1
+    },
+    {
+        "title": "【契約請求】企業検索APIのクエリパラメータに更新日（FROM-TO）を追加",
+        "author": {
+            "login": "katou-yuuto"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/429",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-30T03:52:11Z",
+                        "authoredDate": "2020-11-30T03:52:11Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-30T04:54:16Z",
+        "mergedAt": "2020-11-30T06:36:08Z",
+        "additions": 19,
+        "deletions": 0
+    },
+    {
+        "title": "#0 建退共連携用作業員名簿リスト（複数件）のspec修正 limitのデフォルト1000件に",
+        "author": {
+            "login": "RyoTakano00"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/428",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-19T05:39:36Z",
+                        "authoredDate": "2020-11-19T05:39:36Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-19T05:40:47Z",
+        "mergedAt": "2020-11-19T05:49:19Z",
+        "additions": 1,
+        "deletions": 1
+    },
+    {
+        "title": "cfn-lintのignore_checksをE3029からE3018に変更",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/427",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-18T08:26:14Z",
+                        "authoredDate": "2020-11-18T08:26:14Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-18T08:30:30Z",
+        "mergedAt": "2020-11-18T08:35:38Z",
+        "additions": 2,
+        "deletions": 2
+    },
+    {
+        "title": "リファレンス競合解決_timeChangeスキーマ定義をgateに合わせる",
+        "author": {
+            "login": "ishiguroMadoka"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/426",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-18T05:50:37Z",
+                        "authoredDate": "2020-11-18T05:50:37Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-18T06:01:15Z",
+        "mergedAt": "2020-11-18T08:13:53Z",
+        "additions": 3,
+        "deletions": 3
+    },
+    {
+        "title": "建退共連携用作業員名簿リスト（複数件）SPEC修正",
+        "author": {
+            "login": "nishizawa-shunsuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/425",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 2,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-18T02:12:44Z",
+                        "authoredDate": "2020-11-18T02:12:44Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-18T03:40:52Z",
+                        "authoredDate": "2020-11-18T03:40:52Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-18T02:17:00Z",
+        "mergedAt": "2020-11-18T05:04:59Z",
+        "additions": 9,
+        "deletions": 5
+    },
+    {
+        "title": "建退共連携用作業員名簿リスト（複数件）SPEC作成",
+        "author": {
+            "login": "nishizawa-shunsuke"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/424",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 3,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-13T06:11:16Z",
+                        "authoredDate": "2020-11-13T06:11:16Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-16T01:35:52Z",
+                        "authoredDate": "2020-11-16T01:35:52Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-16T07:53:53Z",
+                        "authoredDate": "2020-11-16T07:53:53Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-13T06:34:38Z",
+        "mergedAt": "2020-11-17T00:35:11Z",
+        "additions": 185,
+        "deletions": 0
+    },
+    {
+        "title": "Nodejsバージョンアップ対応",
+        "author": {
+            "login": "takaya-kazuki"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/423",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 8,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-09T06:43:07Z",
+                        "authoredDate": "2020-11-09T06:43:07Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T00:44:29Z",
+                        "authoredDate": "2020-11-10T00:44:29Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T00:54:32Z",
+                        "authoredDate": "2020-11-10T00:54:32Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T01:05:05Z",
+                        "authoredDate": "2020-11-10T01:05:05Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T01:10:15Z",
+                        "authoredDate": "2020-11-10T01:10:15Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T01:15:58Z",
+                        "authoredDate": "2020-11-10T01:15:58Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T01:20:13Z",
+                        "authoredDate": "2020-11-10T01:20:13Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T01:26:41Z",
+                        "authoredDate": "2020-11-10T01:26:41Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-09T06:57:12Z",
+        "mergedAt": "2020-11-17T02:10:34Z",
+        "additions": 4455,
+        "deletions": 1626
+    },
+    {
+        "title": "GSLite対応_標準帳票検索（1件）",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/422",
+        "comments": {
+            "totalCount": 1
+        },
+        "commits": {
+            "totalCount": 6,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-06T04:54:40Z",
+                        "authoredDate": "2020-11-06T04:54:40Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-06T05:14:30Z",
+                        "authoredDate": "2020-11-06T05:14:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-09T03:17:37Z",
+                        "authoredDate": "2020-11-09T03:17:37Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-09T03:36:30Z",
+                        "authoredDate": "2020-11-09T03:36:30Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-09T05:52:34Z",
+                        "authoredDate": "2020-11-09T05:52:34Z"
+                    }
+                },
+                {
+                    "commit": {
+                        "committedDate": "2020-11-10T00:39:45Z",
+                        "authoredDate": "2020-11-10T00:39:45Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-06T05:10:45Z",
+        "mergedAt": "2020-11-10T07:15:26Z",
+        "additions": 107,
+        "deletions": 16
+    },
+    {
+        "title": "SPEC_GSLite対応_標準帳票検索（1件）",
+        "author": {
+            "login": "takagiShingo"
+        },
+        "url": "https://github.com/MCDataPlus/dbp_datahub_gs_api/pull/421",
+        "comments": {
+            "totalCount": 0
+        },
+        "commits": {
+            "totalCount": 1,
+            "nodes": [
+                {
+                    "commit": {
+                        "committedDate": "2020-11-06T00:53:59Z",
+                        "authoredDate": "2020-11-06T00:53:59Z"
+                    }
+                }
+            ]
+        },
+        "createdAt": "2020-11-06T01:20:10Z",
+        "mergedAt": "2020-11-06T02:33:41Z",
+        "additions": 4,
+        "deletions": 1
+    }
+]
