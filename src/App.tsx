@@ -10,9 +10,12 @@ import { Hidden, CssBaseline } from "@material-ui/core";
 import theme from "./theme";
 import { Copyright } from "@material-ui/icons";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, useLocation } from "react-router-dom";
+import { PrivateRoute } from "./components/PrivateRoute";
 import { links } from "./links";
 import { GitHubAuthCallback } from "./components/GitHubAuthCallback";
+import { LandingPage } from "./components/LandingPage";
+import { useAuth } from "./AuthProvider";
 
 const drawerWidth = 256;
 
@@ -45,60 +48,72 @@ const styles = createStyles({
 
 export interface AppProps extends WithStyles<typeof styles> {}
 
-function App(props: AppProps) {
+const MainDashboardLayoutPage = (props: AppProps) => {
   const { classes } = props;
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
-    console.log(links);
   };
 
+  const location = useLocation();
+  const { isAuthenticated } = useAuth();
+
+  if (!isAuthenticated && location.pathname === "/auth/github/callback") {
+    return <GitHubAuthCallback />;
+  }
+
+  if (!isAuthenticated) {
+    return <LandingPage />;
+  }
+
+  return (
+    <div className={classes.root}>
+      <CssBaseline />
+
+      <nav className={classes.drawer}>
+        <Hidden smUp implementation="js">
+          <Navigator
+            PaperProps={{ style: { width: drawerWidth } }}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+          />
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Navigator PaperProps={{ style: { width: drawerWidth } }} />
+        </Hidden>
+      </nav>
+      <div className={classes.app}>
+        <Header onDrawerToggle={handleDrawerToggle} />
+
+        <Switch>
+          <main className={classes.main}>
+            {links.map((link) =>
+              link.children.map((child) => {
+                return (
+                  <PrivateRoute exact path={child.to} key={child.to}>
+                    {child.component}
+                  </PrivateRoute>
+                );
+              })
+            )}
+          </main>
+        </Switch>
+        <footer className={classes.footer}>
+          <Copyright />
+        </footer>
+      </div>
+    </div>
+  );
+};
+
+function App(props: AppProps) {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <div className={classes.root}>
-          <CssBaseline />
-
-          <nav className={classes.drawer}>
-            <Hidden smUp implementation="js">
-              <Navigator
-                PaperProps={{ style: { width: drawerWidth } }}
-                variant="temporary"
-                open={mobileOpen}
-                onClose={handleDrawerToggle}
-              />
-            </Hidden>
-            <Hidden xsDown implementation="css">
-              <Navigator PaperProps={{ style: { width: drawerWidth } }} />
-            </Hidden>
-          </nav>
-          <div className={classes.app}>
-            <Header onDrawerToggle={handleDrawerToggle} />
-
-            <Switch>
-              <main className={classes.main}>
-                {links.map((link) =>
-                  link.children.map((child) => {
-                    return (
-                      <Route exact path={child.to} key={child.to}>
-                        {child.component}
-                      </Route>
-                    );
-                  })
-                )}
-                <Route exact path="/auth/github/callback">
-                  <GitHubAuthCallback />
-                </Route>
-              </main>
-            </Switch>
-
-            <footer className={classes.footer}>
-              <Copyright />
-            </footer>
-          </div>
-        </div>
+        <MainDashboardLayoutPage {...props} />
       </ThemeProvider>
     </Router>
   );

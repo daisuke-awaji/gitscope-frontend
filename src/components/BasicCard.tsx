@@ -21,7 +21,7 @@ export type BasicCardProps = {
 export const BasicCard: React.FC<BasicCardProps> = (props) => {
   const classes = useStyles();
   return (
-    <Card className={classes.card} {...props}>
+    <Card elevation={0} className={classes.card} {...props}>
       <Grid container justify="space-between">
         <div className={classes.title}>{props.title}</div>
         {props.chip ? <Chip color="primary" label={props.chip} /> : null}

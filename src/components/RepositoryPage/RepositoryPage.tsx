@@ -1,35 +1,29 @@
 import { Button, Divider, Grid } from "@material-ui/core";
-import faker from "faker";
+
 import React, { useEffect, useState } from "react";
+import { createClient } from "../../api/client";
+import { useAuth } from "../../AuthProvider";
 import { SERVICE_NAME } from "../../Constants";
 import { BasicCard } from "../BasicCard";
 
-const repositoriesData = [
-  {
-    name: "intecrb/sample_app",
-    followed: false,
-  },
-  {
-    name: "intecrb/demo_app",
-    followed: true,
-  },
-  {
-    name: "daisuke-awaji/serverless-appsync-offline-typescript-template",
-    followed: false,
-  },
-];
-
-for (let i = 0; i < 30; i++) {
-  repositoriesData.push({
-    name: faker.random.word() + "/" + faker.random.word(),
-    followed: faker.random.boolean(),
-  });
-}
+type RepositoryStatus = {
+  nameWithOwner: string;
+  url: string;
+  followed: boolean;
+};
 
 export const RepositoryPage: React.FC = () => {
-  const [repositories, setRepositories] = useState(repositoriesData);
+  const [repositories, setRepositories] = useState<RepositoryStatus[]>([]);
+  const { user } = useAuth();
   useEffect(() => {
-    setRepositories(repositoriesData);
+    const fetch = async (token: string) => {
+      const client = createClient(token);
+      const res = await client.get("/repos");
+      console.log(res);
+      setRepositories(res.data);
+    };
+    if (user) fetch(user.token);
+    // eslint-disable-next-line
   }, []);
 
   const handleClickSetUp = (name: any) => {
@@ -64,23 +58,29 @@ export const RepositoryPage: React.FC = () => {
                     alignItems="center"
                   >
                     <Grid item>
-                      <a href={"https://github.com/" + repo.name}>
-                        <div style={{ color: "black" }}>{repo.name}</div>
+                      <a href={"https://github.com/" + repo.nameWithOwner}>
+                        <div style={{ color: "black" }}>
+                          {repo.nameWithOwner}
+                        </div>
                       </a>
                     </Grid>
                     <Grid item>
                       {repo.followed ? (
                         <Button
+                          onClick={() =>
+                            handleClickUnfollow(repo.nameWithOwner)
+                          }
+                        >
+                          Unfollow Project
+                        </Button>
+                      ) : (
+                        <Button
                           variant="contained"
                           color="primary"
                           disableElevation
-                          onClick={() => handleClickSetUp(repo.name)}
+                          onClick={() => handleClickSetUp(repo.nameWithOwner)}
                         >
                           Set Up Project
-                        </Button>
-                      ) : (
-                        <Button onClick={() => handleClickUnfollow(repo.name)}>
-                          Unfollow Project
                         </Button>
                       )}
                     </Grid>

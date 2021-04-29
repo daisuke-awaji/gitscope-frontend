@@ -8,11 +8,21 @@ let theme = createMuiTheme({
       dark: "#006db3",
     },
     // primary: {
-    //   light: "#ff844c",
-    //   main: "#f4511e",
-    //   dark: "#b91400",
+    //   light: "#73E1A1",
+    //   main: "#008035",
+    //   dark: "#003717",
     // },
-  },
+    secondary: {
+      light: "#73E1A1",
+      main: "#008035",
+      dark: "#003717",
+    },
+    third: {
+      light: "#73E1A1",
+      main: "#ffc478",
+      dark: "#003717",
+    },
+  } as any,
   typography: {
     h5: {
       fontWeight: 500,

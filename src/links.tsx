@@ -7,6 +7,7 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import React from "react";
 import { RepositoryPage } from "./components/RepositoryPage/RepositoryPage";
+import { DeveloperContributionPage } from "./components/DeveloperContributionPage";
 
 export type Link = {
   id: string;
@@ -21,29 +22,6 @@ type LinkItem = {
   component: any;
 };
 export const links: Link[] = [
-  // {
-  //   id: "Authentication",
-  //   category: "Develop",
-  //   icon: <PeopleIcon />,
-  //   path: "/authentication",
-  //   children: [
-  //     {
-  //       label: "Pets",
-  //       to: "/authentication",
-  //       component: <Pokemons />,
-  //     },
-  //     {
-  //       label: "Sign-in method",
-  //       to: "/authentication/providers",
-  //       component: <div>xxx</div>,
-  //     },
-  //     {
-  //       label: "Templates",
-  //       to: "/authentication/templates",
-  //       component: <div>xxx</div>,
-  //     },
-  //   ],
-  // },
   {
     id: "Dashboard",
     category: "Develop",
@@ -56,9 +34,9 @@ export const links: Link[] = [
         component: <ProductivityPage />,
       },
       {
-        label: "Communication",
-        to: "/dashboard/communication",
-        component: <div>communication</div>,
+        label: "Contribution",
+        to: "/dashboard/contribution",
+        component: <DeveloperContributionPage />,
       },
     ],
   },

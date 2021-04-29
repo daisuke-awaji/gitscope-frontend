@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import AppBar from "@material-ui/core/AppBar";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import HelpIcon from "@material-ui/icons/Help";
@@ -21,7 +20,7 @@ import {
 } from "@material-ui/core/styles";
 import { Link, useLocation } from "react-router-dom";
 import { links } from "../links";
-import { GitHubLoginButton } from "./GitHubLoginButton";
+import { LoginUserAvatar } from "./LoginUserAvatar";
 
 const lightColor = "rgba(255, 255, 255, 0.7)";
 
@@ -153,9 +152,6 @@ function Header(props: HeaderProps) {
             </Hidden>
             <Grid item xs />
             <Grid item>
-              <GitHubLoginButton />
-            </Grid>
-            <Grid item>
               <Tooltip title="Alerts • No alerts">
                 <IconButton color="inherit">
                   <NotificationsIcon />
@@ -163,12 +159,7 @@ function Header(props: HeaderProps) {
               </Tooltip>
             </Grid>
             <Grid item>
-              <IconButton color="inherit" className={classes.iconButtonAvatar}>
-                <Avatar
-                  src="https://lh3.googleusercontent.com/ogw/ADGmqu_oda0rCoGTKxyiXu9rBZwVsGoL4VdNQFEMmgKT1Q=s32-c-mo"
-                  alt="My Avatar"
-                />
-              </IconButton>
+              <LoginUserAvatar />
             </Grid>
           </Grid>
         </Toolbar>

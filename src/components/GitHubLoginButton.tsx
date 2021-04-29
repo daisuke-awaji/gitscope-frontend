@@ -1,5 +1,5 @@
 import Button from "@material-ui/core/Button";
-import "./GitHubLoginButton.css";
+import { useAuth } from "../AuthProvider";
 
 const GitHubIcon = (props: any) => (
   <svg
@@ -14,10 +14,19 @@ const GitHubIcon = (props: any) => (
 );
 
 export const GitHubLoginButton = () => {
+  const { loginWithGitHub } = useAuth();
   return (
-    <Button className="button" variant="outlined" color="inherit" size="small">
-      <GitHubIcon className="github-icon" />
-      <a href="http://localhost:8080/auth/github">GitHub</a>
+    <Button
+      variant="outlined"
+      color="inherit"
+      size="large"
+      startIcon={<GitHubIcon />}
+      onClick={() => {
+        loginWithGitHub();
+      }}
+      style={{ textTransform: "none" }}
+    >
+      Login
     </Button>
   );
 };
