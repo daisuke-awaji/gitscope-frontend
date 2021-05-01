@@ -20,7 +20,7 @@ export const RepositoryPage: React.FC = () => {
       const client = createClient(token);
       const res = await client.get("/repos");
       console.log(res);
-      setRepositories(res.data);
+      setRepositories(res.data.repos);
     };
     if (user) fetch(user.token);
     // eslint-disable-next-line

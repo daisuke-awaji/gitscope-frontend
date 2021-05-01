@@ -85,7 +85,7 @@ export const AuthProvider = (props: any) => {
       GITHUB_AUTH_CALLBACK_ENDPOINT + "?code=" + code
     );
 
-    const { token, avatarUrl, login } = result.data;
+    const { token, avatarUrl, login } = result.data.user;
     setUser({ name: login, token, imageUrl: avatarUrl });
     localStorage.setItem("gh-token", token);
     localStorage.setItem("gh-user-name", login);
