@@ -58,6 +58,7 @@ export const AuthProvider = (props: any) => {
         name,
         imageUrl,
       });
+      setIsLoading(false);
     }
   };
 

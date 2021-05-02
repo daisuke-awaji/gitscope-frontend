@@ -17,6 +17,7 @@ import { Omit } from "@material-ui/types";
 import { SERVICE_NAME } from "../Constants";
 import { Link, useLocation } from "react-router-dom";
 import { categories } from "../links";
+import { ServiceLogo } from "./Atoms/ServiceLogo";
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -73,11 +74,7 @@ function Navigator(props: NavigatorProps) {
         <ListItem
           className={clsx(classes.firebase, classes.item, classes.itemCategory)}
         >
-          <img
-            src={`${process.env.PUBLIC_URL}/logo.png`}
-            alt="logo"
-            style={{ width: 35, marginRight: 10 }}
-          />
+          <ServiceLogo />
           {SERVICE_NAME}
         </ListItem>
         <ListItem className={clsx(classes.item, classes.itemCategory)}>
