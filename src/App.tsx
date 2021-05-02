@@ -16,7 +16,6 @@ import { links } from "./links";
 import { GitHubAuthCallback } from "./components/GitHubAuthCallback";
 import { LandingPage } from "./components/LandingPage";
 import { useAuth } from "./AuthProvider";
-import { Loading } from "./components/Atoms/Loading";
 
 const drawerWidth = 256;
 
@@ -59,11 +58,8 @@ const MainDashboardLayoutPage = (props: AppProps) => {
   };
 
   const location = useLocation();
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated } = useAuth();
 
-  if (isLoading) {
-    return <Loading />;
-  }
   if (!isAuthenticated && location.pathname === "/auth/github/callback") {
     return <GitHubAuthCallback />;
   }

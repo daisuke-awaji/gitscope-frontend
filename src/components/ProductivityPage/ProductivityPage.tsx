@@ -22,7 +22,7 @@ const ProductivityPage = () => {
   useEffect(() => {
     setSelectedRepository(repoNames[0]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [repositories]);
 
   if (isLoading) {
     return <Loading />;
