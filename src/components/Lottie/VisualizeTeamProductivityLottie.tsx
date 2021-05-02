@@ -12,7 +12,7 @@ const VisualizeTeamProductivityLottie = () => {
     },
   };
 
-  return <Lottie options={defaultOptions} height={500} width={500} />;
+  return <Lottie options={defaultOptions} height={"100%"} width={"100%"} />;
 };
 
 export default VisualizeTeamProductivityLottie;

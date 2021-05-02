@@ -1,4 +1,12 @@
-import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
+import {
+  Container,
+  createStyles,
+  CssBaseline,
+  Grid,
+  makeStyles,
+  Theme,
+  Typography,
+} from "@material-ui/core";
 import React from "react";
 import { SERVICE_NAME } from "../Constants";
 import { GitHubLoginButton } from "./GitHubLoginButton";
@@ -7,10 +15,7 @@ import VisualizeTeamProductivityLottie from "./Lottie/VisualizeTeamProductivityL
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      height: 3000,
       paddingTop: 10,
-      paddingLeft: 180,
-      paddingRight: 180,
       backgroundImage:
         "linear-gradient(to right top, #ffffff, #ebeeff, #cde1ff, #a2d6ff, #63ccff);",
     },
@@ -25,10 +30,15 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: 20,
     },
     landingMessage: {
-      fontSize: 80,
-      fontWeight: 800,
       color: "white",
       marginTop: 200,
+    },
+    feature: {
+      minHeight: 1000,
+    },
+    footer: {
+      background: "gray",
+      height: 300,
     },
   })
 );
@@ -70,7 +80,7 @@ const Header = () => {
   );
 };
 
-const Main = () => {
+const MainLandingMessage = () => {
   const classes = useStyles();
 
   return (
@@ -88,9 +98,9 @@ const Main = () => {
           justify="flex-start"
           alignItems="center"
         >
-          <Grid item>Visualize</Grid>
-          <Grid item>Team</Grid>
-          <Grid item>Productivity</Grid>
+          <Typography variant="h1">Visualize</Typography>
+          <Typography variant="h1">Team</Typography>
+          <Typography variant="h1">Productivity</Typography>
         </Grid>
       </Grid>
       <Grid item xs={12} sm={6}>
@@ -100,13 +110,50 @@ const Main = () => {
   );
 };
 
+const Feature = () => {
+  const classes = useStyles();
+
+  return (
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className={classes.feature}
+    >
+      feature
+    </Grid>
+  );
+};
+
+const Footer = () => {
+  const classes = useStyles();
+
+  return (
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      className={classes.footer}
+    >
+      footer
+    </Grid>
+  );
+};
+
 export const LandingPage = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Header />
-      <Main />
+      <CssBaseline />
+      <Container fixed>
+        <Header />
+        <MainLandingMessage />
+        <Feature />
+      </Container>
+      <Footer />
     </div>
   );
 };
