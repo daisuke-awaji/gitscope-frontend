@@ -1,6 +1,6 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
-import * as querystring from "querystring";
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
+import * as querystring from 'querystring';
 
 export interface AuthState {
   isAuthenticated: boolean;
@@ -17,7 +17,7 @@ const initialState: AuthState = {
   isLoading: false,
 };
 const stub = (): never => {
-  throw new Error("You forgot to wrap your component in <AuthProvider>.");
+  throw new Error('You forgot to wrap your component in <AuthProvider>.');
 };
 export const initialContext = {
   ...initialState,
@@ -47,9 +47,9 @@ export const AuthProvider = (props: any) => {
 
   const checkAuthenticated = () => {
     setIsLoading(true);
-    const token = localStorage.getItem("gh-token");
-    const name = localStorage.getItem("gh-user-name");
-    const imageUrl = localStorage.getItem("gh-user-image-url");
+    const token = localStorage.getItem('gh-token');
+    const name = localStorage.getItem('gh-user-name');
+    const imageUrl = localStorage.getItem('gh-user-image-url');
 
     if (token && name && imageUrl) {
       setIsAuthenticated(true);
@@ -69,11 +69,11 @@ export const AuthProvider = (props: any) => {
 
   const loginWithGitHub = () => {
     const GITHUB_AUTHORIZE_ENDPOINT =
-      "https://github.com/login/oauth/authorize" +
-      "?" +
+      'https://github.com/login/oauth/authorize' +
+      '?' +
       querystring.stringify({
         client_id: process.env.REACT_APP_GITHUB_CLIENT_ID,
-        scope: "repo, user",
+        scope: 'repo, user, read:org',
       });
     setIsLoading(true);
     window.location.replace(GITHUB_AUTHORIZE_ENDPOINT);
@@ -81,16 +81,16 @@ export const AuthProvider = (props: any) => {
 
   const callback = async (code: string) => {
     const GITHUB_AUTH_CALLBACK_ENDPOINT =
-      process.env.REACT_APP_BACKEND_API_ENDPOINT + "/auth/github/callback";
+      process.env.REACT_APP_BACKEND_API_ENDPOINT + '/auth/github/callback';
     const result = await axios.get(
-      GITHUB_AUTH_CALLBACK_ENDPOINT + "?code=" + code
+      GITHUB_AUTH_CALLBACK_ENDPOINT + '?code=' + code,
     );
 
     const { token, avatarUrl, login } = result.data.user;
     setUser({ name: login, token, imageUrl: avatarUrl });
-    localStorage.setItem("gh-token", token);
-    localStorage.setItem("gh-user-name", login);
-    localStorage.setItem("gh-user-image-url", avatarUrl);
+    localStorage.setItem('gh-token', token);
+    localStorage.setItem('gh-user-name', login);
+    localStorage.setItem('gh-user-image-url', avatarUrl);
     setIsAuthenticated(true);
     setIsLoading(false);
   };

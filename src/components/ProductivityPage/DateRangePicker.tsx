@@ -1,30 +1,35 @@
-import React from "react";
-import { DateRangePicker, DateRange } from "materialui-daterange-picker";
-import { Button } from "@material-ui/core";
+import React from 'react';
+import { DateRange, DateRangePicker } from 'materialui-daterange-picker';
+import { Button } from '@material-ui/core';
+import DateRangeIcon from '@material-ui/icons/DateRange';
+import { format } from 'date-fns';
 
-type Props = {};
+type Props = {
+  dateRange: DateRange;
+  setDateRange: React.Dispatch<React.SetStateAction<DateRange>>;
+};
 
 const DateRangePickerExample: React.FunctionComponent<Props> = (props) => {
+  const { dateRange, setDateRange } = props;
   const [open, setOpen] = React.useState(false);
-  const [dateRange, setDateRange] = React.useState<DateRange>({
-    startDate: new Date(),
-    endDate: new Date(),
-  });
 
   const toggle = () => setOpen(!open);
   const handleClickOpenPicker = () => {
     setOpen(!open);
+    console.log(dateRange);
   };
+
+  const { startDate, endDate } = dateRange;
 
   return (
     <>
-      <Button onClick={handleClickOpenPicker}>
+      <Button onClick={handleClickOpenPicker} startIcon={<DateRangeIcon />}>
         <span style={{ fontWeight: 500 }}>
-          {dateRange.startDate?.getMonth()}/{dateRange.startDate?.getDate()}
+          {startDate ? format(startDate, 'yyyy-MM-dd') : null}
         </span>
         <span style={{ margin: 5 }}>-</span>
         <span style={{ fontWeight: 500 }}>
-          {dateRange.endDate?.getMonth()}/{dateRange.endDate?.getDate()}
+          {endDate ? format(endDate, 'yyyy-MM-dd') : null}
         </span>
       </Button>
       <DateRangePicker

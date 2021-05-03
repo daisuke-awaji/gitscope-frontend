@@ -1,21 +1,27 @@
-import { Grid } from "@material-ui/core";
-import { DeveloperScoreCard } from "./DeveloperScore";
-import { PullRequestTimelineCard } from "./PullRequestTimeline";
-import React, { useEffect, useState } from "react";
-import { RepositorySelector } from "./RepositorySelector";
-import { ProductionLeadTimeCard } from "./ProductionLeadTime";
-import { ActivityRatioCard } from "./ActivityRatio";
-import { ScoreCards } from "./ScoreCards";
-import DateRangePickerExample from "./DateRangePicker";
-import { useRepositoryStatusApi } from "../../api/useRepositoryStatus";
-import { Loading } from "../Atoms/Loading";
+import { Grid } from '@material-ui/core';
+import { DeveloperScoreCard } from './DeveloperScore';
+import { PullRequestTimelineCard } from './PullRequestTimeline';
+import React, { useEffect, useState } from 'react';
+import { RepositorySelector } from './RepositorySelector';
+import { ProductionLeadTimeCard } from './ProductionLeadTime';
+import { ActivityRatioCard } from './ActivityRatio';
+import { ScoreCards } from './ScoreCards';
+import DateRangePickerExample from './DateRangePicker';
+import { useRepositoryStatusApi } from '../../api/useRepositoryStatus';
+import { Loading } from '../Atoms/Loading';
+import { DateRange } from 'materialui-daterange-picker';
+import { sub } from 'date-fns';
 
 const ProductivityPage = () => {
   const { repositories, isLoading } = useRepositoryStatusApi();
   const repoNames = repositories.map((repo) => repo.nameWithOwner);
-  const [selectedRepository, setSelectedRepository] = useState("");
+  const [selectedRepository, setSelectedRepository] = useState('');
+  const [dateRange, setDateRange] = React.useState<DateRange>({
+    startDate: sub(new Date(), { months: 1 }),
+    endDate: new Date(),
+  });
+
   const handleChange = (event: any) => {
-    console.log(event);
     setSelectedRepository(event.target.value);
   };
 
@@ -38,7 +44,10 @@ const ProductivityPage = () => {
         />
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={12}>
-        <DateRangePickerExample />
+        <DateRangePickerExample
+          dateRange={dateRange}
+          setDateRange={setDateRange}
+        />
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={6}>
         <ScoreCards repository={selectedRepository} />
@@ -52,7 +61,10 @@ const ProductivityPage = () => {
       </Grid>
 
       <Grid item xs={12} sm={12} md={12} lg={6}>
-        <PullRequestTimelineCard repository={selectedRepository} />
+        <PullRequestTimelineCard
+          repository={selectedRepository}
+          dateRange={dateRange}
+        />
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={6}>
         <DeveloperScoreCard repository={selectedRepository} />

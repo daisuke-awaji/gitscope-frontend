@@ -4,8 +4,8 @@ import {
   InputLabel,
   Select,
   MenuItem,
-} from "@material-ui/core";
-import React from "react";
+} from '@material-ui/core';
+import React from 'react';
 
 type RepositorySelectorProps = {
   repositories: string[];
@@ -14,7 +14,7 @@ type RepositorySelectorProps = {
 };
 
 export const RepositorySelector: React.FC<RepositorySelectorProps> = (
-  props
+  props,
 ) => {
   const { repositories, selectedRepository, handleChange } = props;
   return (
@@ -30,7 +30,12 @@ export const RepositorySelector: React.FC<RepositorySelectorProps> = (
           value={selectedRepository}
           onChange={handleChange}
         >
-          {repositories.map((repo) => {
+          {[
+            ...repositories,
+            'facebook/react',
+            'serverless/serverless',
+            'serverless/components',
+          ].map((repo) => {
             return <MenuItem value={repo}>{repo}</MenuItem>;
           })}
         </Select>
