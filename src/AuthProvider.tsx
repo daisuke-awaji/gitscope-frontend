@@ -11,6 +11,7 @@ export interface AuthState {
 interface IAuthContext extends AuthState {
   loginWithGitHub: () => void;
   callback: (code: string) => Promise<void>;
+  logout: () => void;
 }
 const initialState: AuthState = {
   isAuthenticated: false,
@@ -23,6 +24,7 @@ export const initialContext = {
   ...initialState,
   loginWithGitHub: stub,
   callback: stub,
+  logout: stub,
 };
 
 export const AuthContext = React.createContext<IAuthContext>(initialContext);
@@ -93,6 +95,14 @@ export const AuthProvider = (props: any) => {
     localStorage.setItem('gh-user-image-url', avatarUrl);
     setIsAuthenticated(true);
     setIsLoading(false);
+    window.location.replace('/dashboard');
+  };
+
+  const logout = () => {
+    localStorage.clear();
+    setIsAuthenticated(false);
+    setUser(undefined);
+    window.location.replace('/');
   };
 
   return (
@@ -102,6 +112,7 @@ export const AuthProvider = (props: any) => {
         isLoading,
         loginWithGitHub,
         callback,
+        logout,
         user,
         error,
       }}
