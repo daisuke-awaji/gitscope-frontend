@@ -60,8 +60,8 @@ export const AuthProvider = (props: any) => {
         name,
         imageUrl,
       });
-      setIsLoading(false);
     }
+    setIsLoading(false);
   };
 
   const currentAuthenticatedUser = async (): Promise<void> => {

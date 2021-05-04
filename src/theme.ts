@@ -15,6 +15,14 @@ let theme = createMuiTheme({
     //   main: '#008035',
     //   dark: '#003717',
     // },
+
+    // orange
+    // primary: {
+    //   light: '#fcecdd',
+    //   main: '#ffc288',
+    //   dark: '#fea82f',
+    // },
+
     secondary: {
       light: '#73E1A1',
       main: '#008035',

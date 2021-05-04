@@ -28,6 +28,8 @@ export const LoginUserAvatar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const profileUrl = `https://github.com/${user?.name}`;
   return (
     <div>
       <IconButton
@@ -44,8 +46,9 @@ export const LoginUserAvatar = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={() => (window.location.href = profileUrl)}>
+          Profile
+        </MenuItem>
         <MenuItem onClick={() => logout()}>
           <ExitToAppIcon />
           <span style={{ marginLeft: 20 }}>Logout</span>
