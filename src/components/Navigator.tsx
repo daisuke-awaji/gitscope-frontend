@@ -1,23 +1,23 @@
-import React from "react";
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 import {
   createStyles,
   Theme,
   withStyles,
   WithStyles,
-} from "@material-ui/core/styles";
-import Divider from "@material-ui/core/Divider";
-import Drawer, { DrawerProps } from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import HomeIcon from "@material-ui/icons/Home";
-import { Omit } from "@material-ui/types";
-import { SERVICE_NAME } from "../Constants";
-import { Link, useLocation } from "react-router-dom";
-import { categories } from "../links";
-import { ServiceLogo } from "./Atoms/ServiceLogo";
+} from '@material-ui/core/styles';
+import Divider from '@material-ui/core/Divider';
+import Drawer, { DrawerProps } from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import HomeIcon from '@material-ui/icons/Home';
+import { Omit } from '@material-ui/types';
+import { SERVICE_NAME } from '../Constants';
+import { Link, useLocation } from 'react-router-dom';
+import { categories } from '../links';
+import { ServiceLogo } from './Atoms/ServiceLogo';
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -31,14 +31,14 @@ const styles = (theme: Theme) =>
     item: {
       paddingTop: 1,
       paddingBottom: 1,
-      color: "rgba(255, 255, 255, 0.7)",
-      "&:hover,&:focus": {
-        backgroundColor: "rgba(255, 255, 255, 0.08)",
+      color: 'rgba(255, 255, 255, 0.7)',
+      '&:hover,&:focus': {
+        backgroundColor: 'rgba(255, 255, 255, 0.08)',
       },
     },
     itemCategory: {
-      backgroundColor: "#232f3e",
-      boxShadow: "0 -1px 0 #404854 inset",
+      backgroundColor: '#232f3e',
+      boxShadow: '0 -1px 0 #404854 inset',
       paddingTop: theme.spacing(2),
       paddingBottom: theme.spacing(2),
     },
@@ -50,10 +50,10 @@ const styles = (theme: Theme) =>
       color: theme.palette.primary.light,
     },
     itemPrimary: {
-      fontSize: "inherit",
+      fontSize: 'inherit',
     },
     itemIcon: {
-      minWidth: "auto",
+      minWidth: 'auto',
       marginRight: theme.spacing(2),
     },
     divider: {
@@ -62,7 +62,7 @@ const styles = (theme: Theme) =>
   });
 
 export interface NavigatorProps
-  extends Omit<DrawerProps, "classes">,
+  extends Omit<DrawerProps, 'classes'>,
     WithStyles<typeof styles> {}
 
 function Navigator(props: NavigatorProps) {
@@ -103,7 +103,7 @@ function Navigator(props: NavigatorProps) {
             {categories[item].map(({ id, icon, path }) => (
               <Link
                 to={path}
-                style={{ color: "inherit", textDecoration: "none" }}
+                style={{ color: 'inherit', textDecoration: 'none' }}
                 key={id}
               >
                 <ListItem
@@ -111,7 +111,7 @@ function Navigator(props: NavigatorProps) {
                   button
                   className={clsx(
                     classes.item,
-                    pathname.includes(path) && classes.itemActiveItem
+                    pathname.includes(path) && classes.itemActiveItem,
                   )}
                 >
                   <ListItemIcon className={classes.itemIcon}>

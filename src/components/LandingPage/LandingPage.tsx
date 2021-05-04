@@ -7,8 +7,11 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 import { SERVICE_NAME } from '../../Constants';
-import { BasicCard } from '../BasicCard';
-import { GitHubLoginButton } from '../GitHubLoginButton';
+import {
+  GitHubLoginButton,
+  StartWithGitHubLoginButton,
+} from '../GitHubLoginButton';
+import { Discussion, Risk } from '../Lottie/LottieAnimation';
 import PullRequestLeadTimeDemoLottie from '../Lottie/PullRequestLeadTimeDemoLottie';
 import VisualizeTeamProductivityLottie from '../Lottie/VisualizeTeamProductivityLottie';
 
@@ -17,12 +20,13 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       paddingTop: 10,
       backgroundImage:
-        'linear-gradient(to right top, #ffffff, #ebeeff, #cde1ff, #a2d6ff, #63ccff);',
+        // 'linear-gradient(to right top, #ffffff, #ebeeff, #cde1ff, #a2d6ff, #63ccff);',
+        'linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)',
     },
     header: {
       fontWeight: 800,
-      paddingLeft: 10,
-      paddingRight: 10,
+      paddingLeft: 30,
+      paddingRight: 30,
     },
     logo: {
       width: 35,
@@ -32,23 +36,34 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: 20,
     },
     landingMessage: {
-      color: 'white',
+      // color: 'white',
       marginTop: '8vh',
       fontSize: 'clamp(5vw, 100px, 10vw)',
       fontWeight: 800,
-      paddingLeft: 10,
-      paddingRight: 10,
+      paddingLeft: 30,
+      paddingRight: 30,
     },
     feature: {
-      minHeight: 300,
+      minHeight: 600,
     },
     featureContainer: {
-      padding: 10,
+      padding: 30,
     },
-
+    featureTitle: {
+      fontSize: 30,
+      fontWeight: 500,
+      minHeight: 50,
+    },
+    featureDescription: {
+      color: 'gray',
+      minHeight: 100,
+    },
+    featureAnimationContainer: {
+      minHeight: 300,
+    },
     footer: {
       background: 'gray',
-      height: 300,
+      height: 100,
     },
   }),
 );
@@ -122,6 +137,29 @@ const MainLandingMessage = () => {
 const Feature = () => {
   const classes = useStyles();
 
+  const FeatureChild: React.FC<{
+    title: string;
+    description: string;
+    anime: React.ReactElement;
+  }> = (props) => {
+    const { title, description, anime } = props;
+    return (
+      <div style={{ minHeight: 300, textAlign: 'center' }}>
+        <div className={classes.featureTitle}>{title}</div>
+        <div className={classes.featureDescription}>{description}</div>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          className={classes.featureAnimationContainer}
+        >
+          {anime}
+        </Grid>
+      </div>
+    );
+  };
+
   return (
     <Grid
       container
@@ -132,13 +170,25 @@ const Feature = () => {
     >
       <Grid
         item
+        xs={12}
+        sm={12}
         container
         direction="row"
         justify="center"
-        alignItems="center"
+        alignItems="flex-start"
+        style={{ paddingTop: 50, paddingBottom: 50 }}
+      >
+        <StartWithGitHubLoginButton />
+      </Grid>
+
+      <Grid
+        item
+        container
+        direction="row"
+        justify="center"
+        alignItems="flex-start"
         xs={12}
         sm={12}
-        spacing={2}
       >
         <Grid
           xs={12}
@@ -147,17 +197,15 @@ const Feature = () => {
           lg={4}
           className={classes.featureContainer}
         >
-          <BasicCard
-            title="Pull Request Lead Time"
-            style={{
-              backgroundImage:
-                'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)',
-            }}
-          >
-            <div style={{ height: 300 }}>
-              <PullRequestLeadTimeDemoLottie />
-            </div>
-          </BasicCard>
+          <FeatureChild
+            title="GitHub Analytics"
+            description="The lead-time metric gives you an idea of how many times (usually in
+          days) pull requests take to be merged or closed. This metric is
+          especially useful for raising questions and start investigations
+          before it’s too late. A good practice is to measure this number over
+          time so that you can spot trends and behaviors more pragmatically."
+            anime={<PullRequestLeadTimeDemoLottie />}
+          />
         </Grid>
         <Grid
           xs={12}
@@ -166,9 +214,11 @@ const Feature = () => {
           lg={4}
           className={classes.featureContainer}
         >
-          <BasicCard title="Communications">
-            <div style={{ height: 300 }}>feature</div>
-          </BasicCard>
+          <FeatureChild
+            title="Discussions"
+            description="Measuring the number of comments and reactions for each pull request gives you an idea of how your team collaborates. Collaboration is great, and as leaders, we want to endorse it. However, after a certain level, discussions slow down development."
+            anime={<Discussion />}
+          />
         </Grid>
         <Grid
           xs={12}
@@ -177,9 +227,11 @@ const Feature = () => {
           lg={4}
           className={classes.featureContainer}
         >
-          <BasicCard title="Detect Lisks">
-            <div style={{ height: 300 }}>feature</div>
-          </BasicCard>
+          <FeatureChild
+            title="Detect Risk"
+            description="Frequently modified sources lead to bugs. Identify files that are susceptible to change, and identify high-risk changes based on the percentage of discussions in the Pull Request."
+            anime={<Risk />}
+          />
         </Grid>
       </Grid>
     </Grid>
@@ -197,7 +249,7 @@ const Footer = () => {
       alignItems="center"
       className={classes.footer}
     >
-      footer
+      ©️ {new Date().getFullYear()} GitScope, Designed by Awaji Daisuke.
     </Grid>
   );
 };

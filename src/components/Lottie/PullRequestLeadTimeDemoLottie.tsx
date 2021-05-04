@@ -1,18 +1,9 @@
 import React from 'react';
-import Lottie from 'react-lottie';
+import LottieBase from './LottieBase';
 import animationData from './pull-request-lead-time-demo.json';
 
 const PullRequestLeadTimeDemoLottie = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
-
-  return <Lottie options={defaultOptions} height={'100%'} width={'100%'} />;
+  return <LottieBase animationData={animationData} />;
 };
 
 export default PullRequestLeadTimeDemoLottie;
