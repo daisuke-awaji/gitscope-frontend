@@ -61,7 +61,10 @@ const ProductivityPage = () => {
         <ScoreCards repository={selectedRepository} />
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={6}>
-        <ActivityRatioCard repository={selectedRepository} />
+        <ActivityRatioCard
+          repository={selectedRepository}
+          dateRange={dateRange}
+        />
       </Grid>
 
       <Grid item xs={12} sm={12} md={12} lg={12}>
