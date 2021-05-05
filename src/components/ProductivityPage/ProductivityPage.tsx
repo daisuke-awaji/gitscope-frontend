@@ -57,7 +57,7 @@ const ProductivityPage = () => {
       </Grid>
 
       <Grid item xs={12} sm={12} md={12} lg={12}>
-        <ProductionLeadTimeCard repository={selectedRepository} />
+        <ProductionLeadTimeCard repository={selectedRepository} dateRange={dateRange} />
       </Grid>
 
       <Grid item xs={12} sm={12} md={12} lg={6}>

@@ -1,24 +1,70 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactECharts from 'echarts-for-react';
 import theme from '../../theme';
 import faker from 'faker';
 import { BasicCard } from '../BasicCard';
+import { usePullRequestsApi } from '../../api/usePullReqeustsApi';
+import { DateRange } from 'materialui-daterange-picker';
+import { format } from 'date-fns';
+import * as querystring from 'querystring';
+import { Grid } from '@material-ui/core';
+import { Loading } from '../Atoms/Loading';
 
-type ProductionLeadTimeProps = { repository: string };
+/**
+ * 任意の桁で切り上げする関数
+ * @param {number} value 四捨五入する数値
+ * @param {number} base どの桁で四捨五入するか（10→10の位、0.1→小数第１位）
+ * @return {number} 四捨五入した値
+ */
+function orgCeil(value: number, base: number) {
+  return Math.ceil(value * base) / base;
+}
+
+type ProductionLeadTimeProps = { repository: string; dateRange: DateRange };
 const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
   repository,
+  dateRange,
 }) => {
+  const startDateString = dateRange.startDate
+    ? format(dateRange.startDate, 'yyyy-MM-dd')
+    : undefined;
+  const endDateString = dateRange.endDate
+    ? format(dateRange.endDate, 'yyyy-MM-dd')
+    : undefined;
+
+  const qs = querystring.stringify({ startDateString, endDateString });
+  const path = `/repos/${repository}/prs?${qs}`;
+  const { prs, isLoading, setPath } = usePullRequestsApi({ path });
+
+  useEffect(() => {
+    setPath(path);
+  }, [setPath, path]);
+
+  if (isLoading) {
+    return (
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        style={{ height: 300 }}
+      >
+        <Loading />
+      </Grid>
+    );
+  }
+
   const firstCommitToPRCreated = [];
-  for (let i = 32; i < 55; i++) {
-    firstCommitToPRCreated.push([i, faker.random.float({ min: 0, max: 2 })]);
-  }
   const prCreatedToLastCommit = [];
-  for (let i = 32; i < 55; i++) {
-    prCreatedToLastCommit.push([i, faker.random.float({ min: 0, max: 10 })]);
-  }
   const lastCommitToMerged = [];
-  for (let i = 32; i < 55; i++) {
-    lastCommitToMerged.push([i, faker.random.float({ min: 1, max: 7 })]);
+
+  for (const pr of prs) {
+    const fctopr = orgCeil(pr.firstCommitToPRCreated / (60 * 60 * 24), 100);
+    firstCommitToPRCreated.push([pr.number, fctopr > 0 ? fctopr : 0]);
+    const prtolast = orgCeil(pr.prCreatedAtToLastCommit / (60 * 60 * 24), 100);
+    prCreatedToLastCommit.push([pr.number, prtolast > 0 ? prtolast : 0]);
+    const lastToMerged = orgCeil(pr.lastCommitToMerge / (60 * 60 * 24), 100);
+    lastCommitToMerged.push([pr.number, lastToMerged > 0 ? lastToMerged : 0]);
   }
 
   const options = {
@@ -143,9 +189,9 @@ const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
   return <ReactECharts theme={'vintage'} option={options} />;
 };
 
-export const ProductionLeadTimeCard: React.FC<ProductionLeadTimeProps> = ({
-  repository,
-}) => {
+export const ProductionLeadTimeCard: React.FC<ProductionLeadTimeProps> = (
+  props,
+) => {
   return (
     <BasicCard title="Production Lead Time">
       <div style={{ color: 'gray' }}>
@@ -157,7 +203,8 @@ export const ProductionLeadTimeCard: React.FC<ProductionLeadTimeProps> = ({
       </div>
       <div style={{ color: 'gray', fontSize: 12, paddingBottom: 10 }}>
         ※ Production lead time は 初回のコミットから PullRequest
-        がマージされるまでの時間を計測しています。
+        がマージされるまでの時間を計測しています。PullRequest
+        はマージされた時系列順に表示されます。
       </div>
       <div style={{ color: 'gray', fontSize: 12 }}>
         <span style={{ width: 50, display: 'inline-block' }}>Open: </span>
@@ -172,7 +219,7 @@ export const ProductionLeadTimeCard: React.FC<ProductionLeadTimeProps> = ({
         <span>Last Commit - PR Merged</span>
       </div>
 
-      <ProductionLeadTime repository={repository} />
+      <ProductionLeadTime {...props} />
     </BasicCard>
   );
 };

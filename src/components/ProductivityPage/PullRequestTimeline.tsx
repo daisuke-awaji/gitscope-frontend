@@ -3,7 +3,7 @@ import ReactECharts from 'echarts-for-react';
 import theme from '../../theme';
 import faker from 'faker';
 import { BasicCard } from '../BasicCard';
-import { usePullRequestsApi } from '../../api/usePullReqeustsApi';
+import { usePullRequestsPerDayApi } from '../../api/usePullReqeustsPerDayApi';
 import { Loading } from '../Atoms/Loading';
 import { Grid } from '@material-ui/core';
 import { DateRange } from 'materialui-daterange-picker';
@@ -37,8 +37,8 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
     : undefined;
 
   const qs = querystring.stringify({ startDateString, endDateString });
-  const path = `/repos/${repository}/prs?${qs}`;
-  const { prs, isLoading, setPath } = usePullRequestsApi({
+  const path = `/repos/${repository}/prsPerDay?${qs}`;
+  const { prs, isLoading, setPath } = usePullRequestsPerDayApi({
     path,
   });
   useEffect(() => {

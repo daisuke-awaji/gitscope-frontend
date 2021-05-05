@@ -2,38 +2,27 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../AuthProvider';
 import { createClient } from './client';
 
-type PullRequest = {
-  number: number;
-  firstCommitToPRCreated: number; // seconds
-  prCreatedAtToLastCommit: number;
-  lastCommitToMerge: number;
-  title: string;
-  author: string;
-  url: string;
-  createdAt: string;
-  mergedAt: string;
-  additions: number;
-  deletions: number;
-  authoredDate: string;
-  lastCommitDate: string;
+type MergedPullRequestPerDay = {
+  mergedAt: string; // YYYY-MM-DD
+  count: number;
 };
 
 type InitialState = {
   path: string;
 };
-export const usePullRequestsApi = (initialState: InitialState) => {
+export const usePullRequestsPerDayApi = (initialState: InitialState) => {
   const [path, setPath] = useState<string>(initialState.path);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [prs, setPrs] = useState<PullRequest[]>([]);
+  const [prs, setPrs] = useState<MergedPullRequestPerDay[]>([]);
   const { user } = useAuth();
   useEffect(() => {
     const fetch = async (token: string) => {
       setIsLoading(true);
       const client = createClient(token);
       const res = await client.get<{
-        prs: PullRequest[];
+        mergedPullRequestsPerDay: MergedPullRequestPerDay[];
       }>(path);
-      setPrs(res.data.prs);
+      setPrs(res.data.mergedPullRequestsPerDay);
       setIsLoading(false);
     };
     if (user) {
