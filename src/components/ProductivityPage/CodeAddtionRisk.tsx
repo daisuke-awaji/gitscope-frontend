@@ -3,29 +3,15 @@ import ReactECharts from 'echarts-for-react';
 import theme from '../../theme';
 import faker from 'faker';
 import { BasicCard } from '../BasicCard';
-import { usePullRequestsPerDayApi } from '../../api/usePullReqeustsPerDayApi';
-import { Loading } from '../Atoms/Loading';
-import { Grid } from '@material-ui/core';
+import { usePullRequestsApi } from '../../api/usePullReqeustsApi';
 import { DateRange } from 'materialui-daterange-picker';
 import { format } from 'date-fns';
 import * as querystring from 'querystring';
+import { Grid } from '@material-ui/core';
+import { Loading } from '../Atoms/Loading';
 
-type PullRequestTimelineProps = { repository: string; dateRange: DateRange };
-
-export const PullRequestTimelineCard: React.FC<PullRequestTimelineProps> = (
-  props,
-) => {
-  return (
-    <BasicCard title="Pull Request timeline">
-      <div style={{ color: 'gray' }}>
-        {faker.random.arrayElement(['マージされた Pull Request の数の推移'])}
-      </div>
-      <PullRequestTimeline {...props} />
-    </BasicCard>
-  );
-};
-
-const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
+type CodeAdditionRiskProps = { repository: string; dateRange: DateRange };
+const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
   repository,
   dateRange,
 }) => {
@@ -37,19 +23,12 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
     : undefined;
 
   const qs = querystring.stringify({ startDateString, endDateString });
-  const path = `/repos/${repository}/prsPerDay?${qs}`;
-  const { prs, isLoading, setPath } = usePullRequestsPerDayApi({
-    path,
-  });
+  const path = `/repos/${repository}/prs?${qs}`;
+  const { prs, isLoading, setPath } = usePullRequestsApi({ path });
+
   useEffect(() => {
     setPath(path);
   }, [setPath, path]);
-
-  const data = prs
-    .sort(
-      (a, b) => new Date(a.mergedAt).getTime() - new Date(b.mergedAt).getTime(),
-    )
-    .map((pr) => [pr.mergedAt, pr.count]);
 
   if (isLoading) {
     return (
@@ -65,8 +44,19 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
     );
   }
 
+  const data: any[] = [];
+  prs.forEach((pr, index) => {
+    const d = index < 10 ? faker.random.number(100) : faker.random.number(30);
+    data.push([pr.number, d]);
+  });
+
   const options = {
+    title: {
+      text: 'Code Addition Risk',
+      show: false,
+    },
     xAxis: {
+      name: 'PR',
       type: 'category',
       boundaryGap: true,
     },
@@ -91,15 +81,31 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
       bottom: '3%',
       containLabel: true,
     },
+    // legend: {
+    //   top: 0,
+    //   data: ['Open', 'Work', 'Review'],
+    // },
     dataZoom: [
       {
         type: 'inside',
       },
     ],
+    // Make gradient line here
+    visualMap: [
+      {
+        show: true,
+        type: 'continuous',
+        seriesIndex: 0,
+        min: 0,
+        max: 100,
+      },
+    ],
     series: [
       {
-        name: repository,
-        type: 'bar',
+        name: 'Open',
+        smooth: true,
+        type: 'line',
+        // areaStyle: {},
         itemStyle: {
           color: theme.palette.primary.light,
           width: 1,
@@ -110,13 +116,30 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
             { type: 'min', name: '最小值' },
           ],
         },
-        markLine: {
-          data: [{ type: 'average', name: '平均值' }],
-        },
-        data: data,
+        data,
       },
     ],
   };
 
-  return <ReactECharts option={options} />;
+  return <ReactECharts theme={'vintage'} option={options} />;
+};
+
+export const CodeAdditionRiskCard: React.FC<CodeAdditionRiskProps> = (
+  props,
+) => {
+  return (
+    <BasicCard title="Code Addition Risk (mock)">
+      <div style={{ color: 'gray' }}>
+        {faker.random.arrayElement([
+          'Risk Points が xx 以上になると要注意です。',
+        ])}
+      </div>
+      <div style={{ color: 'gray', fontSize: 12, paddingBottom: 10 }}>
+        ※ Code Addition Risk は Pull Request
+        におけるコード変更量とディスカッション率、変更されるソースコードの凝集度などの要素から算出されます。
+      </div>
+
+      <CodeAdditionRisk {...props} />
+    </BasicCard>
+  );
 };

@@ -1,7 +1,7 @@
-import { Grid } from "@material-ui/core";
-import faker from "faker";
-import React from "react";
-import { ScoreCard } from "./ScoreCard";
+import { Grid } from '@material-ui/core';
+import faker from 'faker';
+import React from 'react';
+import { ScoreCard } from './ScoreCard';
 
 type ScoreCardsProps = { repository: string };
 export const ScoreCards: React.FC<ScoreCardsProps> = ({ repository }) => {
@@ -9,32 +9,32 @@ export const ScoreCards: React.FC<ScoreCardsProps> = ({ repository }) => {
 
   const scoreData = [
     {
-      title: "Productivity",
+      title: 'Productivity (mock)',
       score: faker.random.number(100).toString(),
-      unit: "",
+      unit: '',
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: "today",
+      chip: 'today',
     },
     {
-      title: "Efficiency",
+      title: 'Efficiency (mock)',
       score: faker.random.number(100).toString(),
-      unit: "",
+      unit: '',
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: "1 week",
+      chip: '1 week',
     },
     {
-      title: "Activity",
+      title: 'Activity (mock)',
       score: faker.random.number(100).toString(),
-      unit: "",
+      unit: '',
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: "1 week",
+      chip: '1 week',
     },
     {
-      title: "Milestone",
+      title: 'Milestone (mock)',
       score: faker.random.number(100).toString(),
-      unit: "",
+      unit: '',
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: "1 week",
+      chip: '1 week',
     },
   ];
   return (

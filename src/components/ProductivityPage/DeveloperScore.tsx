@@ -149,7 +149,7 @@ export const DeveloperScoreCard: React.FC<CommitsTopProps> = ({
   repository,
 }) => {
   return (
-    <BasicCard title="Developer score">
+    <BasicCard title="Developer score (mock)">
       <div style={{ color: 'gray' }}>
         {faker.random.arrayElement([
           'XXXX さんは積極的にコミュニケーションをとっているようですね。',

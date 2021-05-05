@@ -11,6 +11,7 @@ import { useRepositoryStatusApi } from '../../api/useRepositoryStatus';
 import { Loading } from '../Atoms/Loading';
 import { DateRange } from 'materialui-daterange-picker';
 import { sub } from 'date-fns';
+import { CodeAdditionRiskCard } from './CodeAddtionRisk';
 const { useQueryParams } = require('react-router-query-hooks');
 
 const ProductivityPage = () => {
@@ -82,6 +83,13 @@ const ProductivityPage = () => {
       </Grid>
       <Grid item xs={12} sm={12} md={12} lg={6}>
         <DeveloperScoreCard repository={selectedRepository} />
+      </Grid>
+
+      <Grid item xs={12} sm={12} md={12} lg={12}>
+        <CodeAdditionRiskCard
+          repository={selectedRepository}
+          dateRange={dateRange}
+        />
       </Grid>
     </Grid>
   );
