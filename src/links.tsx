@@ -8,6 +8,8 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import React from "react";
 import { RepositoryPage } from "./components/RepositoryPage/RepositoryPage";
 import { DeveloperContributionPage } from "./components/DeveloperContributionPage";
+import BeachAccessIcon from "@material-ui/icons/BeachAccess";
+import { JobsPage } from "./components/JobsPage/JobsPage";
 
 export type Link = {
   id: string;
@@ -37,6 +39,19 @@ export const links: Link[] = [
         label: "Contribution",
         to: "/dashboard/contribution",
         component: <DeveloperContributionPage />,
+      },
+    ],
+  },
+  {
+    id: "Jobs",
+    category: "Develop",
+    icon: <BeachAccessIcon />,
+    path: "/jobs",
+    children: [
+      {
+        label: "jobs",
+        to: "/jobs",
+        component: <JobsPage />,
       },
     ],
   },
