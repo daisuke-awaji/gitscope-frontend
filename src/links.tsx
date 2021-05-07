@@ -49,7 +49,7 @@ export const links: Link[] = [
     path: "/jobs",
     children: [
       {
-        label: "jobs",
+        label: "Jobs",
         to: "/jobs",
         component: <JobsPage />,
       },

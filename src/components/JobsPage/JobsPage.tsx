@@ -92,6 +92,13 @@ export const JobsPage: React.FC = (): JSX.Element => {
 
   return (
     <Grid container spacing={2}>
+      <Grid item xs={12} style={{ color: "gray", fontSize: 12 }}>
+        <div>GitHub の Commit ごとに Risk Point を計測します。</div>
+        <div>
+          Risk Point は PullRequest
+          におけるディスカッション数、ソースコードの凝集度、変更量、リードタイムをもとに算出されます。
+        </div>
+      </Grid>
       {jobs.map((item: Job) => {
         return (
           <Grid item xs={12}>
