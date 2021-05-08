@@ -4,16 +4,16 @@ import {
   Grid,
   makeStyles,
   Theme,
-} from '@material-ui/core';
-import React from 'react';
-import { SERVICE_NAME } from '../../Constants';
+} from "@material-ui/core";
+import React from "react";
+import { SERVICE_NAME } from "../../../Constants";
 import {
   GitHubLoginButton,
   StartWithGitHubLoginButton,
-} from '../GitHubLoginButton';
-import { Discussion, Risk } from '../Lottie/LottieAnimation';
-import PullRequestLeadTimeDemoLottie from '../Lottie/PullRequestLeadTimeDemoLottie';
-import VisualizeTeamProductivityLottie from '../Lottie/VisualizeTeamProductivityLottie';
+} from "../../Atoms/GitHubLoginButton";
+import { Discussion, Risk } from "../../Lottie/LottieAnimation";
+import PullRequestLeadTimeDemoLottie from "../../Lottie/PullRequestLeadTimeDemoLottie";
+import VisualizeTeamProductivityLottie from "../../Lottie/VisualizeTeamProductivityLottie";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingTop: 10,
       backgroundImage:
         // 'linear-gradient(to right top, #ffffff, #ebeeff, #cde1ff, #a2d6ff, #63ccff);',
-        'linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)',
+        "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
     },
     header: {
       fontWeight: 800,
@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     landingMessage: {
       // color: 'white',
-      marginTop: '8vh',
-      fontSize: 'clamp(5vw, 100px, 10vw)',
+      marginTop: "8vh",
+      fontSize: "clamp(5vw, 100px, 10vw)",
       fontWeight: 800,
       paddingLeft: 30,
       paddingRight: 30,
@@ -55,17 +55,17 @@ const useStyles = makeStyles((theme: Theme) =>
       minHeight: 50,
     },
     featureDescription: {
-      color: 'gray',
+      color: "gray",
       minHeight: 100,
     },
     featureAnimationContainer: {
       minHeight: 300,
     },
     footer: {
-      background: 'gray',
+      background: "gray",
       height: 100,
     },
-  }),
+  })
 );
 
 const Header = () => {
@@ -144,7 +144,7 @@ const Feature = () => {
   }> = (props) => {
     const { title, description, anime } = props;
     return (
-      <div style={{ minHeight: 300, textAlign: 'center' }}>
+      <div style={{ minHeight: 300, textAlign: "center" }}>
         <div className={classes.featureTitle}>{title}</div>
         <div className={classes.featureDescription}>{description}</div>
         <Grid

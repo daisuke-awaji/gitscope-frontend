@@ -1,15 +1,15 @@
-import ProjectUsageContent from "./components/CostPage/ProjectUsageContent";
+import ProjectUsageContent from "./components/Pages/CostPage/ProjectUsageContent";
 import PeopleIcon from "@material-ui/icons/People";
 import SettingsIcon from "@material-ui/icons/Settings";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import ProductivityPage from "./components/ProductivityPage/ProductivityPage";
+import ProductivityPage from "./components/Pages/ProductivityPage/ProductivityPage";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import React from "react";
-import { RepositoryPage } from "./components/RepositoryPage/RepositoryPage";
-import { DeveloperContributionPage } from "./components/DeveloperContributionPage";
+import { RepositoryPage } from "./components/Pages/RepositoryPage/RepositoryPage";
+import { DeveloperContributionPage } from "./components/Pages/DeveloperContributionPage";
 import BeachAccessIcon from "@material-ui/icons/BeachAccess";
-import { JobsPage } from "./components/JobsPage/JobsPage";
+import { JobsPage } from "./components/Pages/JobsPage/JobsPage";
 
 export type Link = {
   id: string;

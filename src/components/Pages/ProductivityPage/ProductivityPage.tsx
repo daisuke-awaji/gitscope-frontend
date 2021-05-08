@@ -1,18 +1,18 @@
-import { Grid } from '@material-ui/core';
-import { DeveloperScoreCard } from './DeveloperScore';
-import { PullRequestTimelineCard } from './PullRequestTimeline';
-import React, { useEffect, useState } from 'react';
-import { RepositorySelector } from './RepositorySelector';
-import { ProductionLeadTimeCard } from './ProductionLeadTime';
-import { ActivityRatioCard } from './ActivityRatio';
-import { ScoreCards } from './ScoreCards';
-import DateRangePickerExample from './DateRangePicker';
-import { useRepositoryStatusApi } from '../../api/useRepositoryStatus';
-import { Loading } from '../Atoms/Loading';
-import { DateRange } from 'materialui-daterange-picker';
-import { sub } from 'date-fns';
-import { CodeAdditionRiskCard } from './CodeAddtionRisk';
-const { useQueryParams } = require('react-router-query-hooks');
+import { Grid } from "@material-ui/core";
+import { DeveloperScoreCard } from "./DeveloperScore";
+import { PullRequestTimelineCard } from "./PullRequestTimeline";
+import React, { useEffect, useState } from "react";
+import { RepositorySelector } from "./RepositorySelector";
+import { ProductionLeadTimeCard } from "./ProductionLeadTime";
+import { ActivityRatioCard } from "./ActivityRatio";
+import { ScoreCards } from "./ScoreCards";
+import DateRangePickerExample from "./DateRangePicker";
+import { useRepositoryStatusApi } from "../../../api/useRepositoryStatus";
+import { Loading } from "../../Atoms/Loading";
+import { DateRange } from "materialui-daterange-picker";
+import { sub } from "date-fns";
+import { CodeAdditionRiskCard } from "./CodeAddtionRisk";
+const { useQueryParams } = require("react-router-query-hooks");
 
 const ProductivityPage = () => {
   const [query, { replaceQuery }] = useQueryParams();
@@ -20,10 +20,10 @@ const ProductivityPage = () => {
 
   const { repositories, isLoading } = useRepositoryStatusApi();
   const repoNames = repositories.map((repo) => repo.nameWithOwner);
-  const [selectedRepository, setSelectedRepository] = useState('');
+  const [selectedRepository, setSelectedRepository] = useState("");
 
   const initialDateRange = {
-    startDate: sub(new Date(), { months: 1 }),
+    startDate: sub(new Date(), { weeks: 1 }),
     endDate: new Date(),
   };
   const [dateRange, setDateRange] = React.useState<DateRange>(initialDateRange);
@@ -34,8 +34,9 @@ const ProductivityPage = () => {
   };
 
   useEffect(() => {
-    const repo = query.repo || repoNames[0];
+    const repo = query.repo || "facebook/react";
     setSelectedRepository(repo);
+    replaceQuery({ repo: "facebook/react" });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [repositories]);
 

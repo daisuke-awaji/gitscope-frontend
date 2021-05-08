@@ -96,8 +96,8 @@ export const DeveloperContributions = (props: DeveloperContributionsProps) => {
       direction="row"
       justify="center"
       alignItems="center"
-      spacing={2}
       className={classes.root}
+      spacing={2}
     >
       <Grid item xs={1} sm={1} md={1} lg={1}>
         <AvaterWithName {...props.user} />
@@ -109,7 +109,6 @@ export const DeveloperContributions = (props: DeveloperContributionsProps) => {
           </Grid>
         );
       })}
-
       <Grid item xs={1} sm={1} md={1} lg={1}></Grid>
     </Grid>
   );

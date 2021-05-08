@@ -1,6 +1,6 @@
 import { makeStyles, Theme, createStyles } from "@material-ui/core";
 import React from "react";
-import { BasicCard, BasicCardProps } from "../BasicCard";
+import { BasicCard, BasicCardProps } from "../../Atoms/BasicCard";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

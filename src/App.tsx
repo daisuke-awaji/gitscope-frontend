@@ -1,49 +1,49 @@
-import React from 'react';
-import Navigator from './components/Navigator';
+import React from "react";
+import Navigator from "./components/Navigator";
 import {
   createStyles,
   ThemeProvider,
   withStyles,
   WithStyles,
-} from '@material-ui/core/styles';
-import { Hidden, CssBaseline } from '@material-ui/core';
-import theme from './theme';
-import { Copyright } from '@material-ui/icons';
-import Header from './components/Header';
-import { BrowserRouter as Router, Switch, useLocation } from 'react-router-dom';
-import { PrivateRoute } from './components/PrivateRoute';
-import { links } from './links';
-import { GitHubAuthCallback } from './components/GitHubAuthCallback';
-import { LandingPage } from './components/LandingPage/LandingPage';
-import { useAuth } from './AuthProvider';
-import { Loading } from './components/Atoms/Loading';
+} from "@material-ui/core/styles";
+import { Hidden, CssBaseline } from "@material-ui/core";
+import theme from "./theme";
+import { Copyright } from "@material-ui/icons";
+import Header from "./components/Header";
+import { BrowserRouter as Router, Switch, useLocation } from "react-router-dom";
+import { PrivateRoute } from "./components/PrivateRoute";
+import { links } from "./links";
+import { GitHubAuthCallback } from "./components/Atoms/GitHubAuthCallback";
+import { LandingPage } from "./components/Pages/LandingPage/LandingPage";
+import { useAuth } from "./AuthProvider";
+import { Loading } from "./components/Atoms/Loading";
 
 const drawerWidth = 256;
 
 const styles = createStyles({
   root: {
-    display: 'flex',
-    minHeight: '100vh',
+    display: "flex",
+    minHeight: "100vh",
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
   app: {
     flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   main: {
     flex: 1,
     padding: theme.spacing(2),
-    background: '#eaeff1',
+    background: "#eaeff1",
   },
   footer: {
     padding: theme.spacing(2),
-    background: '#eaeff1',
+    background: "#eaeff1",
   },
 });
 
@@ -61,7 +61,7 @@ const MainDashboardLayoutPage = (props: AppProps) => {
   const location = useLocation();
   const { isAuthenticated, isLoading } = useAuth();
 
-  if (!isAuthenticated && location.pathname === '/auth/github/callback') {
+  if (!isAuthenticated && location.pathname === "/auth/github/callback") {
     return <GitHubAuthCallback />;
   }
 
@@ -71,6 +71,10 @@ const MainDashboardLayoutPage = (props: AppProps) => {
 
   if (!isAuthenticated) {
     return <LandingPage />;
+  }
+
+  if (isAuthenticated && location.pathname === "/") {
+    window.location.href = "/dashboard";
   }
 
   return (
@@ -102,7 +106,7 @@ const MainDashboardLayoutPage = (props: AppProps) => {
                     {child.component}
                   </PrivateRoute>
                 );
-              }),
+              })
             )}
           </main>
         </Switch>

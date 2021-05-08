@@ -30,12 +30,7 @@ export const RepositorySelector: React.FC<RepositorySelectorProps> = (
           value={selectedRepository}
           onChange={handleChange}
         >
-          {[
-            "serverless/serverless",
-            "serverless/components",
-            "facebook/react",
-            ...repositories,
-          ].map((repo) => {
+          {repositories.map((repo) => {
             return <MenuItem value={repo}>{repo}</MenuItem>;
           })}
         </Select>

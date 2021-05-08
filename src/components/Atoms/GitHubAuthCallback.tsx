@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useAuth } from "../AuthProvider";
+import { useAuth } from "../../AuthProvider";
 
 export const GitHubAuthCallback = () => {
   const { callback } = useAuth();

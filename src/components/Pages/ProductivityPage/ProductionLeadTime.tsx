@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import ReactECharts from 'echarts-for-react';
-import theme from '../../theme';
-import faker from 'faker';
-import { BasicCard } from '../BasicCard';
-import { usePullRequestsApi } from '../../api/usePullReqeustsApi';
-import { DateRange } from 'materialui-daterange-picker';
-import { format } from 'date-fns';
-import * as querystring from 'querystring';
-import { Grid } from '@material-ui/core';
-import { Loading } from '../Atoms/Loading';
+import React, { useEffect } from "react";
+import ReactECharts from "echarts-for-react";
+import theme from "../../../theme";
+import faker from "faker";
+import { BasicCard } from "../../Atoms/BasicCard";
+import { usePullRequestsApi } from "../../../api/usePullReqeustsApi";
+import { DateRange } from "materialui-daterange-picker";
+import { format } from "date-fns";
+import * as querystring from "querystring";
+import { Grid } from "@material-ui/core";
+import { Loading } from "../../Atoms/Loading";
 
 /**
  * 任意の桁で切り上げする関数
@@ -26,10 +26,10 @@ const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
   dateRange,
 }) => {
   const startDateString = dateRange.startDate
-    ? format(dateRange.startDate, 'yyyy-MM-dd')
+    ? format(dateRange.startDate, "yyyy-MM-dd")
     : undefined;
   const endDateString = dateRange.endDate
-    ? format(dateRange.endDate, 'yyyy-MM-dd')
+    ? format(dateRange.endDate, "yyyy-MM-dd")
     : undefined;
 
   const qs = querystring.stringify({ startDateString, endDateString });
@@ -69,53 +69,53 @@ const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
 
   const options = {
     title: {
-      text: 'Production Lead Time',
+      text: "Production Lead Time",
       show: false,
     },
     xAxis: {
-      name: 'PR',
-      type: 'category',
+      name: "PR",
+      type: "category",
       boundaryGap: true,
     },
     yAxis: {
-      type: 'value',
+      type: "value",
       axisLabel: {
-        formatter: '{value} Day',
+        formatter: "{value} Day",
       },
     },
     tooltip: {
-      trigger: 'axis',
+      trigger: "axis",
     },
     toolbox: {
       show: true,
       feature: {
         dataView: { show: true, readOnly: false },
-        magicType: { show: true, type: ['line', 'bar'] },
+        magicType: { show: true, type: ["line", "bar"] },
         restore: { show: true },
         saveAsImage: { show: true },
       },
     },
     grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
       containLabel: true,
     },
     legend: {
       top: 0,
-      data: ['Open', 'Work', 'Review'],
+      data: ["Open", "Work", "Review"],
     },
     dataZoom: [
       {
-        type: 'inside',
+        type: "inside",
       },
     ],
     series: [
       {
-        name: 'Open',
-        stack: 'LeadTime',
+        name: "Open",
+        stack: "LeadTime",
         smooth: true,
-        type: 'line',
+        type: "line",
         areaStyle: {},
         itemStyle: {
           color: theme.palette.primary.light,
@@ -123,23 +123,23 @@ const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
         },
         markPoint: {
           data: [
-            { type: 'max', name: '最大值' },
-            { type: 'min', name: '最小值' },
+            { type: "max", name: "最大值" },
+            { type: "min", name: "最小值" },
           ],
         },
         markLine: {
-          data: [{ type: 'average', name: '平均值' }],
+          data: [{ type: "average", name: "平均值" }],
         },
         emphasis: {
-          focus: 'series',
+          focus: "series",
         },
         data: firstCommitToPRCreated,
       },
       {
-        name: 'Work',
-        stack: 'LeadTime',
+        name: "Work",
+        stack: "LeadTime",
         smooth: true,
-        type: 'line',
+        type: "line",
         areaStyle: {},
         itemStyle: {
           color: theme.palette.primary.main,
@@ -147,23 +147,23 @@ const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
         },
         markPoint: {
           data: [
-            { type: 'max', name: '最大值' },
-            { type: 'min', name: '最小值' },
+            { type: "max", name: "最大值" },
+            { type: "min", name: "最小值" },
           ],
         },
         markLine: {
-          data: [{ type: 'average', name: '平均值' }],
+          data: [{ type: "average", name: "平均值" }],
         },
         emphasis: {
-          focus: 'series',
+          focus: "series",
         },
         data: prCreatedToLastCommit,
       },
       {
-        name: 'Review',
-        stack: 'LeadTime',
+        name: "Review",
+        stack: "LeadTime",
         smooth: true,
-        type: 'line',
+        type: "line",
         areaStyle: {},
         itemStyle: {
           color: theme.palette.primary.dark,
@@ -171,51 +171,51 @@ const ProductionLeadTime: React.FC<ProductionLeadTimeProps> = ({
         },
         markPoint: {
           data: [
-            { type: 'max', name: '最大值' },
-            { type: 'min', name: '最小值' },
+            { type: "max", name: "最大值" },
+            { type: "min", name: "最小值" },
           ],
         },
         markLine: {
-          data: [{ type: 'average', name: '平均值' }],
+          data: [{ type: "average", name: "平均值" }],
         },
         emphasis: {
-          focus: 'series',
+          focus: "series",
         },
         data: lastCommitToMerged,
       },
     ],
   };
 
-  return <ReactECharts theme={'vintage'} option={options} />;
+  return <ReactECharts theme={"vintage"} option={options} />;
 };
 
 export const ProductionLeadTimeCard: React.FC<ProductionLeadTimeProps> = (
-  props,
+  props
 ) => {
   return (
     <BasicCard title="Production Lead Time">
-      <div style={{ color: 'gray' }}>
+      <div style={{ color: "gray" }}>
         {faker.random.arrayElement([
-          '先週と比べてリードタイムが落ちています。プロセスを見直しましょう。',
-          'リードタイムが改善されています。この調子で開発を進めましょう。',
-          '最終コミットからマージまでの時間が長い場合、レビューやその他の作業に時間を要している可能性があります。',
+          "先週と比べてリードタイムが落ちています。プロセスを見直しましょう。",
+          "リードタイムが改善されています。この調子で開発を進めましょう。",
+          "最終コミットからマージまでの時間が長い場合、レビューやその他の作業に時間を要している可能性があります。",
         ])}
       </div>
-      <div style={{ color: 'gray', fontSize: 12, paddingBottom: 10 }}>
+      <div style={{ color: "gray", fontSize: 12, paddingBottom: 10 }}>
         ※ Production lead time は 初回のコミットから PullRequest
         がマージされるまでの時間を計測しています。PullRequest
         はマージされた時系列順に表示されます。
       </div>
-      <div style={{ color: 'gray', fontSize: 12 }}>
-        <span style={{ width: 50, display: 'inline-block' }}>Open: </span>
+      <div style={{ color: "gray", fontSize: 12 }}>
+        <span style={{ width: 50, display: "inline-block" }}>Open: </span>
         <span>First Commit - PR Created</span>
       </div>
-      <div style={{ color: 'gray', fontSize: 12 }}>
-        <span style={{ width: 50, display: 'inline-block' }}>Work: </span>
+      <div style={{ color: "gray", fontSize: 12 }}>
+        <span style={{ width: 50, display: "inline-block" }}>Work: </span>
         <span>PR Created - Last Commit</span>
       </div>
-      <div style={{ color: 'gray', fontSize: 12 }}>
-        <span style={{ width: 50, display: 'inline-block' }}>Review: </span>
+      <div style={{ color: "gray", fontSize: 12 }}>
+        <span style={{ width: 50, display: "inline-block" }}>Review: </span>
         <span>Last Commit - PR Merged</span>
       </div>
 

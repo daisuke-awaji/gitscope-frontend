@@ -20,7 +20,7 @@ import {
 } from "@material-ui/core/styles";
 import { Link, useLocation } from "react-router-dom";
 import { links } from "../links";
-import { LoginUserAvatar } from "./LoginUserAvatar";
+import { LoginUserAvatar } from "./Atoms/LoginUserAvatar";
 
 const lightColor = "rgba(255, 255, 255, 0.7)";
 

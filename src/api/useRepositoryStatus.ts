@@ -18,7 +18,25 @@ export const useRepositoryStatusApi = () => {
       setIsLoading(true);
       const client = createClient(token);
       const res = await client.get(path);
-      setRepositories(res.data.repos);
+      setRepositories([
+        {
+          nameWithOwner: "serverless/serverless",
+          url: "https://github.com/serverless/serverless",
+          followed: true,
+        },
+        {
+          nameWithOwner: "serverless/components",
+          url: "https://github.com/serverless/components",
+          followed: true,
+        },
+        {
+          nameWithOwner: "facebook/react",
+          url: "https://github.com/facebook/react",
+          followed: true,
+        },
+
+        ...res.data.repos,
+      ]);
       setIsLoading(false);
     };
     if (user) {

@@ -1,24 +1,24 @@
-import React, { useEffect } from 'react';
-import ReactECharts from 'echarts-for-react';
-import theme from '../../theme';
-import faker from 'faker';
-import { BasicCard } from '../BasicCard';
-import { usePullRequestsPerDayApi } from '../../api/usePullReqeustsPerDayApi';
-import { Loading } from '../Atoms/Loading';
-import { Grid } from '@material-ui/core';
-import { DateRange } from 'materialui-daterange-picker';
-import { format } from 'date-fns';
-import * as querystring from 'querystring';
+import React, { useEffect } from "react";
+import ReactECharts from "echarts-for-react";
+import theme from "../../../theme";
+import faker from "faker";
+import { BasicCard } from "../../Atoms/BasicCard";
+import { usePullRequestsPerDayApi } from "../../../api/usePullReqeustsPerDayApi";
+import { Loading } from "../../Atoms/Loading";
+import { Grid } from "@material-ui/core";
+import { DateRange } from "materialui-daterange-picker";
+import { format } from "date-fns";
+import * as querystring from "querystring";
 
 type PullRequestTimelineProps = { repository: string; dateRange: DateRange };
 
 export const PullRequestTimelineCard: React.FC<PullRequestTimelineProps> = (
-  props,
+  props
 ) => {
   return (
     <BasicCard title="Pull Request timeline">
-      <div style={{ color: 'gray' }}>
-        {faker.random.arrayElement(['マージされた Pull Request の数の推移'])}
+      <div style={{ color: "gray" }}>
+        {faker.random.arrayElement(["マージされた Pull Request の数の推移"])}
       </div>
       <PullRequestTimeline {...props} />
     </BasicCard>
@@ -30,10 +30,10 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
   dateRange,
 }) => {
   const startDateString = dateRange.startDate
-    ? format(dateRange.startDate, 'yyyy-MM-dd')
+    ? format(dateRange.startDate, "yyyy-MM-dd")
     : undefined;
   const endDateString = dateRange.endDate
-    ? format(dateRange.endDate, 'yyyy-MM-dd')
+    ? format(dateRange.endDate, "yyyy-MM-dd")
     : undefined;
 
   const qs = querystring.stringify({ startDateString, endDateString });
@@ -47,7 +47,7 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
 
   const data = prs
     .sort(
-      (a, b) => new Date(a.mergedAt).getTime() - new Date(b.mergedAt).getTime(),
+      (a, b) => new Date(a.mergedAt).getTime() - new Date(b.mergedAt).getTime()
     )
     .map((pr) => [pr.mergedAt, pr.count]);
 
@@ -67,51 +67,51 @@ const PullRequestTimeline: React.FC<PullRequestTimelineProps> = ({
 
   const options = {
     xAxis: {
-      type: 'category',
+      type: "category",
       boundaryGap: true,
     },
     yAxis: {
-      type: 'value',
+      type: "value",
     },
     tooltip: {
-      trigger: 'axis',
+      trigger: "axis",
     },
     toolbox: {
       show: true,
       feature: {
         dataView: { show: true, readOnly: false },
-        magicType: { show: true, type: ['line', 'bar'] },
+        magicType: { show: true, type: ["line", "bar"] },
         restore: { show: true },
         saveAsImage: { show: true },
       },
     },
     grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
       containLabel: true,
     },
     dataZoom: [
       {
-        type: 'inside',
+        type: "inside",
       },
     ],
     series: [
       {
         name: repository,
-        type: 'bar',
+        type: "bar",
         itemStyle: {
           color: theme.palette.primary.light,
           width: 1,
         },
         markPoint: {
           data: [
-            { type: 'max', name: '最大值' },
-            { type: 'min', name: '最小值' },
+            { type: "max", name: "最大值" },
+            { type: "min", name: "最小值" },
           ],
         },
         markLine: {
-          data: [{ type: 'average', name: '平均值' }],
+          data: [{ type: "average", name: "平均值" }],
         },
         data: data,
       },

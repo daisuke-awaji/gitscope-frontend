@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import ReactECharts from 'echarts-for-react';
-import theme from '../../theme';
-import faker from 'faker';
-import { BasicCard } from '../BasicCard';
-import { usePullRequestsApi } from '../../api/usePullReqeustsApi';
-import { DateRange } from 'materialui-daterange-picker';
-import { format } from 'date-fns';
-import * as querystring from 'querystring';
-import { Grid } from '@material-ui/core';
-import { Loading } from '../Atoms/Loading';
+import React, { useEffect } from "react";
+import ReactECharts from "echarts-for-react";
+import theme from "../../../theme";
+import faker from "faker";
+import { BasicCard } from "../../Atoms/BasicCard";
+import { usePullRequestsApi } from "../../../api/usePullReqeustsApi";
+import { DateRange } from "materialui-daterange-picker";
+import { format } from "date-fns";
+import * as querystring from "querystring";
+import { Grid } from "@material-ui/core";
+import { Loading } from "../../Atoms/Loading";
 
 type CodeAdditionRiskProps = { repository: string; dateRange: DateRange };
 const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
@@ -16,10 +16,10 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
   dateRange,
 }) => {
   const startDateString = dateRange.startDate
-    ? format(dateRange.startDate, 'yyyy-MM-dd')
+    ? format(dateRange.startDate, "yyyy-MM-dd")
     : undefined;
   const endDateString = dateRange.endDate
-    ? format(dateRange.endDate, 'yyyy-MM-dd')
+    ? format(dateRange.endDate, "yyyy-MM-dd")
     : undefined;
 
   const qs = querystring.stringify({ startDateString, endDateString });
@@ -52,33 +52,33 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
 
   const options = {
     title: {
-      text: 'Code Addition Risk',
+      text: "Code Addition Risk",
       show: false,
     },
     xAxis: {
-      name: 'PR',
-      type: 'category',
+      name: "PR",
+      type: "category",
       boundaryGap: true,
     },
     yAxis: {
-      type: 'value',
+      type: "value",
     },
     tooltip: {
-      trigger: 'axis',
+      trigger: "axis",
     },
     toolbox: {
       show: true,
       feature: {
         dataView: { show: true, readOnly: false },
-        magicType: { show: true, type: ['line', 'bar'] },
+        magicType: { show: true, type: ["line", "bar"] },
         restore: { show: true },
         saveAsImage: { show: true },
       },
     },
     grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
       containLabel: true,
     },
     // legend: {
@@ -87,14 +87,14 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
     // },
     dataZoom: [
       {
-        type: 'inside',
+        type: "inside",
       },
     ],
     // Make gradient line here
     visualMap: [
       {
         show: true,
-        type: 'continuous',
+        type: "continuous",
         seriesIndex: 0,
         min: 0,
         max: 100,
@@ -102,9 +102,9 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
     ],
     series: [
       {
-        name: 'Open',
+        name: "Open",
         smooth: true,
-        type: 'line',
+        type: "line",
         // areaStyle: {},
         itemStyle: {
           color: theme.palette.primary.light,
@@ -112,8 +112,8 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
         },
         markPoint: {
           data: [
-            { type: 'max', name: '最大值' },
-            { type: 'min', name: '最小值' },
+            { type: "max", name: "最大值" },
+            { type: "min", name: "最小值" },
           ],
         },
         data,
@@ -121,20 +121,20 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
     ],
   };
 
-  return <ReactECharts theme={'vintage'} option={options} />;
+  return <ReactECharts theme={"vintage"} option={options} />;
 };
 
 export const CodeAdditionRiskCard: React.FC<CodeAdditionRiskProps> = (
-  props,
+  props
 ) => {
   return (
     <BasicCard title="Code Addition Risk (mock)">
-      <div style={{ color: 'gray' }}>
+      <div style={{ color: "gray" }}>
         {faker.random.arrayElement([
-          'Risk Points が xx 以上になると要注意です。',
+          "Risk Points が xx 以上になると要注意です。",
         ])}
       </div>
-      <div style={{ color: 'gray', fontSize: 12, paddingBottom: 10 }}>
+      <div style={{ color: "gray", fontSize: 12, paddingBottom: 10 }}>
         ※ Code Addition Risk は Pull Request
         におけるコード変更量とディスカッション率、変更されるソースコードの凝集度などの要素から算出されます。
       </div>

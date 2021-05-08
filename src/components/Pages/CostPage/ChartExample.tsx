@@ -1,6 +1,6 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
-import theme from "../../theme";
+import theme from "../../../theme";
 import faker from "faker";
 
 const Page: React.FC = () => {

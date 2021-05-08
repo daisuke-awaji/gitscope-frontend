@@ -5,10 +5,10 @@ import { Fragment } from "react";
 import {
   RepositoryStatus,
   useRepositoryStatusApi,
-} from "../../api/useRepositoryStatus";
-import { SERVICE_NAME } from "../../Constants";
-import { Loading } from "../Atoms/Loading";
-import { BasicCard } from "../BasicCard";
+} from "../../../api/useRepositoryStatus";
+import { SERVICE_NAME } from "../../../Constants";
+import { Loading } from "../../Atoms/Loading";
+import { BasicCard } from "../../Atoms/BasicCard";
 
 const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
   props

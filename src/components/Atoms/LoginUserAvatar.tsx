@@ -4,10 +4,10 @@ import {
   makeStyles,
   Menu,
   MenuItem,
-} from '@material-ui/core';
-import React from 'react';
-import { useAuth } from '../AuthProvider';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+} from "@material-ui/core";
+import React from "react";
+import { useAuth } from "../../AuthProvider";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const useStyles = makeStyles((theme) => ({
   iconButtonAvatar: {
