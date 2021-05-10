@@ -20,16 +20,18 @@ const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
     save({
       nameWithOwner: name,
       followed: true,
+    }).then(() => {
+      window.location.reload();
     });
-    window.location.reload();
   };
   const handleClickUnfollow = (name: any) => {
     console.log(name);
     save({
       nameWithOwner: name,
       followed: false,
+    }).then(() => {
+      window.location.reload();
     });
-    window.location.reload();
   };
   return (
     <Grid container spacing={2} direction="column">

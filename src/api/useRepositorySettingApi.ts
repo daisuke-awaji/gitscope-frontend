@@ -17,9 +17,17 @@ export const useRepositorySettingApi = () => {
       const client = createClient(user.token);
       const path = `/repos/${repositorySetting.nameWithOwner}/setup`;
 
-      await client.post(path, {
-        enabled: repositorySetting.followed,
-      });
+      await client.post(
+        path,
+        {
+          enabled: repositorySetting.followed,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
     }
     setIsLoading(false);
   };
