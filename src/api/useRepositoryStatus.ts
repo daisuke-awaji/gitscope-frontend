@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "../AuthProvider";
 import { createClient } from "./client";
+import * as querystring from "querystring";
 
 export type RepositoryStatus = {
   nameWithOwner: string;
@@ -8,8 +9,10 @@ export type RepositoryStatus = {
   followed: boolean;
 };
 
-export const useRepositoryStatusApi = () => {
-  const [path, setPath] = useState<string>("/repos");
+export const useRepositoryStatusApi = (followed?: boolean) => {
+  const [path, setPath] = useState<string>(
+    "/repos?" + querystring.stringify({ followed })
+  );
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [repositories, setRepositories] = useState<RepositoryStatus[]>([]);
   const { user } = useAuth();

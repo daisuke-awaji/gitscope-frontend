@@ -9,15 +9,27 @@ import {
 import { SERVICE_NAME } from "../../../Constants";
 import { Loading } from "../../Atoms/Loading";
 import { BasicCard } from "../../Atoms/BasicCard";
+import { useRepositorySettingApi } from "../../../api/useRepositorySettingApi";
 
 const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
   props
 ) => {
+  const { save } = useRepositorySettingApi();
   const handleClickSetUp = (name: any) => {
     console.log(name);
+    save({
+      nameWithOwner: name,
+      followed: true,
+    });
+    window.location.reload();
   };
   const handleClickUnfollow = (name: any) => {
     console.log(name);
+    save({
+      nameWithOwner: name,
+      followed: false,
+    });
+    window.location.reload();
   };
   return (
     <Grid container spacing={2} direction="column">

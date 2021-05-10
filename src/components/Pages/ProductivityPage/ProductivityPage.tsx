@@ -18,7 +18,7 @@ const ProductivityPage = () => {
   const [query, { replaceQuery }] = useQueryParams();
   console.log(query);
 
-  const { repositories, isLoading } = useRepositoryStatusApi();
+  const { repositories, isLoading } = useRepositoryStatusApi(true);
   const repoNames = repositories.map((repo) => repo.nameWithOwner);
   const [selectedRepository, setSelectedRepository] = useState("");
 
