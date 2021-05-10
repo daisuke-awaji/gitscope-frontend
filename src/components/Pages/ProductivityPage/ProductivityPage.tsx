@@ -10,14 +10,12 @@ import DateRangePickerExample from "./DateRangePicker";
 import { useRepositoryStatusApi } from "../../../api/useRepositoryStatus";
 import { Loading } from "../../Atoms/Loading";
 import { DateRange } from "materialui-daterange-picker";
-import { sub } from "date-fns";
+import { format, sub } from "date-fns";
 import { CodeAdditionRiskCard } from "./CodeAddtionRisk";
 const { useQueryParams } = require("react-router-query-hooks");
 
 const ProductivityPage = () => {
   const [query, { replaceQuery }] = useQueryParams();
-  console.log(query);
-
   const { repositories, isLoading } = useRepositoryStatusApi(true);
   const repoNames = repositories.map((repo) => repo.nameWithOwner);
   const [selectedRepository, setSelectedRepository] = useState("");
@@ -30,13 +28,29 @@ const ProductivityPage = () => {
 
   const handleChange = (event: any) => {
     setSelectedRepository(event.target.value);
-    replaceQuery({ repo: event.target.value });
+    replaceQuery({
+      repo: event.target.value,
+      startDate: query.startDate,
+      endDate: query.endDate,
+    });
   };
 
   useEffect(() => {
     const repo = query.repo || "facebook/react";
     setSelectedRepository(repo);
-    replaceQuery({ repo: "facebook/react" });
+
+    const startDateStr =
+      query.startDate || format(initialDateRange.startDate, "yyyy-MM-dd");
+    const endDateStr =
+      query.endDate || format(initialDateRange.endDate, "yyyy-MM-dd");
+
+    setDateRange({
+      startDate: new Date(startDateStr),
+      endDate: new Date(endDateStr),
+    });
+
+    replaceQuery({ repo, startDate: startDateStr, endDate: endDateStr });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [repositories]);
 
