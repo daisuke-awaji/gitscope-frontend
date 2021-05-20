@@ -18,6 +18,7 @@ import { Discussion, Risk } from "../../Lottie/LottieAnimation";
 import PullRequestLeadTimeDemoLottie from "../../Lottie/PullRequestLeadTimeDemoLottie";
 import VisualizeTeamProductivityLottie from "../../Lottie/VisualizeTeamProductivityLottie";
 import { ContentBlock } from "./ContentBlock";
+import { Pricing } from "./Pricing";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -108,9 +109,8 @@ export const LandingPage = () => {
             type="right"
             first={true}
             title={"Minimize Lead Time"}
-            content={
-              "Start analyze GitHub Repository. GitScope makes it easy to visualize your product team's verocity, productivity and risk."
-            }
+            content={`Start analyze GitHub Repository. GitScope makes it easy to visualize your product team's verocity, productivity and risk. 
+            😋 This service is currently under development. There may be destructive updates without notice. Please note that we cannot guarantee the storage of data, etc. 🍰`}
             icon={<VisualizeTeamProductivityLottie />}
             button={<StartWithGitHubLoginButton />}
           />
@@ -162,6 +162,13 @@ export const LandingPage = () => {
             title={"Detect Risk"}
             content={`Frequently modified sources lead to bugs. Identify files that are susceptible to change, and identify high-risk changes based on the percentage of discussions in the Pull Request.`}
             icon={<Risk />}
+          />
+
+          <ContentBlock
+            type="middle"
+            title={"Pricing"}
+            content={`Start building for free now.`}
+            icon={<Pricing />}
           />
         </Container>
 
