@@ -10,14 +10,19 @@ const useContentBlockStyles = makeStyles((theme: Theme) =>
       paddingTop: "4rem",
       paddingBottom: "4rem",
     },
+    gradiented: {
+      background: `-webkit-linear-gradient(135deg, ${theme.palette.primary.main}, #ffb9f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;`,
+    },
     firstTitle: {
       fontSize: "5rem",
-      fontWeight: 800,
+      fontWeight: 900,
       paddingBottom: "0.75rem",
     },
     title: {
       fontSize: "3rem",
-      fontWeight: 800,
+      fontWeight: 600,
       paddingBottom: "0.75rem",
     },
     content: {
@@ -64,7 +69,8 @@ const ContentContainer = (props: ContentBlockProps) => {
         <div
           className={clsx(
             props.first && matches ? classes.firstTitle : classes.title,
-            (props.type === "middle" || !matches) && classes.centerize
+            (props.type === "middle" || !matches) && classes.centerize,
+            props.first && classes.gradiented
           )}
         >
           {props.title}

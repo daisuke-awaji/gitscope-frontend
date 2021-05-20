@@ -24,7 +24,7 @@ export const GitHubLoginButton = () => {
       onClick={() => {
         loginWithGitHub();
       }}
-      style={{ textTransform: "none" }}
+      style={{ textTransform: "none", fontWeight: 800 }}
     >
       Login
     </Button>
@@ -42,7 +42,7 @@ export const StartWithGitHubLoginButton = () => {
       onClick={() => {
         loginWithGitHub();
       }}
-      style={{ textTransform: "none" }}
+      style={{ textTransform: "none", fontWeight: 800, fontSize: "1.2rem" }}
     >
       Get Started for Free
     </Button>
