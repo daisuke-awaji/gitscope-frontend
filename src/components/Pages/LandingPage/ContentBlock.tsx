@@ -60,17 +60,17 @@ const ContentContainer = (props: ContentBlockProps) => {
       alignItems="center"
       style={{ margin: "30px" }}
     >
-      <Grid xs={12}>
+      <Grid xs={12} item>
         <div
           className={clsx(
-            props.first ? classes.firstTitle : classes.title,
+            props.first && matches ? classes.firstTitle : classes.title,
             (props.type === "middle" || !matches) && classes.centerize
           )}
         >
           {props.title}
         </div>
       </Grid>
-      <Grid xs={12}>
+      <Grid xs={12} item>
         <div
           className={clsx(
             classes.content,
@@ -80,7 +80,7 @@ const ContentContainer = (props: ContentBlockProps) => {
           {props.content}
         </div>
       </Grid>
-      <Grid xs={12}>
+      <Grid xs={12} item>
         <div className={clsx(classes.button, !matches && classes.centerize)}>
           {props?.button}
         </div>
@@ -96,6 +96,7 @@ const MiddleContentBlock = (props: ContentBlockProps) => {
     <Grid container className={classes.container}>
       <Grid
         xs={12}
+        item
         container
         direction="row"
         justify="center"
@@ -105,6 +106,7 @@ const MiddleContentBlock = (props: ContentBlockProps) => {
       </Grid>
       <Grid
         xs={12}
+        item
         container
         direction="row"
         justify="center"
@@ -124,6 +126,7 @@ const RightContentBlock = (props: ContentBlockProps) => {
       <Grid
         xs={12}
         sm={6}
+        item
         container
         direction="row"
         justify="center"
@@ -131,7 +134,7 @@ const RightContentBlock = (props: ContentBlockProps) => {
       >
         <ContentContainer {...props} />
       </Grid>
-      <Grid xs={12} sm={6}>
+      <Grid xs={12} sm={6} item>
         {props.icon}
       </Grid>
     </Grid>
@@ -142,12 +145,13 @@ const LeftContentBlock = (props: ContentBlockProps) => {
 
   return (
     <Grid container className={classes.container}>
-      <Grid xs={12} sm={6}>
+      <Grid xs={12} sm={6} item>
         {props.icon}
       </Grid>
       <Grid
         xs={12}
         sm={6}
+        item
         container
         direction="row"
         justify="center"

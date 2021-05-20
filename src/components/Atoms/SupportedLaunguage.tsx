@@ -5,12 +5,8 @@ import { JavaScriptIcon, TypeScriptIcon } from "./Icons/Icons";
 export const SupportedLaunguage = () => {
   return (
     <Grid container direction="row" justify="center" alignItems="center">
-      <Grid xs={2}>
-        <JavaScriptIcon style={{ width: 80 }} />
-      </Grid>
-      <Grid xs={2}>
-        <TypeScriptIcon style={{ width: 80 }} />
-      </Grid>
+      <JavaScriptIcon style={{ width: 90, marginLeft: 10, marginRight: 10 }} />
+      <TypeScriptIcon style={{ width: 90, marginLeft: 10, marginRight: 10 }} />
     </Grid>
   );
 };
