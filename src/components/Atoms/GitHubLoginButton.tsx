@@ -44,7 +44,7 @@ export const StartWithGitHubLoginButton = () => {
       }}
       style={{ textTransform: "none" }}
     >
-      Start Analyze GitHub Repositories
+      Get Started for Free
     </Button>
   );
 };
