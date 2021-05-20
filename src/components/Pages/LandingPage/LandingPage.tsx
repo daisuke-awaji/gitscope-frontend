@@ -8,10 +8,12 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { SERVICE_NAME } from "../../../Constants";
+import { DeveloperFlow } from "../../Atoms/DeveloperFlow";
 import {
   GitHubLoginButton,
   StartWithGitHubLoginButton,
 } from "../../Atoms/GitHubLoginButton";
+import { SupportedLaunguage } from "../../Atoms/SupportedLaunguage";
 import { Discussion, Risk } from "../../Lottie/LottieAnimation";
 import PullRequestLeadTimeDemoLottie from "../../Lottie/PullRequestLeadTimeDemoLottie";
 import VisualizeTeamProductivityLottie from "../../Lottie/VisualizeTeamProductivityLottie";
@@ -113,6 +115,30 @@ export const LandingPage = () => {
           }
           icon={<VisualizeTeamProductivityLottie />}
           button={<StartWithGitHubLoginButton />}
+        />
+
+        <ContentBlock
+          type="middle"
+          title={"Only Push, Analyze Everything"}
+          content={`You just push the source code to your GitHub repository. 
+            No complicated setting work is required.
+            All actions taken on GitHub are automatically analyzed by GitScope.`}
+          icon={
+            <div style={{ width: "80%" }}>
+              <DeveloperFlow />
+            </div>
+          }
+        />
+
+        <ContentBlock
+          type="middle"
+          title={"Language Support"}
+          content={`We plan to increase the number of supported languages ​​in the future.`}
+          icon={
+            <div style={{ width: "80%" }}>
+              <SupportedLaunguage />
+            </div>
+          }
         />
 
         <ContentBlock

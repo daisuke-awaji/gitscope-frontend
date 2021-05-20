@@ -1,6 +1,8 @@
 import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
 import React, { ReactElement } from "react";
-import clsx from "clsx"; //←ここでインポート。
+import clsx from "clsx";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
 const useContentBlockStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -24,6 +26,9 @@ const useContentBlockStyles = makeStyles((theme: Theme) =>
     button: {
       paddingTop: "1rem",
     },
+    centerize: {
+      textAlign: "center",
+    },
   })
 );
 
@@ -44,6 +49,8 @@ export const ContentBlock = (props: ContentBlockProps) => {
 
 const ContentContainer = (props: ContentBlockProps) => {
   const classes = useContentBlockStyles(props.first);
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <Grid
@@ -56,18 +63,27 @@ const ContentContainer = (props: ContentBlockProps) => {
       <Grid xs={12}>
         <div
           className={clsx(
-            !props.first && classes.title,
-            props.first && classes.firstTitle
+            props.first ? classes.firstTitle : classes.title,
+            (props.type === "middle" || !matches) && classes.centerize
           )}
         >
           {props.title}
         </div>
       </Grid>
       <Grid xs={12}>
-        <div className={classes.content}>{props.content}</div>
+        <div
+          className={clsx(
+            classes.content,
+            (props.type === "middle" || !matches) && classes.centerize
+          )}
+        >
+          {props.content}
+        </div>
       </Grid>
       <Grid xs={12}>
-        <div className={classes.button}>{props?.button}</div>
+        <div className={clsx(classes.button, !matches && classes.centerize)}>
+          {props?.button}
+        </div>
       </Grid>
     </Grid>
   );
