@@ -14,8 +14,14 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     priceCard: {
       textAlign: "center",
-      height: "20rem",
-      width: "13rem",
+      height: "30rem",
+      width: "20rem",
+    },
+    title: {
+      paddingTop: "1rem",
+      paddingBottom: "1rem",
+      fontSize: "2rem",
+      fontWeight: 700,
     },
     colorBar: {
       height: "1rem",
@@ -23,23 +29,22 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     description: {
       color: "gray",
-      fontSize: "0.5rem",
+      fontSize: "0.8rem",
     },
     priceInformation: {
       color: "gray",
-      fontSize: "0.9rem",
+      fontSize: "1.3rem",
       paddingTop: "1.0rem",
     },
-
     features: {
       paddingTop: "1rem",
-      fontSize: "0.5rem",
+      fontSize: "1rem",
       textAlign: "left",
     },
     button: {
       marginTop: "1rem",
-      width: "8rem",
-      fontSize: "0.5rem",
+      width: "12rem",
+      fontSize: "1rem",
       fontWeight: 800,
       color: "white",
     },
@@ -68,7 +73,7 @@ const PriceCard = (props: PriceCardProps) => {
               : props.color,
         }}
       ></div>
-      <h2>{props.title}</h2>
+      <div className={classes.title}>{props.title}</div>
       <div className={clsx(classes.description)}>{props?.description}</div>
       <div className={clsx(classes.priceInformation)}>
         {props?.priceInformation}
@@ -103,7 +108,7 @@ export const Pricing = () => {
       direction="row"
       justify="center"
       alignItems="center"
-      spacing={1}
+      spacing={3}
     >
       <Grid
         xs={12}
@@ -138,7 +143,7 @@ export const Pricing = () => {
       >
         <PriceCard
           color="gray"
-          title="Performance"
+          title="Pro"
           description="Not yet available. Under development."
           priceInformation="Starting at $30 per month"
           buttonText="Work in progress..."
