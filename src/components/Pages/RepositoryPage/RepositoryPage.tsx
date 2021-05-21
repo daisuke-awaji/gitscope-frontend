@@ -11,9 +11,10 @@ import { Loading } from "../../Atoms/Loading";
 import { BasicCard } from "../../Atoms/BasicCard";
 import { useRepositorySettingApi } from "../../../api/useRepositorySettingApi";
 
-const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
-  props
-) => {
+const Repositories: React.FC<{
+  repositories: RepositoryStatus[];
+  setRepositories: any;
+}> = (props) => {
   const { save } = useRepositorySettingApi();
   const handleClickSetUp = (name: any) => {
     console.log(name);
@@ -21,7 +22,19 @@ const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
       nameWithOwner: name,
       followed: true,
     }).then(() => {
-      window.location.reload();
+      const newRepositories: RepositoryStatus[] = props.repositories.map(
+        (repositoryStatus) => {
+          if (repositoryStatus.nameWithOwner === name) {
+            return {
+              nameWithOwner: name,
+              url: repositoryStatus.url,
+              followed: !repositoryStatus.followed,
+            };
+          }
+          return repositoryStatus;
+        }
+      );
+      props.setRepositories(newRepositories);
     });
   };
   const handleClickUnfollow = (name: any) => {
@@ -30,7 +43,19 @@ const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
       nameWithOwner: name,
       followed: false,
     }).then(() => {
-      window.location.reload();
+      const newRepositories: RepositoryStatus[] = props.repositories.map(
+        (repositoryStatus) => {
+          if (repositoryStatus.nameWithOwner === name) {
+            return {
+              nameWithOwner: name,
+              url: repositoryStatus.url,
+              followed: !repositoryStatus.followed,
+            };
+          }
+          return repositoryStatus;
+        }
+      );
+      props.setRepositories(newRepositories);
     });
   };
   return (
@@ -73,7 +98,7 @@ const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
 };
 
 export const RepositoryPage: React.FC = (): JSX.Element => {
-  const { repositories, isLoading } = useRepositoryStatusApi();
+  const { repositories, setRepositories, isLoading } = useRepositoryStatusApi();
 
   return (
     <Grid container spacing={2}>
@@ -94,7 +119,10 @@ export const RepositoryPage: React.FC = (): JSX.Element => {
             {isLoading ? (
               <Loading />
             ) : (
-              <Repositories repositories={repositories} />
+              <Repositories
+                repositories={repositories}
+                setRepositories={setRepositories}
+              />
             )}
           </Grid>
         </BasicCard>
