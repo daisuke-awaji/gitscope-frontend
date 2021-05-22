@@ -1,5 +1,4 @@
 import ProjectUsageContent from "./components/Pages/CostPage/ProjectUsageContent";
-import PeopleIcon from "@material-ui/icons/People";
 import SettingsIcon from "@material-ui/icons/Settings";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import ProductivityPage from "./components/Pages/ProductivityPage/ProductivityPage";
@@ -10,6 +9,8 @@ import { RepositoryPage } from "./components/Pages/RepositoryPage/RepositoryPage
 import { DeveloperContributionPage } from "./components/Pages/DeveloperContributionPage";
 import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 import { JobsPage } from "./components/Pages/JobsPage/JobsPage";
+import { RepositorySetting } from "./components/Pages/RepositoryPage/RepositorySetting";
+import { Setting } from "./components/Pages/SettingPage/Setting";
 
 export type Link = {
   id: string;
@@ -19,7 +20,7 @@ export type Link = {
   children: LinkItem[];
 };
 type LinkItem = {
-  label: string;
+  label?: string;
   to: string;
   component: any;
 };
@@ -66,21 +67,25 @@ export const links: Link[] = [
         to: "/repositories",
         component: <RepositoryPage />,
       },
-    ],
-  },
-  {
-    id: "Users",
-    category: "Develop",
-    icon: <PeopleIcon />,
-    path: "/users",
-    children: [
       {
-        label: "HelloWorld",
-        to: "/users",
-        component: <div>xxx</div>,
+        to: "/repositories/:id",
+        component: <RepositorySetting />,
       },
     ],
   },
+  // {
+  //   id: "Users",
+  //   category: "Develop",
+  //   icon: <PeopleIcon />,
+  //   path: "/users",
+  //   children: [
+  //     {
+  //       label: "HelloWorld",
+  //       to: "/users",
+  //       component: <div>xxx</div>,
+  //     },
+  //   ],
+  // },
   {
     id: "Settings",
     category: "Settings",
@@ -90,7 +95,7 @@ export const links: Link[] = [
       {
         label: "Setting",
         to: "/settings",
-        component: <div>settings</div>,
+        component: <Setting />,
       },
     ],
   },

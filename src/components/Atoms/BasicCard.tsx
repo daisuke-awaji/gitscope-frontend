@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export type BasicCardProps = {
-  title: string;
+  title?: string;
   chip?: string;
 } & CardProps;
 export const BasicCard: React.FC<BasicCardProps> = (props) => {

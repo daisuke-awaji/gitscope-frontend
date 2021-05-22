@@ -1,4 +1,5 @@
 import { Button, Divider, Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 import React from "react";
 import { Fragment } from "react";
@@ -11,26 +12,30 @@ import { Loading } from "../../Atoms/Loading";
 import { BasicCard } from "../../Atoms/BasicCard";
 import { useRepositorySettingApi } from "../../../api/useRepositorySettingApi";
 
-const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
-  props
-) => {
+const Repositories: React.FC<{
+  repositories: RepositoryStatus[];
+  setRepositories: any;
+}> = (props) => {
   const { save } = useRepositorySettingApi();
-  const handleClickSetUp = (name: any) => {
-    console.log(name);
-    save({
-      nameWithOwner: name,
-      followed: true,
-    }).then(() => {
-      window.location.reload();
-    });
-  };
   const handleClickUnfollow = (name: any) => {
     console.log(name);
     save({
       nameWithOwner: name,
       followed: false,
     }).then(() => {
-      window.location.reload();
+      const newRepositories: RepositoryStatus[] = props.repositories.map(
+        (repositoryStatus) => {
+          if (repositoryStatus.nameWithOwner === name) {
+            return {
+              nameWithOwner: name,
+              url: repositoryStatus.url,
+              followed: !repositoryStatus.followed,
+            };
+          }
+          return repositoryStatus;
+        }
+      );
+      props.setRepositories(newRepositories);
     });
   };
   return (
@@ -54,14 +59,20 @@ const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
                     Unfollow Project
                   </Button>
                 ) : (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    disableElevation
-                    onClick={() => handleClickSetUp(repo.nameWithOwner)}
+                  <Link
+                    to={`/repositories/${encodeURIComponent(
+                      repo.nameWithOwner
+                    )}`}
+                    style={{ textDecoration: "none" }}
                   >
-                    Set Up Project
-                  </Button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      disableElevation
+                    >
+                      Set Up Project
+                    </Button>
+                  </Link>
                 )}
               </Grid>
             </Grid>
@@ -73,7 +84,7 @@ const Repositories: React.FC<{ repositories: RepositoryStatus[] }> = (
 };
 
 export const RepositoryPage: React.FC = (): JSX.Element => {
-  const { repositories, isLoading } = useRepositoryStatusApi();
+  const { repositories, setRepositories, isLoading } = useRepositoryStatusApi();
 
   return (
     <Grid container spacing={2}>
@@ -94,7 +105,10 @@ export const RepositoryPage: React.FC = (): JSX.Element => {
             {isLoading ? (
               <Loading />
             ) : (
-              <Repositories repositories={repositories} />
+              <Repositories
+                repositories={repositories}
+                setRepositories={setRepositories}
+              />
             )}
           </Grid>
         </BasicCard>
