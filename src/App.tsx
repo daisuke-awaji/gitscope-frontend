@@ -16,7 +16,7 @@ import { links } from "./links";
 import { GitHubAuthCallback } from "./components/Atoms/GitHubAuthCallback";
 import { LandingPage } from "./components/Pages/LandingPage/LandingPage";
 import { useAuth } from "./AuthProvider";
-import { Loading } from "./components/Atoms/Loading";
+import Backdrop from "./components/Atoms/SimpleBackDrop";
 
 const drawerWidth = 256;
 
@@ -66,7 +66,7 @@ const MainDashboardLayoutPage = (props: AppProps) => {
   }
 
   if (isLoading) {
-    return <Loading />;
+    return <Backdrop />;
   }
 
   if (!isAuthenticated) {

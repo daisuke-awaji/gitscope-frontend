@@ -1,4 +1,5 @@
 import { Button, Divider, Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 import React from "react";
 import { Fragment } from "react";
@@ -16,27 +17,6 @@ const Repositories: React.FC<{
   setRepositories: any;
 }> = (props) => {
   const { save } = useRepositorySettingApi();
-  const handleClickSetUp = (name: any) => {
-    console.log(name);
-    save({
-      nameWithOwner: name,
-      followed: true,
-    }).then(() => {
-      const newRepositories: RepositoryStatus[] = props.repositories.map(
-        (repositoryStatus) => {
-          if (repositoryStatus.nameWithOwner === name) {
-            return {
-              nameWithOwner: name,
-              url: repositoryStatus.url,
-              followed: !repositoryStatus.followed,
-            };
-          }
-          return repositoryStatus;
-        }
-      );
-      props.setRepositories(newRepositories);
-    });
-  };
   const handleClickUnfollow = (name: any) => {
     console.log(name);
     save({
@@ -79,14 +59,20 @@ const Repositories: React.FC<{
                     Unfollow Project
                   </Button>
                 ) : (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    disableElevation
-                    onClick={() => handleClickSetUp(repo.nameWithOwner)}
+                  <Link
+                    to={`/repositories/${encodeURIComponent(
+                      repo.nameWithOwner
+                    )}`}
+                    style={{ textDecoration: "none" }}
                   >
-                    Set Up Project
-                  </Button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      disableElevation
+                    >
+                      Set Up Project
+                    </Button>
+                  </Link>
                 )}
               </Grid>
             </Grid>

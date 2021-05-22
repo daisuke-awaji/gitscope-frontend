@@ -21,6 +21,7 @@
     "echarts-for-react": "^3.0.1",
     "faker": "^5.4.0",
     "materialui-daterange-picker": "^1.1.92",
+    "prismjs": "^1.23.0",
     "querystring": "^0.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -28,6 +29,8 @@
     "react-router-dom": "^5.2.0",
     "react-router-query-hooks": "^2.1.0",
     "react-scripts": "4.0.3",
+    "react-simple-code-editor": "^0.11.0",
+    "react-syntax-highlighter": "^15.4.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -56,7 +59,9 @@
     ]
   },
   "devDependencies": {
+    "@types/prismjs": "^1.16.5",
     "@types/react-lottie": "^1.2.5",
-    "@types/react-router-dom": "^5.1.7"
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-syntax-highlighter": "^13.5.0"
   }
 }

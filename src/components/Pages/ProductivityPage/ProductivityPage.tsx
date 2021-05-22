@@ -1,21 +1,21 @@
-import { Button, Grid } from '@material-ui/core';
-import { DeveloperScoreCard } from './DeveloperScore';
-import { PullRequestTimelineCard } from './PullRequestTimeline';
-import React, { useEffect, useState } from 'react';
-import { RepositorySelector } from './RepositorySelector';
-import { ProductionLeadTimeCard } from './ProductionLeadTime';
-import { ActivityRatioCard } from './ActivityRatio';
-import { ScoreCards } from './ScoreCards';
-import DateRangePickerExample from './DateRangePicker';
-import { useRepositoryStatusApi } from '../../../api/useRepositoryStatus';
-import { Loading } from '../../Atoms/Loading';
-import { DateRange } from 'materialui-daterange-picker';
-import { format, sub } from 'date-fns';
-import { CodeAdditionRiskCard } from './CodeAddtionRisk';
-import { Link } from 'react-router-dom';
-import { ReactComponent as SelectRepositoryLogo } from './SelectRepository.svg';
+import { Button, Grid } from "@material-ui/core";
+import { DeveloperScoreCard } from "./DeveloperScore";
+import { PullRequestTimelineCard } from "./PullRequestTimeline";
+import React, { useEffect, useState } from "react";
+import { RepositorySelector } from "./RepositorySelector";
+import { ProductionLeadTimeCard } from "./ProductionLeadTime";
+import { ActivityRatioCard } from "./ActivityRatio";
+import { ScoreCards } from "./ScoreCards";
+import DateRangePickerExample from "./DateRangePicker";
+import { useRepositoryStatusApi } from "../../../api/useRepositoryStatus";
+import { Loading } from "../../Atoms/Loading";
+import { DateRange } from "materialui-daterange-picker";
+import { format, sub } from "date-fns";
+import { CodeAdditionRiskCard } from "./CodeAddtionRisk";
+import { Link } from "react-router-dom";
+import { ReactComponent as SelectRepositoryLogo } from "./SelectRepository.svg";
 
-const { useQueryParams } = require('react-router-query-hooks');
+const { useQueryParams } = require("react-router-query-hooks");
 
 const GoToRepositorySetting = () => {
   return (
@@ -24,7 +24,7 @@ const GoToRepositorySetting = () => {
       direction="column"
       justify="center"
       alignItems="center"
-      style={{ height: '50%' }}
+      style={{ height: "50%" }}
     >
       <Grid>
         <SelectRepositoryLogo />
@@ -35,7 +35,7 @@ const GoToRepositorySetting = () => {
       <Grid>
         <Link
           to="/repositories"
-          style={{ color: 'inherit', textDecoration: 'none' }}
+          style={{ color: "inherit", textDecoration: "none" }}
         >
           <Button color="primary">Go to Repository Settings</Button>
         </Link>
@@ -48,7 +48,7 @@ const ProductivityPage = () => {
   const [query, { replaceQuery }] = useQueryParams();
   const { repositories, isLoading } = useRepositoryStatusApi(true);
   const repoNames = repositories.map((repo) => repo.nameWithOwner);
-  const [selectedRepository, setSelectedRepository] = useState('');
+  const [selectedRepository, setSelectedRepository] = useState("");
 
   const initialDateRange = {
     startDate: sub(new Date(), { weeks: 1 }),
@@ -70,9 +70,9 @@ const ProductivityPage = () => {
     setSelectedRepository(repo);
 
     const startDateStr =
-      query.startDate || format(initialDateRange.startDate, 'yyyy-MM-dd');
+      query.startDate || format(initialDateRange.startDate, "yyyy-MM-dd");
     const endDateStr =
-      query.endDate || format(initialDateRange.endDate, 'yyyy-MM-dd');
+      query.endDate || format(initialDateRange.endDate, "yyyy-MM-dd");
 
     setDateRange({
       startDate: new Date(startDateStr),
