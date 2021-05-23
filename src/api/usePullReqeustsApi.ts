@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useAuth } from '../AuthProvider';
-import { createClient } from './client';
+import { useState, useEffect } from "react";
+import { useAxios } from "./client";
 
 type PullRequest = {
   number: number;
@@ -25,20 +24,18 @@ export const usePullRequestsApi = (initialState: InitialState) => {
   const [path, setPath] = useState<string>(initialState.path);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [prs, setPrs] = useState<PullRequest[]>([]);
-  const { user } = useAuth();
+  const { axios } = useAxios();
   useEffect(() => {
-    const fetch = async (token: string) => {
+    const fetch = async () => {
       setIsLoading(true);
-      const client = createClient(token);
-      const res = await client.get<{
+      const res = await axios.get<{
         prs: PullRequest[];
       }>(path);
       setPrs(res.data.prs);
       setIsLoading(false);
     };
-    if (user) {
-      fetch(user.token);
-    }
+    fetch();
+
     // eslint-disable-next-line
   }, [path]);
 
