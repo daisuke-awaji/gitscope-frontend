@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../AuthProvider";
-import { createClient } from "./client";
+import { useAxios } from "./client";
 
 type RepositorySetting = {
   nameWithOwner: string;
@@ -18,6 +18,7 @@ type PostResponse = {
 export const useRepositorySettingApi = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { user } = useAuth();
+  const { axios } = useAxios();
 
   const save = async (
     repositorySetting: RepositorySetting
@@ -25,10 +26,9 @@ export const useRepositorySettingApi = () => {
     setIsLoading(true);
     let result = null;
     if (user) {
-      const client = createClient(user.token);
       const path = `/repos/${repositorySetting.nameWithOwner}/setup`;
 
-      const res = await client.post<PostResponse>(
+      const res = await axios.post<PostResponse>(
         path,
         {
           enabled: repositorySetting.followed,

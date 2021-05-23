@@ -10,6 +10,8 @@ export interface AuthState {
 }
 interface IAuthContext extends AuthState {
   loginWithGitHub: () => void;
+  checkAuthenticated: () => void;
+  tokenHasExpired: () => boolean;
   callback: (code: string) => Promise<void>;
   reSignWithRefreshToken: () => Promise<void>;
   logout: () => void;
@@ -23,7 +25,9 @@ const stub = (): never => {
 };
 export const initialContext = {
   ...initialState,
+  tokenHasExpired: stub,
   loginWithGitHub: stub,
+  checkAuthenticated: stub,
   callback: stub,
   reSignWithRefreshToken: stub,
   logout: stub,
@@ -50,9 +54,7 @@ export const AuthProvider = (props: any) => {
     // eslint-disable-next-line
   }, []);
 
-  const checkAuthenticated = () => {
-    setIsLoading(true);
-    const token = localStorage.getItem("gh-token");
+  const tokenHasExpired = () => {
     const expires_at = localStorage.getItem("gh-token-expires-at");
 
     if (expires_at) {
@@ -64,10 +66,21 @@ export const AuthProvider = (props: any) => {
         now: new Date(),
         diff: new Date(Number(expires_at)).getTime() - new Date().getTime(),
       });
-      if (expired) {
-        console.log("refresh token");
-        reSignWithRefreshToken();
-      }
+
+      return expired;
+    }
+
+    return true;
+  };
+
+  const checkAuthenticated = () => {
+    setIsLoading(true);
+    const token = localStorage.getItem("gh-token");
+
+    const expired = tokenHasExpired();
+    if (expired) {
+      console.log("refresh token");
+      reSignWithRefreshToken();
     }
 
     // TODO: refresh token refetch flow
@@ -196,6 +209,8 @@ export const AuthProvider = (props: any) => {
       value={{
         isAuthenticated,
         isLoading,
+        tokenHasExpired,
+        checkAuthenticated,
         loginWithGitHub,
         callback,
         reSignWithRefreshToken,

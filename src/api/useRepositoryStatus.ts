@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { useAuth } from "../AuthProvider";
-import { createClient } from "./client";
+import { useAxios } from "./client";
 import * as querystring from "querystring";
 
 export type RepositoryStatus = {
@@ -15,19 +14,16 @@ export const useRepositoryStatusApi = (followed?: boolean) => {
   );
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [repositories, setRepositories] = useState<RepositoryStatus[]>([]);
-  const { user } = useAuth();
+  const { axios } = useAxios();
   useEffect(() => {
-    const fetch = async (token: string) => {
+    const fetch = async () => {
       setIsLoading(true);
-      const client = createClient(token);
-      const res = await client.get(path);
+      const res = await axios.get(path);
 
       setRepositories(res.data.repos);
       setIsLoading(false);
     };
-    if (user) {
-      fetch(user.token);
-    }
+    fetch();
     // eslint-disable-next-line
   }, [path]);
 
