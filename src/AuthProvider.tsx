@@ -56,7 +56,14 @@ export const AuthProvider = (props: any) => {
     const expires_at = localStorage.getItem("gh-token-expires-at");
 
     if (expires_at) {
-      const expired = new Date(expires_at).getTime() - new Date().getTime() > 0;
+      const expired =
+        new Date(Number(expires_at)).getTime() - new Date().getTime() < 0;
+      console.log({
+        expired,
+        expires_at: new Date(Number(expires_at)),
+        now: new Date(),
+        diff: new Date(Number(expires_at)).getTime() - new Date().getTime(),
+      });
       if (expired) {
         console.log("refresh token");
         reSignWithRefreshToken();
