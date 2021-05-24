@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ReactECharts from "echarts-for-react";
 import faker from "faker";
 import { BasicCard } from "../../Atoms/BasicCard";
-import { Grid } from "@material-ui/core";
+import { Grid, useTheme } from "@material-ui/core";
 import { DateRange } from "materialui-daterange-picker";
 import { format } from "date-fns";
 import { useActivityRatioAPi } from "../../../api/useActivityRatioApi";
@@ -15,6 +15,7 @@ const ActivityRatio: React.FC<ActivityRatioProps> = ({
   repository,
   dateRange,
 }) => {
+  const theme = useTheme();
   const startDateString = dateRange.startDate
     ? format(dateRange.startDate, "yyyy-MM-dd")
     : undefined;
@@ -83,19 +84,29 @@ const ActivityRatio: React.FC<ActivityRatioProps> = ({
           {
             value: activitySummary?.totalCommits,
             name: "Commits",
+            itemStyle: { color: theme.palette.primary.main },
           },
           {
             value: activitySummary?.totalMergedPullRequests,
             name: "PullRequests",
+            itemStyle: { color: theme.palette.secondary.main },
           },
-          { value: activitySummary?.totalOpenIssues, name: "Issues" },
-          { value: activitySummary?.totalComments, name: "Comments" },
+          {
+            value: activitySummary?.totalOpenIssues,
+            name: "Issues",
+            itemStyle: { color: (theme.palette as any).third.main },
+          },
+          {
+            value: activitySummary?.totalComments,
+            name: "Comments",
+            itemStyle: { color: (theme.palette as any).fourth.main },
+          },
         ],
       },
     ],
   };
 
-  return <ReactECharts option={option} />;
+  return <ReactECharts option={option} style={{ height: "280px" }} />;
 };
 
 export const ActivityRatioCard: React.FC<ActivityRatioProps> = (props) => {
