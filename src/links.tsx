@@ -6,11 +6,11 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import React from "react";
 import { RepositoryPage } from "./components/Pages/RepositoryPage/RepositoryPage";
-import { DeveloperContributionPage } from "./components/Pages/DeveloperContributionPage";
 import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 import { JobsPage } from "./components/Pages/JobsPage/JobsPage";
 import { RepositorySetting } from "./components/Pages/RepositoryPage/RepositorySetting";
 import { Setting } from "./components/Pages/SettingPage/Setting";
+import { CollaborationPage } from "./components/Pages/CollaborationPage/CollaborationPage";
 
 export type Link = {
   id: string;
@@ -37,9 +37,9 @@ export const links: Link[] = [
         component: <ProductivityPage />,
       },
       {
-        label: "Contribution",
-        to: "/dashboard/contribution",
-        component: <DeveloperContributionPage />,
+        label: "Collaboration",
+        to: "/dashboard/collaboration",
+        component: <CollaborationPage />,
       },
     ],
   },
@@ -73,19 +73,6 @@ export const links: Link[] = [
       },
     ],
   },
-  // {
-  //   id: "Users",
-  //   category: "Develop",
-  //   icon: <PeopleIcon />,
-  //   path: "/users",
-  //   children: [
-  //     {
-  //       label: "HelloWorld",
-  //       to: "/users",
-  //       component: <div>xxx</div>,
-  //     },
-  //   ],
-  // },
   {
     id: "Settings",
     category: "Settings",
