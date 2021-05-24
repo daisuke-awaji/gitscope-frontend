@@ -90,16 +90,16 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
         type: "inside",
       },
     ],
-    // Make gradient line here
-    visualMap: [
-      {
-        show: true,
-        type: "continuous",
-        seriesIndex: 0,
-        min: 0,
-        max: 100,
-      },
-    ],
+    // // Make gradient line here
+    // visualMap: [
+    //   {
+    //     show: true,
+    //     type: "continuous",
+    //     seriesIndex: 0,
+    //     min: 0,
+    //     max: 100,
+    //   },
+    // ],
     series: [
       {
         name: "Open",

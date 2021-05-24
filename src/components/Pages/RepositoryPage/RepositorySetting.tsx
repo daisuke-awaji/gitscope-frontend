@@ -18,7 +18,7 @@ const useRepositoryNameWithGitHubStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const RepositoryNameWithGitHubIcon: React.FC<{
+export const RepositoryNameWithGitHubIcon: React.FC<{
   repositoryNameWithOwner: string;
 }> = (props) => {
   const classes = useRepositoryNameWithGitHubStyles();

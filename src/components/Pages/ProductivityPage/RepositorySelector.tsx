@@ -6,6 +6,7 @@ import {
   MenuItem,
 } from "@material-ui/core";
 import React from "react";
+import { RepositoryNameWithGitHubIcon } from "../RepositoryPage/RepositorySetting";
 
 type RepositorySelectorProps = {
   repositories: string[];
@@ -18,23 +19,29 @@ export const RepositorySelector: React.FC<RepositorySelectorProps> = (
 ) => {
   const { repositories, selectedRepository, handleChange } = props;
   return (
-    <Grid container justify="space-between">
+    <Grid container justify="space-between" alignItems="flex-end">
       <Grid>
-        <h3>{selectedRepository}</h3>
+        <RepositoryNameWithGitHubIcon
+          repositoryNameWithOwner={selectedRepository}
+        />
       </Grid>
-      <FormControl>
-        <InputLabel id="repository-select-helper-label">Repository</InputLabel>
-        <Select
-          labelId="repository-select-helper-label"
-          id="repository-select-helper"
-          value={selectedRepository}
-          onChange={handleChange}
-        >
-          {repositories.map((repo) => {
-            return <MenuItem value={repo}>{repo}</MenuItem>;
-          })}
-        </Select>
-      </FormControl>
+      <Grid>
+        <FormControl>
+          <InputLabel id="repository-select-helper-label">
+            Repository
+          </InputLabel>
+          <Select
+            labelId="repository-select-helper-label"
+            id="repository-select-helper"
+            value={selectedRepository}
+            onChange={handleChange}
+          >
+            {repositories.map((repo) => {
+              return <MenuItem value={repo}>{repo}</MenuItem>;
+            })}
+          </Select>
+        </FormControl>
+      </Grid>
     </Grid>
   );
 };
