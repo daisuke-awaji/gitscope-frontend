@@ -1,37 +1,29 @@
-import { createMuiTheme } from '@material-ui/core';
+import { createMuiTheme } from "@material-ui/core";
 
 let theme = createMuiTheme({
   palette: {
     // blue
     primary: {
-      light: '#63ccff',
-      main: '#009be5',
-      dark: '#006db3',
+      light: "#63ccff",
+      main: "#009be5",
+      dark: "#006db3",
     },
-
-    // green
-    // primary: {
-    //   light: '#73E1A1',
-    //   main: '#008035',
-    //   dark: '#003717',
-    // },
-
-    // orange
-    // primary: {
-    //   light: '#fcecdd',
-    //   main: '#ffc288',
-    //   dark: '#fea82f',
-    // },
 
     secondary: {
-      light: '#73E1A1',
-      main: '#008035',
-      dark: '#003717',
+      light: "#6FFCC6",
+      main: "#04BF45",
+      dark: "#6FFC76",
     },
+
     third: {
-      light: '#73E1A1',
-      main: '#ffc478',
-      dark: '#003717',
+      light: "#FF6BB5",
+      main: "#F21B7F",
+      dark: "#730D3C",
+    },
+    fourth: {
+      light: "#FFEE05",
+      main: "#F2E205",
+      dark: "#736B02",
     },
   } as any,
   typography: {
@@ -61,17 +53,17 @@ theme = {
   overrides: {
     MuiDrawer: {
       paper: {
-        backgroundColor: '#18202c',
+        backgroundColor: "#18202c",
       },
     },
     MuiButton: {
       label: {
-        textTransform: 'none',
+        textTransform: "none",
       },
       contained: {
-        boxShadow: 'none',
-        '&:active': {
-          boxShadow: 'none',
+        boxShadow: "none",
+        "&:active": {
+          boxShadow: "none",
         },
       },
     },
@@ -88,11 +80,11 @@ theme = {
     },
     MuiTab: {
       root: {
-        textTransform: 'none',
-        margin: '0 16px',
+        textTransform: "none",
+        margin: "0 16px",
         minWidth: 0,
         padding: 0,
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up("md")]: {
           padding: 0,
           minWidth: 0,
         },
@@ -110,7 +102,7 @@ theme = {
     },
     MuiDivider: {
       root: {
-        backgroundColor: '#404854',
+        backgroundColor: "#404854",
       },
     },
     MuiListItemText: {
@@ -120,9 +112,9 @@ theme = {
     },
     MuiListItemIcon: {
       root: {
-        color: 'inherit',
+        color: "inherit",
         marginRight: 0,
-        '& svg': {
+        "& svg": {
           fontSize: 20,
         },
       },

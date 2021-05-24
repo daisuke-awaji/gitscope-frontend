@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import ReactECharts from "echarts-for-react";
-import theme from "../../../theme";
 import faker from "faker";
 import { BasicCard } from "../../Atoms/BasicCard";
 import { usePullRequestsApi } from "../../../api/usePullReqeustsApi";
 import { DateRange } from "materialui-daterange-picker";
 import { format } from "date-fns";
 import * as querystring from "querystring";
-import { Grid } from "@material-ui/core";
+import { Grid, useTheme } from "@material-ui/core";
 import { Loading } from "../../Atoms/Loading";
 
 type CodeAdditionRiskProps = { repository: string; dateRange: DateRange };
@@ -15,6 +14,7 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
   repository,
   dateRange,
 }) => {
+  const theme = useTheme();
   const startDateString = dateRange.startDate
     ? format(dateRange.startDate, "yyyy-MM-dd")
     : undefined;
@@ -91,15 +91,16 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
       },
     ],
     // // Make gradient line here
-    // visualMap: [
-    //   {
-    //     show: true,
-    //     type: "continuous",
-    //     seriesIndex: 0,
-    //     min: 0,
-    //     max: 100,
-    //   },
-    // ],
+    visualMap: [
+      {
+        show: false,
+        type: "continuous",
+        seriesIndex: 0,
+        min: 0,
+        max: 100,
+        itemStyle: { color: theme.palette.error.main },
+      },
+    ],
     series: [
       {
         name: "Open",
@@ -107,13 +108,16 @@ const CodeAdditionRisk: React.FC<CodeAdditionRiskProps> = ({
         type: "line",
         // areaStyle: {},
         itemStyle: {
-          color: theme.palette.primary.light,
+          color: theme.palette.error.main,
           width: 1,
         },
         markPoint: {
           data: [
-            { type: "max", name: "最大值" },
-            { type: "min", name: "最小值" },
+            {
+              type: "max",
+              name: "最大值",
+              itemStyle: { color: theme.palette.error.main },
+            },
           ],
         },
         data,

@@ -1,12 +1,13 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
 import faker from "faker";
-import theme from "../../../theme";
 import { BasicCard } from "../../Atoms/BasicCard";
+import { useTheme } from "@material-ui/core";
 
 type CommitsTopProps = { repository: string };
 
 const CommitsTop: React.FC<CommitsTopProps> = ({ repository }) => {
+  const theme = useTheme();
   const options = {
     tooltip: {
       trigger: "axis",
@@ -68,7 +69,7 @@ const CommitsTop: React.FC<CommitsTopProps> = ({ repository }) => {
         name: "PullRequests",
         type: "bar",
         itemStyle: {
-          color: theme.palette.primary.main,
+          color: theme.palette.secondary.light,
           width: 1,
         },
         stack: "total",
@@ -93,7 +94,7 @@ const CommitsTop: React.FC<CommitsTopProps> = ({ repository }) => {
         name: "Issues",
         type: "bar",
         itemStyle: {
-          color: theme.palette.primary.dark,
+          color: (theme.palette as any).third.light,
           width: 1,
         },
         stack: "total",
@@ -118,7 +119,7 @@ const CommitsTop: React.FC<CommitsTopProps> = ({ repository }) => {
         name: "Comments",
         type: "bar",
         itemStyle: {
-          color: theme.palette.secondary.light,
+          color: (theme.palette as any).fourth.light,
           width: 1,
         },
         stack: "total",
