@@ -39,8 +39,8 @@ const GrayBottomCircular: React.FC<C> = (props) => {
       <CircularProgress
         variant="determinate"
         className={classes.bottom}
-        size={40}
-        thickness={4}
+        size={50}
+        thickness={5}
         value={100}
       />
 
@@ -51,8 +51,8 @@ const GrayBottomCircular: React.FC<C> = (props) => {
         classes={{
           circle: classes.circle,
         }}
-        size={40}
-        thickness={4}
+        size={50}
+        thickness={5}
         {...props}
       />
     </div>
@@ -89,7 +89,7 @@ export const CircularProgressWithLabel: React.FC<C> = (props) => {
         justifyContent="center"
       >
         <Typography
-          variant="caption"
+          variant="body1"
           component="div"
           color="textSecondary"
         >{`${Math.round(props.value)}p`}</Typography>
