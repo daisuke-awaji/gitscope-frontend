@@ -10,6 +10,10 @@ import { RepositorySelector } from "../ProductivityPage/RepositorySelector";
 import { CircularProgressWithLabel } from "./CircularProgressWithLabel";
 import { JobStatusColorChip } from "./JobStatusColorChip";
 import { TulipIcon } from "../../Atoms/Icons/Icons";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const { useQueryParams } = require("react-router-query-hooks");
 
@@ -67,17 +71,22 @@ const JobStatusCard: React.FC<JobStatusCardProps> = (props) => {
         style={{ paddingTop: "1rem" }}
       >
         <div className={classes.id}>
-          {props.fileComplexities?.map((file) => {
-            return (
-              <div>
-                <span>{file.file}</span> <span>{file.complexity}</span>
-              </div>
-            );
-          })}
+          <List dense={true}>
+            {props.fileComplexities?.map((file) => {
+              return (
+                <ListItem>
+                  <ListItemIcon style={{ fontWeight: 700 }}>
+                    {file.complexity}
+                  </ListItemIcon>
+                  <ListItemText primary={file.file} />
+                </ListItem>
+              );
+            })}
+          </List>
         </div>
       </Grid>
 
-      <Grid container>
+      <Grid container direction="row" justify="flex-end" alignItems="center">
         <div className={classes.id}>{props.createdAt}</div>
       </Grid>
       {props.children}
