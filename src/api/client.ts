@@ -21,7 +21,7 @@ export function useAxios(
 ): { isLoading: boolean; axios: AxiosInstance } {
   const { user, tokenHasExpired, reSignWithRefreshToken } = useAuth();
 
-  const axios = createClient(user!.token);
+  const axios = createClient(user.token!);
   // ローディングを state 化
   const [isLoading, setIsLoading] = useState(false);
   // リクエストが投げられた時にローディングを true に変更

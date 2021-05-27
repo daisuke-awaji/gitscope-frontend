@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 
 import React from "react";
 import { Fragment } from "react";
-import {
-  RepositoryStatus,
-  useRepositoryStatusApi,
-} from "../../../api/useRepositoryStatus";
+import { RepositoryStatus } from "../../../api/useRepositoryStatus";
 import { SERVICE_NAME } from "../../../Constants";
 import { Loading } from "../../Atoms/Loading";
 import { BasicCard } from "../../Atoms/BasicCard";
 import { useRepositorySettingApi } from "../../../api/useRepositorySettingApi";
+import { useRepositories } from "../../../RepositoryProvider";
 
 const Repositories: React.FC<{
   repositories: RepositoryStatus[];
@@ -18,7 +16,6 @@ const Repositories: React.FC<{
 }> = (props) => {
   const { save } = useRepositorySettingApi();
   const handleClickUnfollow = (name: any) => {
-    console.log(name);
     save({
       nameWithOwner: name,
       followed: false,
@@ -84,7 +81,7 @@ const Repositories: React.FC<{
 };
 
 export const RepositoryPage: React.FC = (): JSX.Element => {
-  const { repositories, setRepositories, isLoading } = useRepositoryStatusApi();
+  const { repositories, setRepositories, isLoading } = useRepositories();
 
   return (
     <Grid container spacing={2}>

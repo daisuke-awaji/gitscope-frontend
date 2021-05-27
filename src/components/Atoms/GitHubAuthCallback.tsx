@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../../AuthProvider";
+import Backdrop from "./SimpleBackDrop";
 
 export const GitHubAuthCallback = () => {
   const { callback } = useAuth();
@@ -14,5 +15,5 @@ export const GitHubAuthCallback = () => {
     // eslint-disable-next-line
   }, []);
 
-  return <div>login with github. callback please wait....</div>;
+  return <Backdrop />;
 };

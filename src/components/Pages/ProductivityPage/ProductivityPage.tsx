@@ -7,13 +7,13 @@ import { ProductionLeadTimeCard } from "./ProductionLeadTime";
 import { ActivityRatioCard } from "./ActivityRatio";
 import { ScoreCards } from "./ScoreCards";
 import DateRangePickerExample from "./DateRangePicker";
-import { useRepositoryStatusApi } from "../../../api/useRepositoryStatus";
-import { Loading } from "../../Atoms/Loading";
 import { DateRange } from "materialui-daterange-picker";
 import { format, sub } from "date-fns";
 import { CodeAdditionRiskCard } from "./CodeAddtionRisk";
 import { Link } from "react-router-dom";
 import { ReactComponent as SelectRepositoryLogo } from "./SelectRepository.svg";
+import { useRepositories } from "../../../RepositoryProvider";
+import Backdrop from "../../Atoms/SimpleBackDrop";
 
 const { useQueryParams } = require("react-router-query-hooks");
 
@@ -46,9 +46,11 @@ const GoToRepositorySetting = () => {
 
 const ProductivityPage = () => {
   const [query, { replaceQuery }] = useQueryParams();
-  const { repositories, isLoading } = useRepositoryStatusApi(true);
-  const repoNames = repositories.map((repo) => repo.nameWithOwner);
-  const [selectedRepository, setSelectedRepository] = useState("");
+  const { repositories, isLoading } = useRepositories();
+  const followedRepositories = repositories.filter((repo) => repo.followed);
+  const [selectedRepository, setSelectedRepository] = useState(
+    query.repo || followedRepositories[0]?.nameWithOwner
+  );
 
   const initialDateRange = {
     startDate: sub(new Date(), { weeks: 1 }),
@@ -66,9 +68,7 @@ const ProductivityPage = () => {
   };
 
   useEffect(() => {
-    const repo = query.repo || repositories[0]?.nameWithOwner;
-    setSelectedRepository(repo);
-
+    setSelectedRepository(query.repo || followedRepositories[0]?.nameWithOwner);
     const startDateStr =
       query.startDate || format(initialDateRange.startDate, "yyyy-MM-dd");
     const endDateStr =
@@ -79,13 +79,17 @@ const ProductivityPage = () => {
       endDate: new Date(endDateStr),
     });
 
-    replaceQuery({ repo, startDate: startDateStr, endDate: endDateStr });
+    replaceQuery({
+      repo: selectedRepository,
+      startDate: startDateStr,
+      endDate: endDateStr,
+    });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [repositories]);
 
   if (isLoading) {
-    return <Loading />;
+    return <Backdrop />;
   }
 
   if (!repositories.length) {
@@ -96,7 +100,7 @@ const ProductivityPage = () => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={12} md={12} lg={12}>
         <RepositorySelector
-          repositories={repoNames}
+          repositories={followedRepositories.map((repo) => repo.nameWithOwner)}
           selectedRepository={selectedRepository}
           handleChange={handleChange}
         />

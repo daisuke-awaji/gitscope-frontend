@@ -1,21 +1,21 @@
-import { Card, createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
+import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import {
   CommitAnalysis,
   useCommitAnalysisApi,
 } from "../../../api/useCommitAnalysisApi";
-import { useRepositoryStatusApi } from "../../../api/useRepositoryStatus";
 import { Loading } from "../../Atoms/Loading";
 import { RepositorySelector } from "../ProductivityPage/RepositorySelector";
-import { CircularProgressWithLabel } from "./CircularProgressWithLabel";
-import { JobStatusColorChip } from "./JobStatusColorChip";
 import { TulipIcon } from "../../Atoms/Icons/Icons";
+import { useRepositories } from "../../../RepositoryProvider";
+import { JobStatusCard } from "./JobStatusCard";
+import Backdrop from "../../Atoms/SimpleBackDrop";
 
 const { useQueryParams } = require("react-router-query-hooks");
 
 export type JobStatus = "Success" | "InProgress" | "Failuer";
 
-const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
       padding: "20px 20px",
@@ -27,73 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-type JobStatusCardProps = {} & CommitAnalysis;
-const JobStatusCard: React.FC<JobStatusCardProps> = (props) => {
-  const classes = useStyles();
-
-  const commitHref = `https://github.com/${props.repositoryNameWithOwner}/commit/${props.sha}`;
-
-  return (
-    <Card elevation={0} className={classes.card} {...props}>
-      <Grid container justify="space-between">
-        <div className={classes.id}>
-          <span>
-            <a href={commitHref}>{props.sha.slice(0, 7)}</a>
-          </span>
-          <span style={{ paddingLeft: "1rem" }}>
-            Merge pull request #2848 from branch/feature/helloworld
-          </span>
-        </div>
-        <div>
-          {props.state ? <JobStatusColorChip status={props.state} /> : null}
-        </div>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        justify="flex-start"
-        alignItems="center"
-        style={{ paddingTop: "1rem" }}
-      >
-        {props.riskPoint ? (
-          <CircularProgressWithLabel value={props.riskPoint} />
-        ) : null}
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        justify="flex-start"
-        alignItems="center"
-        style={{ paddingTop: "1rem" }}
-      >
-        <div className={classes.id}>
-          {props.fileComplexities?.map((file) => {
-            return (
-              <div>
-                <span>{file.file}</span> <span>{file.complexity}</span>
-              </div>
-            );
-          })}
-        </div>
-      </Grid>
-
-      <Grid container>
-        <div className={classes.id}>{props.createdAt}</div>
-      </Grid>
-      {props.children}
-    </Card>
-  );
-};
-
 const CommitNotFound = () => {
   return (
-    <Grid
-      container
-      direction="column"
-      justify="center"
-      alignItems="center"
-      style={{ height: "50%" }}
-    >
+    <Grid container direction="column" justify="center" alignItems="center">
       <Grid>
         <TulipIcon />
       </Grid>
@@ -113,7 +49,7 @@ const Commits: React.FC<{ repository: string }> = (props) => {
     setPath(`/repos/${props.repository}/jobs`);
   }, [props.repository, setPath]);
 
-  if (isLoading) {
+  const GridContainer: React.FC = (props) => {
     return (
       <Grid
         container
@@ -123,35 +59,29 @@ const Commits: React.FC<{ repository: string }> = (props) => {
         justify="center"
         alignItems="center"
       >
-        <Loading />
+        {props.children}
       </Grid>
+    );
+  };
+
+  if (isLoading) {
+    return (
+      <GridContainer>
+        <Loading />
+      </GridContainer>
     );
   }
 
   if (!commits.length) {
     return (
-      <Grid
-        container
-        style={{ marginTop: 30 }}
-        spacing={2}
-        direction="row"
-        justify="center"
-        alignItems="center"
-      >
+      <GridContainer>
         <CommitNotFound />
-      </Grid>
+      </GridContainer>
     );
   }
 
   return (
-    <Grid
-      container
-      style={{ marginTop: 30 }}
-      spacing={2}
-      direction="row"
-      justify="center"
-      alignItems="center"
-    >
+    <GridContainer>
       {commits.map((item: CommitAnalysis) => {
         return (
           <Grid item xs={12}>
@@ -159,16 +89,19 @@ const Commits: React.FC<{ repository: string }> = (props) => {
           </Grid>
         );
       })}
-    </Grid>
+    </GridContainer>
   );
 };
 
 export const JobsPage: React.FC = (): JSX.Element => {
   const [query, { replaceQuery }] = useQueryParams();
 
-  const { repositories, isLoading } = useRepositoryStatusApi(true);
-  const repoNames = repositories.map((repo) => repo.nameWithOwner);
-  const [selectedRepository, setSelectedRepository] = useState("");
+  const { repositories, isLoading } = useRepositories();
+  const followedRepositories = repositories.filter((repo) => repo.followed);
+
+  const [selectedRepository, setSelectedRepository] = useState(
+    query.repo || followedRepositories[0]?.nameWithOwner
+  );
   const handleChange = (event: any) => {
     setSelectedRepository(event.target.value);
     replaceQuery({
@@ -177,23 +110,21 @@ export const JobsPage: React.FC = (): JSX.Element => {
   };
 
   useEffect(() => {
-    const repo = query.repo || repositories[0]?.nameWithOwner;
-    setSelectedRepository(repo);
-
-    replaceQuery({ repo });
+    setSelectedRepository(query.repo || followedRepositories[0]?.nameWithOwner);
+    replaceQuery({ repo: selectedRepository });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [repositories]);
 
   if (isLoading) {
-    return <Loading />;
+    return <Backdrop />;
   }
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={12} md={12} lg={12}>
         <RepositorySelector
-          repositories={repoNames}
+          repositories={followedRepositories.map((repo) => repo.nameWithOwner)}
           selectedRepository={selectedRepository}
           handleChange={handleChange}
         />
