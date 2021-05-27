@@ -7,13 +7,13 @@ import { ProductionLeadTimeCard } from "./ProductionLeadTime";
 import { ActivityRatioCard } from "./ActivityRatio";
 import { ScoreCards } from "./ScoreCards";
 import DateRangePickerExample from "./DateRangePicker";
-import { Loading } from "../../Atoms/Loading";
 import { DateRange } from "materialui-daterange-picker";
 import { format, sub } from "date-fns";
 import { CodeAdditionRiskCard } from "./CodeAddtionRisk";
 import { Link } from "react-router-dom";
 import { ReactComponent as SelectRepositoryLogo } from "./SelectRepository.svg";
 import { useRepositories } from "../../../RepositoryProvider";
+import Backdrop from "../../Atoms/SimpleBackDrop";
 
 const { useQueryParams } = require("react-router-query-hooks");
 
@@ -89,7 +89,7 @@ const ProductivityPage = () => {
   }, [repositories]);
 
   if (isLoading) {
-    return <Loading />;
+    return <Backdrop />;
   }
 
   if (!repositories.length) {

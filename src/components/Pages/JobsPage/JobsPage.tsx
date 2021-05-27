@@ -9,6 +9,7 @@ import { RepositorySelector } from "../ProductivityPage/RepositorySelector";
 import { TulipIcon } from "../../Atoms/Icons/Icons";
 import { useRepositories } from "../../../RepositoryProvider";
 import { JobStatusCard } from "./JobStatusCard";
+import Backdrop from "../../Atoms/SimpleBackDrop";
 
 const { useQueryParams } = require("react-router-query-hooks");
 
@@ -116,7 +117,7 @@ export const JobsPage: React.FC = (): JSX.Element => {
   }, [repositories]);
 
   if (isLoading) {
-    return <Loading />;
+    return <Backdrop />;
   }
 
   return (
