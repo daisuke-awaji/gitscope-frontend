@@ -36,8 +36,12 @@ export const RepositorySelector: React.FC<RepositorySelectorProps> = (
             value={selectedRepository}
             onChange={handleChange}
           >
-            {repositories.map((repo) => {
-              return <MenuItem value={repo}>{repo}</MenuItem>;
+            {repositories.map((repo, index) => {
+              return (
+                <MenuItem value={repo} key={index}>
+                  {repo}
+                </MenuItem>
+              );
             })}
           </Select>
         </FormControl>

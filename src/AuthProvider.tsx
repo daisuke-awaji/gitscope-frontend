@@ -5,7 +5,7 @@ import * as querystring from "querystring";
 export interface AuthState {
   isAuthenticated: boolean;
   isLoading: boolean;
-  user?: User;
+  user: User;
   error?: any;
 }
 interface IAuthContext extends AuthState {
@@ -18,6 +18,11 @@ interface IAuthContext extends AuthState {
 }
 const initialState: AuthState = {
   isAuthenticated: false,
+  user: {
+    token: localStorage.getItem("gh-token"),
+    name: localStorage.getItem("gh-user-name"),
+    imageUrl: localStorage.getItem("gh-user-image-url"),
+  },
   isLoading: false,
 };
 const stub = (): never => {
@@ -37,17 +42,18 @@ export const AuthContext = React.createContext<IAuthContext>(initialContext);
 export const useAuth = () => useContext(AuthContext);
 
 type User = {
-  name: string;
-  token: string;
-  imageUrl: string;
+  name: string | null;
+  token: string | null;
+  imageUrl: string | null;
 };
 
 export const AuthProvider = (props: any) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    initialState.isAuthenticated
+  );
+  const [isLoading, setIsLoading] = useState(initialState.isLoading);
   const [error] = useState(null);
-  const [user, setUser] = useState<User>();
-
+  const [user, setUser] = useState<User>(initialState.user);
   useEffect(() => {
     checkAuthenticated();
     currentAuthenticatedUser();
@@ -60,12 +66,6 @@ export const AuthProvider = (props: any) => {
     if (expires_at) {
       const expired =
         new Date(Number(expires_at)).getTime() - new Date().getTime() < 0;
-      console.log({
-        expired,
-        expires_at: new Date(Number(expires_at)),
-        now: new Date(),
-        diff: new Date(Number(expires_at)).getTime() - new Date().getTime(),
-      });
 
       return expired;
     }
@@ -79,7 +79,6 @@ export const AuthProvider = (props: any) => {
 
     const expired = tokenHasExpired();
     if (expired) {
-      console.log("refresh token");
       reSignWithRefreshToken();
     }
 
@@ -200,7 +199,11 @@ export const AuthProvider = (props: any) => {
   const logout = () => {
     localStorage.clear();
     setIsAuthenticated(false);
-    setUser(undefined);
+    setUser({
+      token: null,
+      name: null,
+      imageUrl: null,
+    });
     window.location.replace("/");
   };
 

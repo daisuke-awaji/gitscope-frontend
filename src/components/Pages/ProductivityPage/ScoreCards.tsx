@@ -1,47 +1,45 @@
-import { Grid } from '@material-ui/core';
-import faker from 'faker';
-import React from 'react';
-import { ScoreCard } from './ScoreCard';
+import { Grid } from "@material-ui/core";
+import faker from "faker";
+import React from "react";
+import { ScoreCard } from "./ScoreCard";
 
 type ScoreCardsProps = { repository: string };
 export const ScoreCards: React.FC<ScoreCardsProps> = ({ repository }) => {
-  console.log(repository);
-
   const scoreData = [
     {
-      title: 'Productivity (mock)',
+      title: "Productivity (mock)",
       score: faker.random.number(100).toString(),
-      unit: '',
+      unit: "",
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: 'today',
+      chip: "today",
     },
     {
-      title: 'Efficiency (mock)',
+      title: "Efficiency (mock)",
       score: faker.random.number(100).toString(),
-      unit: '',
+      unit: "",
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: '1 week',
+      chip: "1 week",
     },
     {
-      title: 'Activity (mock)',
+      title: "Activity (mock)",
       score: faker.random.number(100).toString(),
-      unit: '',
+      unit: "",
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: '1 week',
+      chip: "1 week",
     },
     {
-      title: 'Milestone (mock)',
+      title: "Milestone (mock)",
       score: faker.random.number(100).toString(),
-      unit: '',
+      unit: "",
       ratio: faker.random.number({ min: -100, max: 100 }).toString(),
-      chip: '1 week',
+      chip: "1 week",
     },
   ];
   return (
     <Grid container spacing={2}>
-      {scoreData.map((item) => {
+      {scoreData.map((item, index) => {
         return (
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={12} md={6} lg={6} key={index}>
             <ScoreCard
               title={item.title}
               score={item.score}

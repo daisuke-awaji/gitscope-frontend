@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { AuthProvider } from "./AuthProvider";
+import { AxiosProvider } from "./AxiosProvider";
 import reportWebVitals from "./reportWebVitals";
+import { RepositoryProvider } from "./RepositoryProvider";
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthProvider>
-      <App />
+      <AxiosProvider>
+        <RepositoryProvider>
+          <App />
+        </RepositoryProvider>
+      </AxiosProvider>
     </AuthProvider>
   </React.StrictMode>,
   document.getElementById("root")

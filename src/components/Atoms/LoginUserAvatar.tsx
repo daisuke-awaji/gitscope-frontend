@@ -37,7 +37,7 @@ export const LoginUserAvatar = () => {
         className={classes.iconButtonAvatar}
         onClick={handleClick}
       >
-        <Avatar src={user?.imageUrl} alt={user?.name} />
+        <Avatar src={user.imageUrl!} alt={user.name!} />
       </IconButton>
       <Menu
         id="simple-menu"
