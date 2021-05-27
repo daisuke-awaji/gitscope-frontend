@@ -1,4 +1,4 @@
-import { createStyles, Grid, makeStyles, Theme } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import {
   CommitAnalysis,
@@ -14,18 +14,6 @@ import Backdrop from "../../Atoms/SimpleBackDrop";
 const { useQueryParams } = require("react-router-query-hooks");
 
 export type JobStatus = "Success" | "InProgress" | "Failuer";
-
-export const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    card: {
-      padding: "20px 20px",
-    },
-    id: {
-      fontWeight: 300,
-      fontSize: 12,
-    },
-  })
-);
 
 const CommitNotFound = () => {
   return (
