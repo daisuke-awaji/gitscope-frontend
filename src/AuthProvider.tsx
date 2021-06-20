@@ -78,8 +78,8 @@ export const AuthProvider = (props: any) => {
     const token = localStorage.getItem("gh-token");
 
     const expired = tokenHasExpired();
-    if (expired) {
-      reSignWithRefreshToken();
+    if (token && expired) {
+      logout();
     }
 
     // TODO: refresh token refetch flow
@@ -160,6 +160,7 @@ export const AuthProvider = (props: any) => {
     const GITHUB_AUTH_CALLBACK_ENDPOINT =
       process.env.REACT_APP_BACKEND_API_ENDPOINT +
       "/auth/github/resignWithRefreshToken";
+
     const result = await axios.get(
       GITHUB_AUTH_CALLBACK_ENDPOINT + "?refresh_token=" + refreshToken
     );
